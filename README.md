@@ -87,9 +87,15 @@ Session 6 added topic authority: **75% → 90%** 🎉
 - ✓ Know when to stop (90% exceeded target, declared victory)
 - ✓ External validation catches bugs (Gemini feedback was valuable)
 
-📖 *Full Phase 8 story coming in Week 2*  
-📊 *Detailed metrics coming in Week 2*  
-🎯 *Presentation PDF coming in Week 2*
+📖 **[Read the Full Phase 8 Story](journey/phase-8-optimization.md)**  
+📊 **[View Detailed Metrics & Analysis](results/phase-8-metrics.md)**  
+🎯 **[Phase 8 Presentation PDF](presentations/phase-8-optimization-journey.pdf)** (13 slides)  
+🏛️ **[Architecture Decision (ADR-009)](architecture/decisions/ADR-009-retrieval-optimization.md)**
+
+**Complete Story with Presentations**:  
+📊 [Infrastructure Overview](presentations/infrastructure-overview.pdf) (Phases 4-6, 12 slides)  
+📊 [Phase 7: RAG Platform](presentations/phase-7-rag-platform.pdf) (Foundation, 15 slides)  
+📊 [Phase 8: Optimization](presentations/phase-8-optimization-journey.pdf) (90% Journey, 13 slides)
 
 ---
 
@@ -98,22 +104,30 @@ Session 6 added topic authority: **75% → 90%** 🎉
 ### 📖 [Journey](journey/)
 Phase-by-phase narratives showing the evolution from empty cluster to production AI/ML platform. Problems faced, decisions made, results achieved.
 
-*Content being added Week 2+*
+**Available Now**:
+- [Phase 8: 0% to 90% Optimization](journey/phase-8-optimization.md) - The breakthrough story
 
 ### 🏛️ [Architecture](architecture/)
 Major architecture decisions (ADRs) documenting choices, trade-offs, and alternatives considered. Plus diagrams showing system topology and data flows.
 
-*Content being added Week 2+*
+**Available Now**:
+- [ADR-001: Orchestration Platform](architecture/decisions/ADR-001-orchestration-platform.md) - Nomad vs K3s vs Swarm
+- [ADR-008: Advanced RAG Platform](architecture/decisions/ADR-008-advanced-rag-platform.md) - Phase 7 foundation
+- [ADR-009: Retrieval Optimization](architecture/decisions/ADR-009-retrieval-optimization.md) - 90% accuracy achieved
 
 ### 🎯 [Results](results/)
 Metrics, improvements, and measurable outcomes. Before/after data, performance benchmarks, and achievement summaries.
 
-*Content being added Week 2+*
+**Available Now**:
+- [Phase 8 Detailed Metrics](results/phase-8-metrics.md) - Complete performance analysis
 
 ### 📊 [Presentations](presentations/)
 Technical presentations explaining complex work for different audiences. Slide decks telling the story visually.
 
-*Content being added Week 2+*
+**Available Now** (40 slides total):
+- [Infrastructure Overview](presentations/infrastructure-overview.pdf) - Phases 4-6 foundation (12 slides)
+- [Phase 7: RAG Platform](presentations/phase-7-rag-platform.pdf) - Production system (15 slides)
+- [Phase 8: 90% Accuracy Journey](presentations/phase-8-optimization-journey.pdf) - Optimization story (13 slides)
 
 ### 🧠 [Methodology](methodology/)
 How I approach engineering: systematic validation, data-driven decisions, ADR framework, session-based development, continuous improvement.
@@ -253,7 +267,7 @@ I build production systems with systematic engineering practices. Every architec
 ## Repository Status
 
 **Week 1**: Foundation complete - structure and landing page ✅  
-**Week 2**: Phase 8 detailed content (planned)  
+**Week 2**: Phase 8 detailed content - COMPLETE ✅  
 **Week 3**: Additional phases, polish, screenshots (planned)  
 **Week 4**: Public launch on GitHub, LinkedIn announcement (planned)
 
@@ -268,5 +282,5 @@ All content represents real work on personal infrastructure. No proprietary or c
 ---
 
 **Last Updated**: January 5, 2026  
-**Portfolio Version**: v0.1 - Week 1 MVP  
-**Next Update**: Week 2 - Phase 8 detailed narrative
+**Portfolio Version**: v0.2 - Week 2 Complete  
+**Next Update**: Week 3 - Additional phases and polish
