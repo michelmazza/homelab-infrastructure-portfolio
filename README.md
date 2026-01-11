@@ -132,7 +132,10 @@ Technical presentations explaining complex work for different audiences. Slide d
 ### 🧠 [Methodology](methodology/)
 How I approach engineering: systematic validation, data-driven decisions, ADR framework, session-based development, continuous improvement.
 
-*Content being added Week 2+*
+**Available Now**:
+- Complete methodology documentation (6 core practices)
+- Phase 8 case study demonstrating methodology in action
+- Interview application guidance
 
 ---
 
