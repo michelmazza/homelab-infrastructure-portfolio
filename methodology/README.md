@@ -1,4 +1,13 @@
-# Engineering Methodology
+**Question: "How do you use AI in your development workflow?"**
+
+Explain comprehensive AI integration:
+1. Planning: Validate architecture in Session 0 with AI
+2. Implementation: Get patterns and examples during coding
+3. Debugging: Use AI to interpret errors and suggest fixes
+4. Validation: Cross-validate with multiple AIs (Claude + Gemini)
+5. Learning: Accelerate understanding of unfamiliar tech
+
+**Example**: Phase 8 Session 0 - validated three-pillar strategy with Claude before writing code, got BM25 integration patterns, designed test suite structure. Session 3 - Gemini caught bugs Claude missed. Not just "ChatGPT for code" but systematic AI collaboration throughout lifecycle.# Engineering Methodology
 
 How I approach complex engineering problems through systematic validation, data-driven decisions, and continuous improvement.
 
@@ -189,35 +198,149 @@ During optimization work, made small frequent commits after each test suite run.
 
 ---
 
-## 6. External Validation Integration
+## 6. AI-Assisted Engineering
 
-**Practice**: Leverage AI assistants and external feedback to catch errors and refine approaches.
+**Practice**: Leverage AI as collaborative partner throughout the development lifecycle, from initial planning through implementation to validation.
 
-**Process**:
-1. **Regular Reviews**: Share work with AI assistants (Claude, Gemini)
-2. **Systematic Feedback**: Ask specific questions about approach
-3. **Error Detection**: Let external reviewers catch bugs
-4. **Refinement**: Incorporate feedback systematically
-5. **Accelerated Learning**: Use AI to explore alternatives faster
+**Philosophy**: AI engagement begins at Session 0, not just validation. Use AI as thinking partner for architecture design, implementation support, and comprehensive review. Different AI models (Claude, Gemini) provide complementary perspectives.
+
+### Planning & Architecture Design
+
+**Practice**: Engage AI early in planning to validate approach and explore alternatives before coding.
+
+**When to Use**:
+- Session 0 strategy and architecture design
+- Exploring unfamiliar technical domains
+- Evaluating multiple architectural options
+- Validating approach before implementation
+- Understanding trade-offs and risks
+
+**Example from Phase 8 Session 0**:
+Before writing any optimization code, discussed the three-pillar strategy (Hybrid Search, Small-to-Big, Experiments) with Claude to validate the approach. AI helped:
+- Confirm hybrid search was viable (BM25 + Vector feasible)
+- Explore BM25 integration patterns and libraries
+- Design test suite structure and query categories
+- Identify potential pitfalls (chunking strategy risks)
+- Get implementation guidance for rank-bm25 library
+
+**Why It Works**:
+- Surfaces architectural issues before time investment
+- Explores alternatives faster than solo research
+- Provides implementation patterns for unfamiliar tech
+- Validates assumptions about feasibility
+- Reduces thrashing during implementation
+- Creates shared understanding of approach
+
+**AI as Thinking Partner**: Not "validate my completed work" but "help me think through this problem." Architecture discussions, trade-off analysis, risk identification, and implementation strategy.
+
+### Implementation Support
+
+**Practice**: Use AI during implementation for pattern research, code examples, and technical clarification.
+
+**When to Use**:
+- Implementing unfamiliar libraries or patterns
+- Debugging confusing error messages
+- Optimizing code performance
+- Understanding API documentation
+- Exploring implementation alternatives
+
+**Example from Phase 8**:
+- **BM25 Integration**: Asked Claude for rank-bm25 usage patterns, got working example code
+- **Document Boosting**: Explored score manipulation patterns with AI before implementing
+- **Topic Authority**: Researched title-based matching approaches with Gemini
+- **Error Resolution**: AI helped interpret confusing embedding dimension mismatches
+
+**Why It Works**:
+- Accelerates learning on unfamiliar topics
+- Provides working code examples to adapt
+- Explains error messages in context
+- Suggests optimization approaches
+- Reduces time stuck on implementation details
+
+### Review & Validation
+
+**Practice**: Share work with AI for comprehensive review before deployment.
+
+**When to Use**:
+- After implementing new functionality
+- Before deploying to production
+- When debugging complex issues
+- To catch edge cases
+- For architecture review
+
+**Example from Phase 8**:
+
+**Session 3 Validation**: Shared boost factor implementation with Google Gemini for architectural review. Gemini caught test suite bugs (incorrect expected results in 2 queries) and suggested refinements to boost factor calculation approach. Incorporating feedback prevented deploying buggy validation code.
+
+**Alternative Exploration**: Used AI to explore Small-to-Big retrieval patterns and re-ranking approaches. Quickly evaluated feasibility before committing implementation time.
+
+**Assumption Testing**: AI feedback helped validate hypothesis about chunk sizes before expensive investigation. When measurements contradicted assumptions (1847 chars vs expected 186), AI helped identify pivot to Topic Authority approach.
+
+**Accelerated Debugging**: External validation helped identify edge cases in test queries that human review missed (queries with multiple valid answers).
 
 **Why It Works**:
 - Catches errors before deployment
 - Provides alternative perspectives
-- Accelerates learning on unfamiliar topics
-- Reduces time to working solution
+- Identifies edge cases humans miss
+- Validates architectural decisions
 - Creates feedback loop for improvement
 
-**Example from Phase 8**:
+### Workflow Integration
 
-**Session 3 Validation**: Shared approach with Google Gemini for architectural review. Gemini caught test suite errors and suggested refinements to boost factor approach. Incorporated feedback prevented deploying buggy validation code.
+**When to Engage AI**:
 
-**Alternative Exploration**: Used AI to explore Small-to-Big retrieval patterns and re-ranking approaches. Quickly evaluated feasibility before committing implementation time.
+**During Planning** (Session 0):
+- "Here's the problem and my approach - what am I missing?"
+- "Compare these three architectural options"
+- "What patterns exist for this problem?"
+- "Help me design a test suite for this optimization"
+- "What risks should I consider?"
 
-**Assumption Testing**: AI feedback validated hypothesis about chunk sizes before expensive investigation. When measurements contradicted assumptions, pivoted approach immediately.
+**During Implementation** (Sessions 1-N):
+- "How do I implement X in Python?"
+- "What's the best library for Y?"
+- "Explain this error message in context"
+- "Optimize this code snippet"
+- "Show me usage patterns for this library"
 
-**Accelerated Debugging**: External validation helped identify edge cases in test queries that human review missed.
+**When Stuck** (Mid-session):
+- "Here's what I've tried, still not working - diagnostic ideas?"
+- "Should I continue this approach or pivot?"
+- "What am I not seeing in this data?"
+- "Debug this confusing behavior"
 
-**Tool Usage**: Claude for implementation, Gemini for architectural validation, both for exploring unfamiliar patterns.
+**For Validation** (Session completion):
+- "Review this implementation for bugs"
+- "Does this architecture make sense?"
+- "What edge cases am I missing?"
+- "Critique this approach"
+- "Verify my test suite covers key scenarios"
+
+### Tool Selection: Claude vs Gemini
+
+**Claude**:
+- Implementation and code generation
+- Real-time problem solving during sessions
+- Pattern research and working examples
+- Iterative refinement and debugging
+- Quick technical clarification
+
+**Gemini**:
+- Architecture review and strategic validation
+- Alternative perspective on approach
+- Catching logical flaws and edge cases
+- Higher-level design feedback
+- Cross-validation of Claude suggestions
+
+**Why Both**: Different models catch different issues. Cross-validation increases confidence. Gemini caught test suite bugs in Phase 8 that Claude missed. Claude provided implementation patterns Gemini couldn't generate as effectively.
+
+**Best Practices**:
+- Engage AI early (planning, not just validation)
+- Be specific in requests (context + clear question)
+- Iterate on feedback (refine based on AI responses)
+- Cross-validate with multiple AIs (complementary perspectives)
+- Document AI insights in session notes (capture reasoning)
+- Use AI to accelerate, not replace, thinking
 
 ---
 
@@ -265,11 +388,13 @@ Small commits after each experiment:
 - Business impact captured in commit messages
 - Zero work lost across multiple days
 
-### **External Validation**
-- Gemini caught test suite bugs in Session 3
-- Claude helped explore Small-to-Big patterns
-- AI feedback refined boost factor approach
-- External validation prevented wasted effort
+### **AI-Assisted Engineering**
+- Session 0: Validated three-pillar strategy with Claude before coding
+- Session 1: Got BM25 integration patterns from AI (rank-bm25 library)
+- Session 2: Explored score manipulation patterns with AI
+- Session 3: Gemini caught test suite bugs (2 incorrect expected results)
+- Session 5: AI helped interpret chunk size findings and pivot to Topic Authority
+- Cross-validation: Claude for implementation, Gemini for architecture review
 
 **Result**: 0% → 90% accuracy, exceeded 60-70% target, systematic and reproducible methodology.
 
@@ -342,7 +467,7 @@ Small commits after each experiment:
 - Validation-first prevented premature optimization
 - Data-driven approach found root causes faster
 - Session-based structure prevented burnout
-- External validation caught bugs early
+- AI-assisted engineering caught bugs early and accelerated implementation
 - Git discipline enabled fearless experimentation
 - ADRs captured context that would've been lost
 
@@ -411,6 +536,17 @@ Describe session-based development:
 3. Frequent git commits
 4. Documentation while fresh
 5. Systematic progress over time
+
+**Question: "How do you use AI in your development workflow?"**
+
+Explain comprehensive AI integration:
+1. Planning: Validate architecture in Session 0 with AI
+2. Implementation: Get patterns and examples during coding
+3. Debugging: Use AI to interpret errors and suggest fixes
+4. Validation: Cross-validate with multiple AIs (Claude + Gemini)
+5. Learning: Accelerate understanding of unfamiliar tech
+
+**Example**: Phase 8 Session 0 - validated three-pillar strategy with Claude before writing code, got BM25 integration patterns, designed test suite structure. Session 3 - Gemini caught bugs Claude missed. Not just "ChatGPT for code" but systematic AI collaboration throughout lifecycle.
 
 ---
 
