@@ -65,11 +65,15 @@ Systematic optimization achieving 90% accuracy through three-layer boosting arch
 
 ## Architecture Diagrams
 
-**Coming Soon**:
-- RAG Pipeline Architecture (3-layer boosting system)
-- Nomad Cluster Topology
-- Observability Stack
-- Caching Architecture
+Visual representations of system architecture.
+
+**Available Now**:
+- [Infrastructure Architecture (Phase 7)](diagrams/infrastructure-architecture-phase7.png) - Complete 10-layer stack showing Nomad cluster, Consul service mesh, Traefik routing, observability, AI/ML platform, and RAG knowledge system
+- [RAG Pipeline Architecture (Phase 8)](diagrams/rag-pipeline-architecture-phase8.png) - 5-layer pipeline with three-layer boosting system (Hybrid Search + Document Type + Topic Authority)
+
+**See**: [Diagrams README](diagrams/README.md) for detailed explanations, usage guidance, and technical details
+
+**Coverage**: Complete infrastructure topology (10 layers) + RAG optimization architecture (3-layer boosting)
 
 ---
 
@@ -77,7 +81,19 @@ Systematic optimization achieving 90% accuracy through three-layer boosting arch
 
 Complete overview of technologies used across all phases.
 
-**Coming Soon**: Comprehensive tech stack documentation
+**See**: [Complete Technology Stack](tech-stack.md)
+
+**Categories**:
+- **Infrastructure & Orchestration**: Nomad, Consul, Traefik, Docker, Proxmox, NFS
+- **Observability & Monitoring**: Prometheus, Grafana, AlertManager, Loki, Exporters
+- **AI/ML Platform**: Ollama (hybrid CPU+GPU), embedding models, LLMs
+- **RAG Platform**: Streamlit, SQLite, hybrid search, document boosting, caching
+- **Development & Process**: Python, Git, pytest, ADR framework
+- **Hardware & Network**: 3-node cluster, Mac Studio GPU, 10TB NAS
+
+**Philosophy**: Operational simplicity prioritized over complexity. Resource efficiency on older hardware. Production-grade patterns with learning value.
+
+**Achievements**: 90% RAG accuracy, 24× GPU speedup, 200× cache speedup, 99.9%+ uptime
 
 ---
 

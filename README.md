@@ -129,6 +129,16 @@ Technical presentations explaining complex work for different audiences. Slide d
 - [Phase 7: RAG Platform](presentations/phase-7-rag-platform.pdf) - Production system (15 slides)
 - [Phase 8: 90% Accuracy Journey](presentations/phase-8-optimization-journey.pdf) - Optimization story (13 slides)
 
+### 📸 [Screenshots](assets/screenshots/)
+Visual evidence of production infrastructure and observability stack.
+
+**Available Now** (8 screenshots):
+- Observability Stack (Grafana dashboards, Prometheus targets, host metrics)
+- Infrastructure Services (Nomad jobs, Consul services, Traefik routing)
+- AI/ML Platform (Ollama monitoring - CPU + GPU hybrid deployment)
+
+**Coverage**: Complete infrastructure visibility from observability through orchestration to AI/ML
+
 ### 🧠 [Methodology](methodology/)
 How I approach engineering: systematic validation, data-driven decisions, ADR framework, session-based development, continuous improvement.
 
