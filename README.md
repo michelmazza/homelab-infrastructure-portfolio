@@ -1,4 +1,7 @@
 # Infrastructure Engineering Portfolio
+
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 ## Systematic DevOps & AI/ML Engineering
 
 **Michel Mazza** | DevOps Engineer | AI/ML Systems Builder  
@@ -279,20 +282,15 @@ I build production systems with systematic engineering practices. Every architec
 
 ---
 
-## Repository Status
+## Contributing
 
-**Week 1**: Foundation complete - structure and landing page ✅  
-**Week 2**: Phase 8 detailed content - COMPLETE ✅  
-**Week 3**: Additional phases, polish, screenshots (planned)  
-**Week 4**: Public launch on GitHub, LinkedIn announcement (planned)
+This is a **personal portfolio** documenting my engineering journey. While I don't accept pull requests, I welcome feedback via [Issues](https://github.com/michelmazza/homelab-infrastructure-portfolio/issues).
 
----
+Found a typo or broken link? Please open an issue!
 
-## License
+Interested in the methodology? Feel free to fork and adapt to your own projects.
 
-This portfolio documentation is licensed under the MIT License.
-
-All content represents real work on personal infrastructure. No proprietary or confidential information included.
+**License**: This work is licensed under [CC BY 4.0](LICENSE) - you're free to use and adapt with attribution.
 
 ---
 
