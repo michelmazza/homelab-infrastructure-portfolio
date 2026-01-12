@@ -51,9 +51,9 @@ Got: Random session notes 😱
 
 **The Approach** (Initial Plan):  
 Systematic three-layer optimization:
-- **Layer 1**: Hybrid Search (BM25 + Vector) - \u2705 Implemented
-- **Layer 2**: Small-to-Big Retrieval - \u274c Abandoned (chunks already optimal size)
-- **Layer 3**: Systematic Experiments - \u274c Replaced with data-driven boosting
+- **Layer 1**: Hybrid Search (BM25 + Vector) - ✅ Implemented
+- **Layer 2**: Small-to-Big Retrieval - ❌ Abandoned (chunks already optimal size)
+- **Layer 3**: Systematic Experiments - ❌ Replaced with data-driven boosting
 
 **The Pivot**: After Session 2's breakthrough with document boosting (+55pp!), pivoted from planned complex retrieval to simpler authority-based ranking. Data showed chunks were already 1847 chars (not 186 as assumed), making Small-to-Big unnecessary.
 
