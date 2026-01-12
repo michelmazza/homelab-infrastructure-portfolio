@@ -4,6 +4,39 @@ Visual representations of system architecture across phases.
 
 ---
 
+## Infrastructure Architecture (Phase 6)
+
+**File**: `infrastructure-architecture-phase6.png`  
+**Created**: December 31, 2025  
+**Updated**: January 12, 2026 (sanitized for portfolio)  
+**Source**: draw.io
+
+**Shows 9-Layer Stack (Pre-RAG)**:
+- **DNS Layer**: Synology DNS (all services point to single IP)
+- **Reverse Proxy Layer**: Traefik v2.10 with Consul catalog provider, host-based routing, Prometheus metrics
+- **Service Discovery Layer**: Consul 3-node cluster (service registration, health monitoring, DNS interface)
+- **Orchestration Layer**: Nomad 3-node cluster (container orchestration, job scheduling, resource allocation)
+- **Application Services**: 15+ containerized services (web apps, search, infrastructure tools)
+- **AI/ML Inference Layer**: Hybrid Ollama deployment (CPU cluster-based + GPU Mac Studio)
+- **Observability Layer**: Prometheus (scraping), Grafana (dashboards), monitoring infrastructure
+- **External GPU Infrastructure**: Mac Studio M1 Max (24× faster than CPU, GPU-accelerated inference)
+- **Storage Layer**: Synology NAS via NFS (persistent data)
+
+**Key Characteristics**:
+- Foundation architecture before RAG platform
+- 15+ services operational
+- Hybrid AI/ML deployment (CPU learning + GPU production)
+- Complete observability stack
+- Production-grade infrastructure
+
+**Use For**: 
+- Showing infrastructure foundation
+- Architecture discussions before RAG
+- Demonstrating pre-RAG capabilities
+- Baseline for Phase 7 comparison
+
+---
+
 ## Infrastructure Architecture (Phase 7)
 
 **File**: `infrastructure-architecture-phase7.png`  

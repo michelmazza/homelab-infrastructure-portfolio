@@ -46,17 +46,19 @@ Query: "What is Nomad?"
 Expected: ADR-001 (authoritative definition)  
 Got: Random session notes 😱
 
-**The Approach**  
+**The Approach** (Initial Plan):  
 Systematic three-layer optimization:
-- **Week 1, Pillar 1**: Hybrid Search (BM25 + Vector)
-- **Week 2, Pillar 2**: Small-to-Big Retrieval (planned)
-- **Week 3, Pillar 3**: Systematic Experiments (planned)
+- **Layer 1**: Hybrid Search (BM25 + Vector) - \u2705 Implemented
+- **Layer 2**: Small-to-Big Retrieval - \u274c Abandoned (chunks already optimal size)
+- **Layer 3**: Systematic Experiments - \u274c Replaced with data-driven boosting
+
+**The Pivot**: After Session 2's breakthrough with document boosting (+55pp!), pivoted from planned complex retrieval to simpler authority-based ranking. Data showed chunks were already 1847 chars (not 186 as assumed), making Small-to-Big unnecessary.
 
 **The Breakthrough**  
-Session 2 diagnostic revealed ADR-001 was rank #10, needed top 3.  
-Gap analysis: 0.0497 score difference.  
-Solution: Boost ADRs by 1.5× (data-driven calculation, not guessing).  
-Result: **30% → 75% accuracy in one 45-minute session.**
+Session 2 diagnostic tool revealed ADR-001 was ranked #8 when it should be #1.  
+**The Gap**: ADR-001 scored 0.4513 vs top-ranked document's 0.4990 - just 0.0477 points behind.  
+Solution: Calculated 1.5× boost factor from this gap (data-driven, not guessed).  
+Result: **20% → 75% accuracy in one 45-minute session** (+55pp breakthrough!)
 
 Session 6 added topic authority: **75% → 90%** 🎉
 

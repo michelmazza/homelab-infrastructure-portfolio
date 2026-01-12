@@ -160,10 +160,10 @@ Phase 8 journey demonstrates all practices in action
 
 ## Future Additions
 
-**Post-Launch** (if beneficial):
-- Phase 7 detailed narrative (if recruiters request foundation story)
+**Post-Launch** (if audience requests):
+- Phase 7 detailed narrative (if requested for foundation story)
 - Phase 9 journey (when agentic RAG completes)
-- Phases 4-6 summary (if SRE roles need operations focus)
+- Phases 4-6 summary (if operations focus needed for specific roles)
 
 **Current approach provides flexibility to expand while maintaining focus on strongest story.**
 

@@ -68,12 +68,13 @@ Systematic optimization achieving 90% accuracy through three-layer boosting arch
 Visual representations of system architecture.
 
 **Available Now**:
-- [Infrastructure Architecture (Phase 7)](diagrams/infrastructure-architecture-phase7.png) - Complete 10-layer stack showing Nomad cluster, Consul service mesh, Traefik routing, observability, AI/ML platform, and RAG knowledge system
-- [RAG Pipeline Architecture (Phase 8)](diagrams/rag-pipeline-architecture-phase8.png) - 5-layer pipeline with three-layer boosting system (Hybrid Search + Document Type + Topic Authority)
+- [Infrastructure Architecture (Phase 6)](diagrams/infrastructure-architecture-phase6.png) - 9-layer stack before RAG (foundation)
+- [Infrastructure Architecture (Phase 7)](diagrams/infrastructure-architecture-phase7.png) - Complete 10-layer stack with RAG platform
+- [RAG Pipeline Architecture (Phase 8)](diagrams/rag-pipeline-architecture-phase8.png) - 5-layer pipeline with three-layer boosting system
 
 **See**: [Diagrams README](diagrams/README.md) for detailed explanations, usage guidance, and technical details
 
-**Coverage**: Complete infrastructure topology (10 layers) + RAG optimization architecture (3-layer boosting)
+**Coverage**: Pre-RAG foundation (9 layers) + Complete infrastructure (10 layers) + RAG optimization (3-layer boosting)
 
 ---
 

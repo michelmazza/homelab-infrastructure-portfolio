@@ -1,18 +1,3 @@
-**Question: "How do you use AI in your development workflow?"**
-
-Explain comprehensive AI integration:
-1. Planning: Validate architecture in Session 0 with AI
-2. Implementation: Get patterns and examples during coding
-3. Debugging: Use AI to interpret errors and suggest fixes
-4. Validation: Cross-validate with multiple AIs (Claude + Gemini)
-5. Learning: Accelerate understanding of unfamiliar tech
-
-**Example**: Phase 8 Session 0 - validated three-pillar strategy with Claude before writing code, got BM25 integration patterns, designed test suite structure. Session 3 - Gemini caught bugs Claude missed. Not just "ChatGPT for code" but systematic AI collaboration throughout lifecycle.# Engineering Methodology
-
-How I approach complex engineering problems through systematic validation, data-driven decisions, and continuous improvement.
-
----
-
 ## Philosophy
 
 **Measure twice, cut once.** Build systems that can be understood, validated, and improved through data rather than intuition. Document decisions while context is fresh. Iterate rapidly but deliberately.
@@ -52,6 +37,38 @@ Session 2 achieved a +55pp accuracy improvement in 45 minutes by focusing exclus
 - Detailed session notes (decisions, experiments, results)
 - Handoff summary (next steps, open questions)
 - Git commits (recovery points)
+
+### Backlog Management
+
+**Practice**: Maintain prioritized backlog, reviewed and groomed at phase boundaries.
+
+**Process**:
+1. **Capture**: Ideas, improvements, and features added to backlog as discovered
+2. **Review**: Backlog examined at start of each new phase
+3. **Groom**: Items refined based on learnings from previous phase
+4. **Prioritize**: Next phase objectives selected from groomed backlog
+5. **Execute**: Focused work on prioritized items during phase
+
+**Why It Works**:
+- Captures ideas without disrupting current focus
+- Prevents forgetting valuable improvements
+- Data-driven reprioritization based on actual results
+- Flexibility to respond to discoveries and changing priorities
+- Clear phase-to-phase continuity
+
+**Example from Phases 7-9**:
+- **Phase 7**: RAG platform creation (backlog item from Phase 6)
+- **Post-Phase 7**: Discovery - factual accuracy 0% (became top priority!)
+- **Phase 8**: Retrieval optimization (reprioritized from backlog due to Phase 7 findings)
+- **Phase 9**: MCP tools integration (next backlog priority after optimization complete)
+
+**Adaptive Planning**: Initial Phase 8 plan was Small-to-Big retrieval, but data showed chunks already optimal. Backlog contained document boosting as alternative - quickly pivoted based on measurements.
+
+**Backlog Review Triggers**:
+- End of each phase (systematic review)
+- Major discoveries during phase (potential reprioritization)
+- External feedback or new requirements
+- Completion of high-priority items
 
 ---
 
@@ -335,12 +352,46 @@ Before writing any optimization code, discussed the three-pillar strategy (Hybri
 **Why Both**: Different models catch different issues. Cross-validation increases confidence. Gemini caught test suite bugs in Phase 8 that Claude missed. Claude provided implementation patterns Gemini couldn't generate as effectively.
 
 **Best Practices**:
-- Engage AI early (planning, not just validation)
-- Be specific in requests (context + clear question)
-- Iterate on feedback (refine based on AI responses)
-- Cross-validate with multiple AIs (complementary perspectives)
-- Document AI insights in session notes (capture reasoning)
-- Use AI to accelerate, not replace, thinking
+
+Engage AI early (planning, not just validation)
+
+Be specific in requests (context + clear question)
+
+Iterate on feedback (refine based on AI responses)
+
+Cross-validate with multiple AIs (complementary perspectives)
+
+Document AI insights in session notes (capture reasoning)
+
+Use AI to accelerate, not replace, thinking
+
+### Claude Code for Systematic Operations
+
+**Practice**: Use Claude Code for bulk operations that require human oversight at each step.
+
+**When to Use**:
+- Bulk configuration updates across multiple files
+- Systematic refactoring or standardization  
+- Operations requiring validation at each step
+- Tasks where human approval is critical for correctness
+
+**Example from Phase 9**:
+During MCP tools integration, discovered the need for preflight validation checks. Claude Code helped implement systematic validation across multiple tool configurations, but with human review approving each step. The preflight check insight itself came from human observation during testing - AI accelerated implementation, but engineer provided the critical thinking.
+
+**Human-in-Loop Requirement**:
+- AI suggests changes → Human approves each step
+- Critical thinking remains with the engineer
+- AI accelerates execution, doesn't replace judgment  
+- Validation and testing remain manual responsibilities
+- Engineer catches edge cases AI might miss
+
+**Claude Code vs Claude Chat**:
+- **Claude Code**: Systematic file operations, bulk updates, multi-file refactoring
+- **Claude Chat**: Strategy, architecture, debugging, learning, ad-hoc questions
+
+**Best Practice**: Use Claude Code for systematic "how" (implementation), keep human focus on "what" and "why" (decisions, validation, and strategic thinking).
+
+**Tools Complement Each Other**: Claude Chat for planning Session 0 approach, Claude Code for executing systematic changes, human engineer for validation and critical decisions.
 
 ---
 

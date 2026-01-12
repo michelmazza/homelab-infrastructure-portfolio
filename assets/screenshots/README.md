@@ -22,7 +22,7 @@ Visual evidence of production infrastructure and observability stack.
 **File**: `ollama_monitoring_dashboard.png`  
 **Shows**: AI/ML platform monitoring with Ollama endpoint health tracking for both CPU (Nomad cluster) and GPU (Mac Studio) instances. Demonstrates blackbox exporter probes for HTTP health checks, response times, and availability metrics. Shows hybrid Ollama deployment architecture.
 
-**Achievement**: Fixed blackbox-exporter endpoint configuration (192.168.2.41 → 192.168.2.42) during Week 3, demonstrating troubleshooting skills.
+**Achievement**: Fixed blackbox-exporter endpoint configuration during Week 3 Session 1, demonstrating systematic troubleshooting and monitoring skills.
 
 ### Prometheus Targets
 **File**: `prometheus_targets.png`  
