@@ -294,6 +294,26 @@ Interested in the methodology? Feel free to fork and adapt to your own projects.
 
 ---
 
-**Last Updated**: January 5, 2026  
-**Portfolio Version**: v0.2 - Week 2 Complete  
-**Next Update**: Week 3 - Additional phases and polish
+---
+
+## Portfolio Information
+
+**Last Updated**: January 12, 2026  
+**Portfolio Version**: 1.0 (Public Launch)  
+**License**: [CC BY 4.0](LICENSE) - Free to use with attribution  
+
+**Current Status**: 
+- ✅ Phase 8 complete (90% RAG accuracy achieved)
+- 🚧 Phase 9 in progress (MCP tools integration)
+- 📋 Continuous documentation and methodology refinement
+
+**Next Major Update**: Upon Phase 9 completion (MCP tools integration with live infrastructure APIs)
+
+**Feedback**: Found an error or have suggestions? [Open an issue](https://github.com/michelmazza/homelab-infrastructure-portfolio/issues)
+
+---
+
+**Built with systematic engineering practices. Every decision measured. Every result validated.**
+
+**Michel Mazza** | DevOps Engineer | AI/ML Systems Builder  
+📍 Montreal, QC | 🔗 [LinkedIn](https://www.linkedin.com/in/michelmazza/) 
