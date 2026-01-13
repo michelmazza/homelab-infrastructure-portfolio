@@ -135,14 +135,15 @@ Technical presentations explaining complex work for different audiences. Slide d
 - [Phase 8: 90% Accuracy Journey](presentations/phase-8-optimization-journey.pdf) - Optimization story (13 slides)
 
 ### 📸 [Screenshots](assets/screenshots/)
-Visual evidence of production infrastructure and observability stack.
+Visual evidence of production infrastructure, observability, and AI/ML systems.
 
-**Available Now** (8 screenshots):
-- Observability Stack (Grafana dashboards, Prometheus targets, host metrics)
-- Infrastructure Services (Nomad jobs, Consul services, Traefik routing)
-- AI/ML Platform (Ollama monitoring - CPU + GPU hybrid deployment)
+**Available Now** (10 screenshots):
+- **Observability Stack** (Grafana dashboards, Prometheus targets, host metrics)
+- **Infrastructure Services** (Nomad jobs, Consul services, Traefik routing)
+- **AI/ML Platform** (Ollama monitoring - CPU + GPU hybrid deployment)
+- **RAG User Interface** (Streamlit UI - welcome screen + query workflow with 90% accuracy in action)
 
-**Coverage**: Complete infrastructure visibility from observability through orchestration to AI/ML
+**Coverage**: Complete system visibility from infrastructure through observability to user-facing AI/ML applications
 
 ### 🧠 [Methodology](methodology/)
 How I approach engineering: systematic validation, data-driven decisions, ADR framework, session-based development, continuous improvement.
