@@ -137,9 +137,60 @@ Complete RAG workflow demonstrating the 90% accuracy achievement in action:
 - ✅ Professional user experience
 
 **Future Additions**:
-- Phase 9 MCP tools integration demo (when complete)
-- Agentic RAG workflow screenshots
-- Multi-step reasoning examples
+- Phase 9 storyboard (Session 13)
+- Phase 9 architecture diagrams (Session 14)
+- Integration chaos testing results (future)
+
+---
+
+## Phase 9: Glass Box AI - Visual Transparency (Week 3)
+
+### Glass Box AI - Thought Trace
+**File**: `phase-9-glass-box-thought-trace.png`
+
+Explainable AI in action showing step-by-step reasoning.
+
+**Query**: "Is Traefik running?"
+
+**Visual Elements**:
+- Intent: LIVE_STATUS (90.0% confident)
+- Total Time: 1010ms | Steps: 3 | Success: 100%
+- Expandable step details with JSON inputs/outputs
+
+**Steps Shown**:
+- 🎯 Step 1: Classify intent (0.1ms)
+- 🔧 Step 2: Get traefik status (1009.8ms) ← Bottleneck!
+- ✨ Step 3: Synthesize answer (0.0ms)
+
+**Achievement**: Makes AI reasoning completely transparent. Users see what intent was detected, which tools were called, what data was used, and where time was spent.
+
+---
+
+### Glass Box AI - Timeline Visualization  
+**File**: `phase-9-glass-box-timeline.png`
+
+Plotly Gantt chart showing execution timeline.
+
+**Key Insight**: 
+- Intent: 0.1ms (0.01%)
+- MCP tools: 1009.8ms (99.99%) ← Optimization target
+- Synthesis: 0.0ms (0.00%)
+
+**Impact**: Visual proof that 99.99% of time is in MCP API calls, NOT AI reasoning. Guides optimization focus.
+
+---
+
+### Glass Box AI - Performance Dashboard
+**File**: `phase-9-glass-box-performance.png`
+
+Performance metrics and speedup visualization.
+
+**Left**: Pie chart showing time breakdown  
+**Right**: Bar chart comparing actual (1010ms) vs target (5000ms)
+
+**Result**: **5× faster than target!** 🏆
+
+**Demonstrates**: Both performance achievement AND engineering discipline (bottleneck identification).
 
 ---
 
@@ -147,19 +198,18 @@ Complete RAG workflow demonstrating the 90% accuracy achievement in action:
 
 These screenshots demonstrate:
 - **Production Operations**: Full observability stack operational
-- **Service Mesh**: Consul service registry and health checks
-- **Service Discovery**: Automatic target discovery via Prometheus
-- **Health Monitoring**: Comprehensive service health tracking
-- **Orchestration**: 15+ services managed via Nomad
-- **Reverse Proxy**: Dynamic routing with Traefik
-- **AI/ML Engineering**: Production RAG system with 90% accuracy
-- **Full-Stack Development**: Backend optimization + professional UI
+- **Service Mesh**: Consul + Nomad + Traefik orchestration
+- **AI/ML Engineering**: 90% RAG accuracy + Agentic capabilities
+- **Explainable AI**: Glass Box visualization ⭐ NEW!
+- **Full-Stack Development**: Backend + frontend + visualization  
 - **SRE Practices**: Monitoring-first infrastructure
+- **Innovation**: Visual transparency in AI reasoning ⭐
 
 ---
 
-**Status**: 10 screenshots total ✅  
+**Status**: 13 screenshots total ✅ (+3 Phase 9)  
 **Week 3 Session 1**: Infrastructure + observability (8 screenshots)  
 **Week 3 Session 4**: RAG platform UI (2 screenshots)  
-**Coverage**: Complete system from infrastructure → observability → AI/ML → user experience  
-**Next**: Phase 9 agentic workflows (when complete)
+**Week 3 Session 12**: Glass Box AI (3 screenshots) ⭐ NEW!  
+**Coverage**: Complete system from infrastructure → AI/ML → explainable AI  
+**Grade**: Portfolio-ready ✅

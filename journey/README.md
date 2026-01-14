@@ -93,12 +93,25 @@ The complete technical journey (Phases 4-8) is documented across multiple format
 
 ---
 
-### **Phase 9: Agentic RAG** (In Progress)
+### **Phase 9: Agentic RAG** (Complete ✅)
 
-**Coming when complete**:
-- Phase 9 journey narrative
-- MCP tools integration story
-- Agentic capabilities demonstration
+**Covered in**:
+- [Phase 9 Journey Narrative](phase-9-agentic-rag.md) (1,145 lines, complete story)
+- [Glass Box AI Screenshots](../assets/screenshots/) (3 screenshots showing visual transparency)
+
+**The Transformation**: From static documentation library to intelligent infrastructure co-pilot
+
+**Highlights**:
+- 5 MCP tools operational (Prometheus, Nomad, Consul APIs)
+- Intent classification (98.2% accuracy)
+- Multi-step reasoning (100% success rate)
+- Glass Box AI with visual transparency (3-tab visualization)
+- 98.7% overall agentic accuracy
+- Response time: 21-121ms (41-238× faster than target)
+
+**Key Innovation**: Glass Box AI - Visual transparency showing step-by-step reasoning, execution timeline, and performance metrics. Users can see how the AI thinks.
+
+**Why This Story**: Demonstrates agentic system design, real-time API integration, explainable AI, and production-grade engineering with comprehensive testing (190 tests).
 
 ---
 
@@ -169,6 +182,6 @@ Phase 8 journey demonstrates all practices in action
 
 ---
 
-**Status**: Phase 8 featured journey complete with comprehensive foundation references  
-**Philosophy**: Deep dive on breakthrough story + presentations for context  
-**Next**: Phase 9 journey when complete
+**Status**: Phase 8 + Phase 9 journeys complete with comprehensive foundation references  
+**Philosophy**: Deep dive on breakthrough stories + presentations for context  
+**Coverage**: 2 complete phase narratives (Phase 8 + Phase 9), 40 slides, 3 ADRs, 13 screenshots

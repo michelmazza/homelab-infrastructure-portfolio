@@ -33,8 +33,14 @@ This portfolio documents my journey building production-grade infrastructure and
 **Advanced RAG Platform** → Production knowledge system with Streamlit UI  
 **Retrieval Optimization** → 0% to 90% accuracy breakthrough ⭐  
 
-### Evolution (Phase 9 - In Progress)
-**Agentic RAG** → MCP tools integration for infrastructure automation  
+### Evolution (Phase 9 - Complete) ✅
+**Agentic RAG** → Intelligent infrastructure co-pilot with Glass Box AI  
+- 5 MCP tools operational (Prometheus, Nomad, Consul APIs)
+- Intent classification with 98.2% accuracy
+- Multi-step reasoning with 100% success rate
+- Glass Box AI with visual transparency (3-tab visualization)
+- 98.7% overall agentic accuracy
+- Response time: 21-121ms (41-238× faster than target)  
 
 ---
 
@@ -137,13 +143,14 @@ Technical presentations explaining complex work for different audiences. Slide d
 ### 📸 [Screenshots](assets/screenshots/)
 Visual evidence of production infrastructure, observability, and AI/ML systems.
 
-**Available Now** (10 screenshots):
+**Available Now** (13 screenshots):
 - **Observability Stack** (Grafana dashboards, Prometheus targets, host metrics)
 - **Infrastructure Services** (Nomad jobs, Consul services, Traefik routing)
 - **AI/ML Platform** (Ollama monitoring - CPU + GPU hybrid deployment)
 - **RAG User Interface** (Streamlit UI - welcome screen + query workflow with 90% accuracy in action)
+- **Glass Box AI** (Phase 9 - Thought trace, timeline, performance visualization) ⭐ NEW!
 
-**Coverage**: Complete system visibility from infrastructure through observability to user-facing AI/ML applications
+**Coverage**: Complete system visibility from infrastructure through observability to explainable AI
 
 ### 🧠 [Methodology](methodology/)
 How I approach engineering: systematic validation, data-driven decisions, ADR framework, session-based development, continuous improvement.
@@ -174,10 +181,15 @@ How I approach engineering: systematic validation, data-driven decisions, ADR fr
 **AI/ML Engineering**
 - ✅ Advanced RAG platform with 611 embedded chunks
 - ✅ 90% search accuracy (0% → 90% optimization)
+- ✅ Agentic RAG with 98.7% accuracy (Phase 9 complete)
+- ✅ 5 MCP tools (Prometheus, Nomad, Consul APIs)
+- ✅ Glass Box AI with visual transparency (explainable AI)
+- ✅ Intent classification (98.2% accuracy)
+- ✅ Multi-step reasoning (100% success rate)
+- ✅ Response time: 21-121ms (41-238× faster than target)
 - ✅ Hybrid search (BM25 + vector embeddings)
 - ✅ ~25ms search latency (production-grade performance)
 - ✅ Ollama local LLM deployment
-- ✅ MCP tools integration (Phase 9 in progress)
 
 **Documentation & Process**
 - ✅ 10+ comprehensive ADRs documenting major decisions
@@ -210,11 +222,18 @@ How I approach engineering: systematic validation, data-driven decisions, ADR fr
 
 ## Current Status
 
-**Phase 9: Agentic RAG with MCP Tools** (In Progress)  
-Building an intelligent agent that integrates with infrastructure using Model Context Protocol. The RAG system becomes a co-pilot that can query live infrastructure state, diagnose issues, and provide contextual guidance.
+**Phase 9: Agentic RAG - Complete ✅**  
+Transformed the RAG system from a passive knowledge base into an intelligent infrastructure co-pilot. The system now understands user intent, queries live infrastructure state, and provides diagnostic guidance with complete visual transparency.
 
-**Week 1 Complete**: 5 MCP tools operational (Prometheus, Nomad, Consul APIs)  
-**Next**: Intent classification, multi-step reasoning, production integration
+**Achievements**:
+- ✅ 5 MCP tools operational (Prometheus, Nomad, Consul APIs)
+- ✅ Intent classification (98.2% accuracy)
+- ✅ Multi-step reasoning (100% success rate)
+- ✅ Glass Box AI with visual transparency
+- ✅ 98.7% overall agentic accuracy
+- ✅ 41-238× faster than target response time
+
+**Next**: Phase 10 planning
 
 ---
 
@@ -299,16 +318,16 @@ Interested in the methodology? Feel free to fork and adapt to your own projects.
 
 ## Portfolio Information
 
-**Last Updated**: January 12, 2026  
-**Portfolio Version**: 1.0 (Public Launch)  
+**Last Updated**: January 14, 2026  
+**Portfolio Version**: 1.1 (Phase 9 Complete)  
 **License**: [CC BY 4.0](LICENSE) - Free to use with attribution  
 
 **Current Status**: 
 - ✅ Phase 8 complete (90% RAG accuracy achieved)
-- 🚧 Phase 9 in progress (MCP tools integration)
+- ✅ Phase 9 complete (Agentic RAG with Glass Box AI)
 - 📋 Continuous documentation and methodology refinement
 
-**Next Major Update**: Upon Phase 9 completion (MCP tools integration with live infrastructure APIs)
+**Next Major Update**: Upon Phase 10 planning and initiation
 
 **Feedback**: Found an error or have suggestions? [Open an issue](https://github.com/michelmazza/homelab-infrastructure-portfolio/issues)
 
