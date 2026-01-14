@@ -116,7 +116,8 @@ Session 6 added topic authority: **75% → 90%** 🎉
 Phase-by-phase narratives showing the evolution from empty cluster to production AI/ML platform. Problems faced, decisions made, results achieved.
 
 **Available Now**:
-- [Phase 8: 0% to 90% Optimization](journey/phase-8-optimization.md) - The breakthrough story
+- [Phase 8: 0% to 90% Optimization](journey/phase-8-optimization.md) ⭐ Featured - The hero story (dramatic transformation)
+- [Phase 9: Agentic RAG with Glass Box AI](journey/phase-9-agentic-rag.md) - Intelligence evolution (library → co-pilot)
 
 ### 🏛️ [Architecture](architecture/)
 Major architecture decisions (ADRs) documenting choices, trade-offs, and alternatives considered. Plus diagrams showing system topology and data flows.

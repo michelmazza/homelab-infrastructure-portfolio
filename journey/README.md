@@ -8,7 +8,7 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
-**Phase 8: Retrieval Quality Optimization**  
+**Phase 8: Retrieval Quality Optimization** ⭐ **Featured**  
 **File**: [phase-8-optimization.md](phase-8-optimization.md)  
 **Summary**: From 0% to 90% accuracy in 7.5 hours
 
@@ -23,18 +23,38 @@ The breakthrough story of transforming a broken RAG system into a production-rea
 
 **Key Metrics**: 90% accuracy, ~25ms latency, 8 sessions, ~7.5 hours
 
-**Why This Story**: Demonstrates systematic optimization methodology, data-driven engineering, and measurable results. The most compelling narrative with clear before/after transformation.
+**Why This Story**: The most compelling narrative with clear before/after transformation. Perfect for "Tell me about a challenging project" interviews.
+
+---
+
+**Phase 9: Agentic RAG with Glass Box AI**  
+**File**: [phase-9-agentic-rag.md](phase-9-agentic-rag.md)  
+**Summary**: From static library to intelligent co-pilot in 3 weeks
+
+The transformation story of evolving the RAG system from passive documentation into an active infrastructure assistant with visual transparency. Features MCP tools integration, intent classification, and the Glass Box AI innovation.
+
+**Highlights**:
+- 5 MCP tools operational (Prometheus, Nomad, Consul APIs)
+- 98.7% agentic accuracy (intent + reasoning + retrieval)
+- Intent classification: 98.2% accuracy
+- Multi-step reasoning: 100% success rate
+- Glass Box AI: Visual transparency (3-tab visualization)
+- Response time: 21-121ms (41-238× faster than target)
+
+**Key Metrics**: 98.7% accuracy, 3 weeks (11 sessions), ~9 hours, 190 tests
+
+**Why This Story**: Demonstrates agentic system design, real-time API integration, explainable AI, and production engineering with comprehensive testing.
 
 ---
 
 ### **Foundation Documented in Other Formats**
 
-The complete technical journey (Phases 4-8) is documented across multiple formats. This approach provides:
+The complete technical journey (Phases 4-9) is documented across multiple formats. This approach provides:
 - **Visual coverage** via presentations (40 slides)
 - **Technical decisions** via ADRs (3 decision records)
-- **Detailed narrative** for the breakthrough phase (Phase 8)
+- **Detailed narratives** for breakthrough phases (Phase 8 + Phase 9)
 
-**Rather than duplicate content, we provide deep coverage of the most compelling story.**
+**Rather than duplicate content, we provide deep coverage of the most compelling stories.**
 
 ---
 
@@ -120,20 +140,20 @@ The complete technical journey (Phases 4-8) is documented across multiple format
 ### **Quality Over Quantity**
 
 Rather than creating multiple mediocre narratives, we focus on:
-- **One exceptional story** (Phase 8) told in depth
+- **Two exceptional stories** (Phase 8 + Phase 9) told in depth
 - **Visual coverage** for foundation phases (presentations)
 - **Technical depth** for key decisions (ADRs)
 - **Production evidence** via screenshots
 
 **This approach provides**:
-- Clear interview focus (the breakthrough story)
+- Clear interview focus (Phase 8 = optimization hero story, Phase 9 = agentic innovation)
 - Comprehensive coverage (presentations + ADRs + screenshots)
 - Time efficiency (deep dive on what matters most)
 - Flexibility (can add more narratives post-launch if needed)
 
 ---
 
-## Story Arc: Foundation → Build → Optimize
+## Story Arc: Foundation → Build → Optimize → Evolve
 
 **Foundation** (Phases 4-6):
 - Built reliable infrastructure (Nomad, Consul, Traefik)
@@ -151,14 +171,24 @@ Rather than creating multiple mediocre narratives, we focus on:
 - Achieved 90% accuracy (exceeded 60-70% target)
 - Documented complete methodology
 
-**Result**: Clear progression from infrastructure → platform → optimization
+**Evolve** (Phase 9):
+- Transformed static library into intelligent co-pilot
+- Integrated live infrastructure via 5 MCP tools
+- Built agentic reasoning (intent + multi-step workflows)
+- Added Glass Box AI for visual transparency
+- Achieved 98.7% agentic accuracy
+
+**Result**: Clear progression from infrastructure → platform → optimization → intelligence
 
 ---
 
 ## Interview Usage
 
 ### **For "Tell me about a challenging project"**:
-Point to Phase 8 journey narrative (complete story with metrics)
+Point to **Phase 8 journey** (0% → 90% transformation - most dramatic story)
+
+### **For "Show me AI/ML engineering work"**:
+Point to **Phase 9 journey** (agentic RAG + Glass Box AI innovation)
 
 ### **For "How do you approach system design"**:
 Reference ADR-001 (Nomad decision) and ADR-008 (RAG architecture)
@@ -167,7 +197,10 @@ Reference ADR-001 (Nomad decision) and ADR-008 (RAG architecture)
 Show Infrastructure Overview presentation + screenshots
 
 ### **For "Walk me through your methodology"**:
-Phase 8 journey demonstrates all practices in action
+Phase 8 or Phase 9 journeys demonstrate all practices in action
+
+### **For "Explainable AI / transparency"**:
+Phase 9 Glass Box AI (visual reasoning, timeline, performance)
 
 ---
 
@@ -175,10 +208,12 @@ Phase 8 journey demonstrates all practices in action
 
 **Post-Launch** (if audience requests):
 - Phase 7 detailed narrative (if requested for foundation story)
-- Phase 9 journey (when agentic RAG completes)
+- Phase 10+ journeys (as new phases complete)
 - Phases 4-6 summary (if operations focus needed for specific roles)
+- Phase 9 presentation (storyboard + slides - Session 13)
+- Phase 9 architecture deep-dive (diagrams + ADRs - Session 14)
 
-**Current approach provides flexibility to expand while maintaining focus on strongest story.**
+**Current approach provides flexibility to expand while maintaining focus on strongest stories.**
 
 ---
 
