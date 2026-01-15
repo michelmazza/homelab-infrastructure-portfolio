@@ -7,9 +7,9 @@ Professional slide decks documenting the infrastructure journey from foundation 
 ## Infrastructure Overview (Phases 4-6)
 
 ### Foundation & Production Operations
-**File**: infrastructure-overview.pdf  
-**Slides**: 12 slides  
-**Format**: PDF  
+**File**: infrastructure-overview.pdf
+**Slides**: 12 slides
+**Format**: PDF
 **Coverage**: Phases 4-6
 
 Visual presentation of the infrastructure foundation:
@@ -33,9 +33,9 @@ Visual presentation of the infrastructure foundation:
 ## Phase 7: RAG Platform Foundation
 
 ### Production Knowledge System
-**File**: phase-7-rag-platform.pdf  
-**Slides**: 15 slides  
-**Format**: PDF  
+**File**: phase-7-rag-platform.pdf
+**Slides**: 15 slides
+**Format**: PDF
 **Coverage**: Phase 7 (Advanced RAG Platform)
 
 Complete RAG platform creation story:
@@ -61,9 +61,9 @@ Complete RAG platform creation story:
 ## Phase 8: Retrieval Quality Optimization
 
 ### The 90% Accuracy Journey
-**File**: phase-8-optimization-journey.pdf  
-**Slides**: 13 slides  
-**Format**: PDF  
+**File**: phase-8-optimization-journey.pdf
+**Slides**: 13 slides
+**Format**: PDF
 **Coverage**: Phase 8 (Retrieval Optimization)
 
 The breakthrough optimization story:
@@ -87,14 +87,59 @@ The breakthrough optimization story:
 
 ---
 
+## Phase 9: Agentic RAG with Glass Box AI ⭐
+
+### From Library to Co-Pilot
+**File**: Phase-9-Presentation-Agentic-RAG.pdf
+**Slides**: 14 slides
+**Format**: PDF
+**Coverage**: Phase 9 (Agentic RAG)
+
+The intelligent co-pilot transformation story:
+- **The Vision**: Transform static library into intelligent infrastructure assistant
+- **Week 1**: MCP Tools Foundation (5 operational tools, ADR Threshold Injector)
+- **Week 2**: Agentic Reasoning (98.2% intent accuracy, 100% multi-step success)
+- **Week 3**: Glass Box AI (visual transparency with 3-tab interface) ⭐
+- **Key Innovation**: Complete visual transparency into AI reasoning process
+- **The Results**: 98.7% accuracy, 41-238× faster than target
+
+**Highlights**:
+- Three-week systematic build strategy (Foundation → Intelligence → Transparency)
+- 5 MCP tools: Prometheus, Nomad, Consul APIs with security guardrails
+- Intent classification with pattern matching (98.2% accuracy, <1ms response)
+- Cross-reference capability (100% accuracy correlating live vs documented thresholds)
+- Multi-step reasoning workflows (100% success rate)
+- **Glass Box AI Innovation**: Thought Trace, Timeline, Performance dashboards
+- 3 interactive screenshots showing actual system in operation
+- Architecture diagram with workflow formula
+- 6 key engineering principles (Foundation First, Security by Default, Intent is Key, etc.)
+
+**Key Achievement**: 
+- 98.7% overall agentic accuracy (157/159 tests passing)
+- Response time: 21-121ms (41-238× faster than 5000ms engineering goal)
+- 190 total tests (100% passing)
+- **Glass Box AI revealed**: 99.9% of time in MCP API calls, not AI reasoning
+- Complete transformation from passive library to active diagnostic co-pilot
+
+**Use for**: 
+- Agentic AI discussions and demonstrations
+- Glass Box AI innovation showcase (unique differentiator)
+- Systematic engineering methodology examples
+- Multi-step reasoning and intent classification talks
+- "Show me AI/ML work" interview conversations
+- Engineering principles and best practices discussions
+
+---
+
 ## Story Arc (Complete)
 
 **Phase Progression**:
 1. **Infrastructure Overview** (Phases 4-6): Foundation and production operations
 2. **Phase 7**: Build the RAG platform (production-ready system)
 3. **Phase 8**: Optimize systematically (0% → 90% accuracy)
+4. **Phase 9**: Transform into intelligent co-pilot (98.7% agentic accuracy, Glass Box AI) ⭐
 
-**Interview Narrative**: *"We built solid infrastructure, created a production RAG platform, then optimized it systematically to achieve 90% accuracy - exceeding targets through data-driven engineering."*
+**Interview Narrative**: *"We built solid infrastructure, created a production RAG platform, optimized it systematically to 90% accuracy, then transformed it into an intelligent co-pilot with complete visual transparency through Glass Box AI."*
 
 ---
 
@@ -106,6 +151,7 @@ All presentations follow core engineering principles:
 - **Systematic Approach**: Methodical problem-solving showcased
 - **Engineering Honesty**: Problems positioned as discoveries
 - **Professional Quality**: Interview and presentation-ready
+- **Innovation Highlight**: Unique contributions clearly demonstrated
 
 ---
 
@@ -116,14 +162,21 @@ All presentations follow core engineering principles:
 | **Infrastructure Overview** | 4-6 | 12 | Nomad, Consul, Observability, Hybrid Ollama |
 | **Phase 7** | 7 | 15 | RAG platform, 5-layer architecture, retrieval ceiling |
 | **Phase 8** | 8 | 13 | 0% → 90% optimization, hybrid search, boosting |
-| **Total** | **4-8** | **40** | **Complete technical journey** |
+| **Phase 9** | 9 | 14 | Agentic RAG, Glass Box AI, 98.7% accuracy, MCP tools ⭐ |
+| **Total** | **4-9** | **54** | **Complete technical journey with AI innovation** |
 
 ---
 
-## Coming Soon
+## Featured Innovation: Glass Box AI ⭐
 
-- **Phase 9**: Agentic RAG with MCP Tools (when Phase 9 completes)
+Phase 9's Glass Box AI represents a unique contribution to explainable AI:
+- **The Problem**: Traditional AI agents are black boxes - users see outputs but not reasoning
+- **The Solution**: Three-tab visual interface exposing every step, tool call, and performance metric
+- **The Impact**: Revealed 99.9% of time in API calls (not AI logic), directing optimization precisely
+- **The Differentiator**: Not just "what AI can do" but "showing HOW it does it"
+
+This innovation demonstrates engineering excellence through transparency and user trust through visibility.
 
 ---
 
-**Status**: 3 presentations complete, covering Phases 4-8 with full visual storytelling ✅
+**Status**: 4 presentations complete, covering Phases 4-9 with full visual storytelling and Glass Box AI innovation ✅

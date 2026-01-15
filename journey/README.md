@@ -8,8 +8,8 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
-**Phase 8: Retrieval Quality Optimization** ⭐ **Featured**  
-**File**: [phase-8-optimization.md](phase-8-optimization.md)  
+**Phase 8: Retrieval Quality Optimization** ⭐ **Featured**
+**File**: [phase-8-optimization.md](phase-8-optimization.md)
 **Summary**: From 0% to 90% accuracy in 7.5 hours
 
 The breakthrough story of transforming a broken RAG system into a production-ready knowledge platform through systematic engineering. Features the dramatic Session 2 (+55pp from document boosting) and the elegant Session 6 solution (+15pp from topic authority).
@@ -27,8 +27,8 @@ The breakthrough story of transforming a broken RAG system into a production-rea
 
 ---
 
-**Phase 9: Agentic RAG with Glass Box AI**  
-**File**: [phase-9-agentic-rag.md](phase-9-agentic-rag.md)  
+**Phase 9: Agentic RAG with Glass Box AI** ⭐
+**File**: [phase-9-agentic-rag.md](phase-9-agentic-rag.md)
 **Summary**: From static library to intelligent co-pilot in 3 weeks
 
 The transformation story of evolving the RAG system from passive documentation into an active infrastructure assistant with visual transparency. Features MCP tools integration, intent classification, and the Glass Box AI innovation.
@@ -50,7 +50,7 @@ The transformation story of evolving the RAG system from passive documentation i
 ### **Foundation Documented in Other Formats**
 
 The complete technical journey (Phases 4-9) is documented across multiple formats. This approach provides:
-- **Visual coverage** via presentations (40 slides)
+- **Visual coverage** via presentations (54 slides)
 - **Technical decisions** via ADRs (3 decision records)
 - **Detailed narratives** for breakthrough phases (Phase 8 + Phase 9)
 
@@ -67,7 +67,7 @@ The complete technical journey (Phases 4-9) is documented across multiple format
   - Phase 4: Production Operations (15+ services, NFS storage)
   - Phase 5: Observability Stack (Prometheus, Grafana, alerting)
   - Phase 6: AI/ML Foundation (Ollama hybrid deployment)
-  
+
 **Key Decision**:
 - [ADR-001: Orchestration Platform Selection](../architecture/decisions/ADR-001-orchestration-platform.md)
   - Nomad vs K3s vs Docker Swarm analysis
@@ -117,6 +117,7 @@ The complete technical journey (Phases 4-9) is documented across multiple format
 
 **Covered in**:
 - [Phase 9 Journey Narrative](phase-9-agentic-rag.md) (1,145 lines, complete story)
+- [Phase 9 Presentation](../presentations/Phase-9-Presentation-Agentic-RAG.pdf) (14 slides) ✅
 - [Glass Box AI Screenshots](../assets/screenshots/) (3 screenshots showing visual transparency)
 
 **The Transformation**: From static documentation library to intelligent infrastructure co-pilot
@@ -171,7 +172,7 @@ Rather than creating multiple mediocre narratives, we focus on:
 - Achieved 90% accuracy (exceeded 60-70% target)
 - Documented complete methodology
 
-**Evolve** (Phase 9):
+**Evolve** (Phase 9): ⭐
 - Transformed static library into intelligent co-pilot
 - Integrated live infrastructure via 5 MCP tools
 - Built agentic reasoning (intent + multi-step workflows)
@@ -210,13 +211,12 @@ Phase 9 Glass Box AI (visual reasoning, timeline, performance)
 - Phase 7 detailed narrative (if requested for foundation story)
 - Phase 10+ journeys (as new phases complete)
 - Phases 4-6 summary (if operations focus needed for specific roles)
-- Phase 9 presentation (storyboard + slides - Session 13)
 - Phase 9 architecture deep-dive (diagrams + ADRs - Session 14)
 
 **Current approach provides flexibility to expand while maintaining focus on strongest stories.**
 
 ---
 
-**Status**: Phase 8 + Phase 9 journeys complete with comprehensive foundation references  
-**Philosophy**: Deep dive on breakthrough stories + presentations for context  
-**Coverage**: 2 complete phase narratives (Phase 8 + Phase 9), 40 slides, 3 ADRs, 13 screenshots
+**Status**: Phase 8 + Phase 9 journeys complete with comprehensive foundation references ✅
+**Philosophy**: Deep dive on breakthrough stories + presentations for context
+**Coverage**: 2 complete phase narratives (Phase 8 + Phase 9), 54 slides, 3 ADRs, 13 screenshots
