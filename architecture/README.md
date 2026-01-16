@@ -92,14 +92,12 @@ Visual representations of system architecture.
 - [Infrastructure Architecture (Phase 6)](diagrams/infrastructure-architecture-phase6.png) - 9-layer stack before RAG (foundation)
 - [Infrastructure Architecture (Phase 7)](diagrams/nomad_cluster_architecture-phase7.png) - Complete 10-layer stack with RAG platform
 - [RAG Pipeline Architecture (Phase 8)](diagrams/rag-pipeline-architecture-phase8.png) - 5-layer pipeline with three-layer boosting system
-
-**Coming Soon** (Session 14):
-- Phase 9 System Topology - MCP tools integration with infrastructure
-- Phase 9 Data Flow - Agentic reasoning pipeline with Glass Box AI
+- [Phase 9 System Topology](diagrams/phase-9-system-topology.png) - MCP tools integration with infrastructure (5-layer agentic architecture)
+- [Phase 9 Data Flow](diagrams/phase-9-data-flow.png) - Agentic reasoning pipeline with Glass Box AI (8-step execution)
 
 **See**: [Diagrams README](diagrams/README.md) for detailed explanations, usage guidance, and technical details
 
-**Coverage**: Pre-RAG foundation (9 layers) + Complete infrastructure (10 layers) + RAG optimization (3-layer boosting) + Agentic intelligence (5 MCP tools)
+**Coverage**: Pre-RAG foundation (9 layers) + Complete infrastructure (10 layers) + RAG optimization (3-layer boosting) + Agentic intelligence (5 MCP tools + Glass Box AI)
 
 ---
 
@@ -125,4 +123,4 @@ Complete overview of technologies used across all phases.
 ---
 
 **Status**: Content being added incrementally based on phase completion  
-**Latest**: Phase 9 complete - Agentic RAG with Glass Box AI
+**Latest**: Phase 9 complete - Agentic RAG with Glass Box AI (Session 14 ✅)
