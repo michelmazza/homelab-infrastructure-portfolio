@@ -135,6 +135,158 @@ Visual representations of system architecture across phases.
 
 ---
 
+## Agentic RAG System Architecture (Phase 9)
+
+**Files**: 
+- `phase-9-system-topology.png` (System components and integration)
+- `phase-9-data-flow.png` (Execution pipeline and Glass Box AI)
+
+**Created**: January 16, 2026  
+**Updated**: January 16, 2026 (Session 14)  
+**Source**: draw.io
+
+### System Topology
+
+**Shows 5-Layer Agentic Architecture**:
+
+**Layer 1 - User Interface**:
+- Streamlit chat interface
+- Multi-turn conversation support
+- Glass Box AI transparency visualization
+
+**Layer 2 - Agentic Reasoning**:
+- Intent classifier (98.2% accuracy)
+- Query analyzer and decomposition
+- Tool selection strategy
+- Response synthesis
+
+**Layer 3 - MCP Tools (5 live tools)**:
+- Prometheus API: Real-time metrics, health checks, alerts
+- Nomad API: Job status, allocation data, cluster health
+- Consul API: Service discovery, health checks, KV store
+- ADR Threshold Injector: Decision criteria embedding (innovation!)
+- Documentation RAG: Semantic + keyword search
+
+**Layer 4 - Infrastructure Integration**:
+- Prometheus: 14+ targets, 30s scrape interval
+- Nomad: 3-node cluster orchestration
+- Consul: Service mesh, health checks
+- SQLite: Conversation persistence (WAL mode)
+
+**Layer 5 - Storage & Knowledge**:
+- RAG embeddings: 15MB, 611 chunks, 85 documents
+- Conversation database: SQLite with analytics
+- Infrastructure state: Live API queries (no caching!)
+
+**Key Architecture Decisions**:
+- **Live Infrastructure Queries**: Real-time state over caching (accuracy priority)
+- **MCP Tool Pattern**: Standardized interface, consistent error handling
+- **Glass Box AI**: Transparent reasoning and decision visualization
+- **ADR Threshold Injector**: Embed decision criteria in tool responses (unique innovation!)
+
+**Integration Characteristics**:
+- Zero error rate (120 tests, 100% passing)
+- 0.7s average tool response time
+- 98.7% overall agentic accuracy
+- 41-238× faster than target latency
+
+### Data Flow Diagram
+
+**Shows 8-Step Agentic Pipeline**:
+
+**Step 1 - Query Reception**:
+- User question captured via Streamlit
+- Conversation context loaded
+- Query preprocessing
+
+**Step 2 - Intent Classification** (98.2% accuracy):
+- Infrastructure query detection
+- Documentation query detection
+- Multi-step reasoning identification
+- Tool selection strategy determined
+
+**Step 3 - Tool Orchestration**:
+- Single tool: Direct execution
+- Multiple tools: Parallel coordination
+- Cross-reference: Multi-tool validation
+
+**Step 4 - MCP Tool Execution**:
+- Prometheus: `query_metric`, `query_range`
+- Nomad: `query_job_status`, `query_allocations`
+- Consul: `query_service`, `query_health`
+- ADR Injector: Threshold-aware responses
+- Documentation RAG: Hybrid search retrieval
+
+**Step 5 - Cross-Reference Validation** (100% accuracy):
+- Multi-tool consistency checking
+- Threshold comparison (ADR-injected criteria)
+- Contradiction detection
+- Confidence scoring
+
+**Step 6 - Response Synthesis**:
+- Combine tool results
+- Apply LLM reasoning
+- Format for clarity
+- Add source attribution
+
+**Step 7 - Glass Box AI Visualization**:
+- Show reasoning chain
+- Display tool calls and responses
+- Highlight decision points
+- Expose confidence scores
+
+**Step 8 - Delivery**:
+- Natural language response
+- Transparent reasoning visible
+- Sources cited
+- Follow-up suggested
+
+**Performance Pipeline Metrics**:
+- Intent classification: 21ms average
+- Tool execution: 0.7s average (dominated by API calls)
+- Cross-reference: 121ms average
+- Overall latency: 41-238× better than target
+- Glass Box rendering: <50ms overhead
+
+**Innovation Highlights**:
+
+**ADR Threshold Injector** (Week 1):
+- Embeds decision thresholds directly in tool responses
+- Enables single-step diagnostic reasoning
+- Example: "CPU > 80% threshold (ADR-008)" in metrics response
+- Transforms multi-step into single-step analysis
+
+**Glass Box AI** (Week 3):
+- Transparent reasoning vs black box models
+- Visual decision chain exposure
+- User trust through explainability
+- Debugging and validation simplified
+
+**Cross-Reference Engine** (100% accuracy):
+- Multi-tool validation for critical queries
+- Prometheus + Nomad health cross-check
+- ADR threshold comparison across tools
+- Contradiction detection and resolution
+
+**Use For**:
+
+**System Topology Diagram**:
+- "Explain your agentic RAG architecture" → Show 5-layer integration
+- "How do you handle live infrastructure queries?" → Point to MCP tools layer
+- "What makes this different from standard RAG?" → Highlight ADR Threshold Injector
+
+**Data Flow Diagram**:
+- "Walk me through an infrastructure query" → Show 8-step pipeline
+- "How do you ensure accuracy?" → Point to cross-reference validation (100%)
+- "What's Glass Box AI?" → Highlight transparency in Step 7
+
+**Together**:
+- Complete picture: topology (components) + data flow (execution)
+- Demonstrates systematic architecture thinking
+- Shows innovation in both design and implementation
+
+---
+
 ## Diagram Philosophy
 
 **Visual Clarity**:
@@ -176,6 +328,12 @@ Visual representations of system architecture across phases.
 - "Explain your caching strategy" → Point to cache hit/miss paths
 - "What was the breakthrough?" → Session 2 document boosting story
 
+**Agentic RAG Architecture**:
+- "What's your most innovative project?" → Phase 9 agentic system
+- "How do you integrate AI with infrastructure?" → Show MCP tools layer
+- "Explain Glass Box AI" → Data flow diagram, Step 7 transparency
+- "What makes your RAG system unique?" → ADR Threshold Injector innovation
+
 ### **For Technical Discussions**
 
 **System Design**:
@@ -188,6 +346,12 @@ Visual representations of system architecture across phases.
 - Visualizes data-driven optimization
 - Documents before/after improvements
 
+**Agentic Systems**:
+- Phase 9 topology shows component integration
+- Data flow demonstrates multi-step reasoning
+- Glass Box AI shows transparency-first design
+- Cross-reference validation shows accuracy priority
+
 ### **For Portfolio Navigation**
 
 **Complete Story**:
@@ -196,7 +360,12 @@ Visual representations of system architecture across phases.
 3. Phase 7 presentation → RAG platform creation
 4. RAG Pipeline diagram → Component-level architecture
 5. Phase 8 presentation → Optimization journey
-6. Phase 8 journey narrative → Complete breakthrough story
+6. Phase 8 journey narrative → Breakthrough story
+7. Phase 9 presentation → Agentic transformation
+8. Phase 9 system topology → Architecture deep-dive
+9. Phase 9 data flow → Execution pipeline detail
+10. Phase 9 journey narrative → Complete implementation story
+11. Phase 9 metrics page → Quantified results
 
 ---
 
@@ -259,8 +428,29 @@ Visual representations of system architecture across phases.
 - Cache hit rate: 40%
 - LLM fallback rate: 40%
 
+### **Agentic RAG Architecture**
+
+**Components Detailed**:
+- Intent Classifier: 98.2% accuracy (54/55 tests)
+- MCP Tools: 5 tools, 120 tests, 100% success rate
+- Cross-Reference: 100% accuracy (60/60 tests)
+- ADR Threshold Injector: Embedded decision criteria
+- Glass Box AI: Transparent reasoning visualization
+- SQLite: Conversation persistence, analytics
+
+**Performance Metrics**:
+- Overall agentic accuracy: 98.7% (157/159 tests)
+- Response time: 21-121ms (41-238× faster than target)
+- Tool execution: 0.7s average (99.99% API call time)
+- Zero error rate: 120/120 tool tests passing
+
+**Innovation Metrics**:
+- ADR Threshold Injector: +10pp accuracy improvement
+- Glass Box AI: Enhanced user trust, simplified debugging
+- Cross-reference validation: 100% accuracy on critical queries
+
 ---
 
-**Status**: 2 architecture diagrams (sanitized, documented)  
-**Coverage**: Infrastructure (10 layers) + RAG Pipeline (5 layers + 3-layer boosting)  
+**Status**: 4 architecture diagrams (sanitized, documented)  
+**Coverage**: Infrastructure (Phases 6-7) + RAG Pipeline (Phase 8) + Agentic RAG (Phase 9)  
 **Quality**: Interview-ready, technically accurate, security-conscious
