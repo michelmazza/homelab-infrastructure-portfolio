@@ -113,11 +113,16 @@ The complete technical journey (Phases 4-9) is documented across multiple format
 
 ---
 
-### **Phase 9: Agentic RAG** (Complete ✅)
+### **Phase 9: Agentic RAG** (Complete)
 
 **Covered in**:
 - [Phase 9 Journey Narrative](phase-9-agentic-rag.md) (1,145 lines, complete story)
-- [Phase 9 Presentation](../presentations/Phase-9-Presentation-Agentic-RAG.pdf) (14 slides) ✅
+- [Phase 9 Presentation](../presentations/Phase-9-Presentation-Agentic-RAG.pdf) (14 slides)
+- [Phase 9 Architecture Diagrams](../architecture/diagrams/README.md#agentic-rag-system-architecture-phase-9) (2 diagrams)
+  - System Topology: 5-layer agentic architecture with MCP tools
+  - Data Flow: 8-step execution pipeline with Glass Box AI
+- [Phase 9 Metrics Analysis](../results/phase-9-metrics.md) (447 lines, detailed breakdown)
+- [ADR-010: Agentic RAG Architecture](../architecture/decisions/ADR-010-Agentic-RAG-Architecture.md)
 - [Glass Box AI Screenshots](../assets/screenshots/) (3 screenshots showing visual transparency)
 
 **The Transformation**: From static documentation library to intelligent infrastructure co-pilot
@@ -131,6 +136,13 @@ The complete technical journey (Phases 4-9) is documented across multiple format
 - Response time: 21-121ms (41-238× faster than target)
 
 **Key Innovation**: Glass Box AI - Visual transparency showing step-by-step reasoning, execution timeline, and performance metrics. Users can see how the AI thinks.
+
+**Architecture Deep-Dive:**
+
+- System topology diagram showing 5-layer integration
+- Data flow diagram showing 8-step agentic pipeline
+- Comprehensive metrics analysis (447 lines)
+- ADR-010 documenting all architectural decisions
 
 **Why This Story**: Demonstrates agentic system design, real-time API integration, explainable AI, and production-grade engineering with comprehensive testing (190 tests).
 
@@ -192,7 +204,7 @@ Point to **Phase 8 journey** (0% → 90% transformation - most dramatic story)
 Point to **Phase 9 journey** (agentic RAG + Glass Box AI innovation)
 
 ### **For "How do you approach system design"**:
-Reference ADR-001 (Nomad decision) and ADR-008 (RAG architecture)
+Reference ADR-001 (Nomad decision) and ADR-008 (RAG architecture) and ADR-010 (Agentic architecture)
 
 ### **For "Show me your infrastructure work"**:
 Show Infrastructure Overview presentation + screenshots
@@ -203,6 +215,9 @@ Phase 8 or Phase 9 journeys demonstrate all practices in action
 ### **For "Explainable AI / transparency"**:
 Phase 9 Glass Box AI (visual reasoning, timeline, performance)
 
+### **For "Show me architecture documentation"**:
+Phase 9 architecture diagrams (system topology + data flow)
+
 ---
 
 ## Future Additions
@@ -211,12 +226,12 @@ Phase 9 Glass Box AI (visual reasoning, timeline, performance)
 - Phase 7 detailed narrative (if requested for foundation story)
 - Phase 10+ journeys (as new phases complete)
 - Phases 4-6 summary (if operations focus needed for specific roles)
-- Phase 9 architecture deep-dive (diagrams + ADRs - Session 14)
 
 **Current approach provides flexibility to expand while maintaining focus on strongest stories.**
 
 ---
 
-**Status**: Phase 8 + Phase 9 journeys complete with comprehensive foundation references ✅
+**Status**: Phase 8 + Phase 9 journeys complete with comprehensive foundation references
+**Phase 9 Architecture**: Complete with diagrams, metrics, and ADR-010
 **Philosophy**: Deep dive on breakthrough stories + presentations for context
-**Coverage**: 2 complete phase narratives (Phase 8 + Phase 9), 54 slides, 3 ADRs, 13 screenshots
+**Coverage**: 2 complete phase narratives (Phase 8 + Phase 9), 54 slides, 4 ADRs, 13 screenshots, 4 architecture diagrams
