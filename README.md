@@ -146,11 +146,11 @@ homelab-portfolio/
 
 ## 🎯 Quick Navigation
 
-**For Technical Depth**: [Journey Narrative](journey/README.md) - Complete story with technical details
-**For Visual Overview**: [Presentations](presentations/) - 54 slides covering Phases 4-9
-**For Engineering Decisions**: [Architecture Decisions](architecture/decisions/) - ADRs explaining key choices
-**For Metrics**: [Results](results/) - Quantified outcomes and test coverage
-**For Screenshots**: [Assets](assets/screenshots/) - Glass Box AI interface ⭐
+- **For Technical Depth**: [Journey Narrative](journey/README.md) - Complete story with technical details
+- **For Visual Overview**: [Presentations](presentations/) - 54 slides covering Phases 4-9
+- **For Engineering Decisions**: [Architecture Decisions](architecture/decisions/) - ADRs explaining key choices
+- **For Metrics**: [Results](results/) - Quantified outcomes and test coverage
+- **For Screenshots**: [Assets](assets/screenshots/) - Glass Box AI interface ⭐
 
 ---
 
