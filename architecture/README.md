@@ -55,11 +55,32 @@ Systematic optimization achieving 90% accuracy through three-layer boosting arch
 
 ---
 
-## Story Arc: Foundation → Build → Optimize
+### ADR-010: Phase 9 Agentic RAG Architecture
+**File**: [decisions/ADR-010-Agentic-RAG-Architecture.md](decisions/ADR-010-Agentic-RAG-Architecture.md)  
+**Date**: January 6-16, 2026  
+**Status**: ✅ Complete
+
+Transform RAG from static library to intelligent infrastructure co-pilot with real-time system awareness.
+
+**Key Decisions**:
+- Function calling (structured tools) with rule-based intent classification
+- 5 MCP tools: Prometheus, Nomad, Consul for live infrastructure queries
+- Read-only safety enforcement (100% GET operations, zero mutations)
+- ADR Threshold Injector: Embed thresholds in tool responses for context-aware diagnostics
+- Glass Box AI: 3-tab visualization (Thought Trace, Timeline, Performance)
+
+**Results**: 98.7% accuracy (157/159 tests), 21-121ms response times (41-238× faster than 5000ms target), 100% cross-reference accuracy, 190 automated tests passing
+
+**Innovations**: ADR Threshold Injector (single-step diagnostics), Glass Box AI (transparent reasoning)
+
+---
+
+## Story Arc: Foundation → Build → Optimize → Intelligence
 
 **ADR-001** (Foundation): Choose simple, reliable orchestration  
 **ADR-008** (Build): Create production RAG platform  
-**ADR-009** (Optimize): Achieve 90% accuracy through systematic engineering
+**ADR-009** (Optimize): Achieve 90% accuracy through systematic engineering  
+**ADR-010** (Intelligence): Transform into agentic co-pilot with live system awareness
 
 ---
 
@@ -69,12 +90,16 @@ Visual representations of system architecture.
 
 **Available Now**:
 - [Infrastructure Architecture (Phase 6)](diagrams/infrastructure-architecture-phase6.png) - 9-layer stack before RAG (foundation)
-- [Infrastructure Architecture (Phase 7)](diagrams/infrastructure-architecture-phase7.png) - Complete 10-layer stack with RAG platform
+- [Infrastructure Architecture (Phase 7)](diagrams/nomad_cluster_architecture-phase7.png) - Complete 10-layer stack with RAG platform
 - [RAG Pipeline Architecture (Phase 8)](diagrams/rag-pipeline-architecture-phase8.png) - 5-layer pipeline with three-layer boosting system
+
+**Coming Soon** (Session 14):
+- Phase 9 System Topology - MCP tools integration with infrastructure
+- Phase 9 Data Flow - Agentic reasoning pipeline with Glass Box AI
 
 **See**: [Diagrams README](diagrams/README.md) for detailed explanations, usage guidance, and technical details
 
-**Coverage**: Pre-RAG foundation (9 layers) + Complete infrastructure (10 layers) + RAG optimization (3-layer boosting)
+**Coverage**: Pre-RAG foundation (9 layers) + Complete infrastructure (10 layers) + RAG optimization (3-layer boosting) + Agentic intelligence (5 MCP tools)
 
 ---
 
@@ -89,13 +114,15 @@ Complete overview of technologies used across all phases.
 - **Observability & Monitoring**: Prometheus, Grafana, AlertManager, Loki, Exporters
 - **AI/ML Platform**: Ollama (hybrid CPU+GPU), embedding models, LLMs
 - **RAG Platform**: Streamlit, SQLite, hybrid search, document boosting, caching
-- **Development & Process**: Python, Git, pytest, ADR framework
+- **Agentic Systems**: MCP tools (Prometheus, Nomad, Consul), intent classification, cross-reference engine
+- **Development & Process**: Python, pytest, UV, Git, ADR framework
 - **Hardware & Network**: 3-node cluster, Mac Studio GPU, 10TB NAS
 
 **Philosophy**: Operational simplicity prioritized over complexity. Resource efficiency on older hardware. Production-grade patterns with learning value.
 
-**Achievements**: 90% RAG accuracy, 24× GPU speedup, 200× cache speedup, 99.9%+ uptime
+**Achievements**: 98.7% agentic accuracy, 90% RAG accuracy, 24× GPU speedup, 200× cache speedup, 99.9%+ uptime
 
 ---
 
-**Status**: Content being added incrementally based on phase completion
+**Status**: Content being added incrementally based on phase completion  
+**Latest**: Phase 9 complete - Agentic RAG with Glass Box AI
