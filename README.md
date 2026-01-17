@@ -208,9 +208,9 @@ Traditional AI agents are black boxes - users see outputs but not reasoning. Gla
 
 ## 📞 Contact & Links
 
-**LinkedIn**: [linkedin.com/in/michelmazza/](https://www.linkedin.com/in/michelmazza/)
-**Location**: Montreal, QC, Canada
-**Portfolio**: This repository documents real production systems and engineering approach
+- **LinkedIn**: [linkedin.com/in/michelmazza/](https://www.linkedin.com/in/michelmazza/)
+- **Location**: Montreal, QC, Canada
+- **Portfolio**: This repository documents real production systems and engineering approach
 
 ---
 
