@@ -107,14 +107,14 @@ Document type boosting: ADRs and core docs ranked higher. **+55 percentage point
 
 ## 📊 Portfolio Statistics
 
-**Infrastructure**: 3-node Nomad cluster, Consul service mesh, Traefik reverse proxy
-**Services Orchestrated**: 15+ production services
-**Observability**: Prometheus + Grafana + Loki with mobile alerting via Pushover
-**AI/ML Platform**: Ollama (CPU + GPU hybrid), RAG with 611 chunks across 85 documents
-**RAG Accuracy**: 90% retrieval accuracy → 98.7% agentic accuracy
-**Test Coverage**: 190 automated tests (100% passing)
-**Documentation**: 1,145-line journey narrative, ADRs, architecture diagrams, session notes
-**Presentations**: 54 professional slides across 4 presentations (14 slides on Glass Box AI)
+- **Infrastructure**: 3-node Nomad cluster, Consul service mesh, Traefik reverse proxy
+- **Services Orchestrated**: 15+ production services
+- **Observability**: Prometheus + Grafana + Loki with mobile alerting via Pushover
+- **AI/ML Platform**: Ollama (CPU + GPU hybrid), RAG with 611 chunks across 85 documents
+- **RAG Accuracy**: 90% retrieval accuracy → 98.7% agentic accuracy
+- **Test Coverage**: 190 automated tests (100% passing)
+- **Documentation**: 1,145-line journey narrative, ADRs, architecture diagrams, session notes
+- **Presentations**: 54 professional slides across 4 presentations (14 slides on Glass Box AI)
 
 ---
 
