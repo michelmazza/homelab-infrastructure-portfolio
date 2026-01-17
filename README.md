@@ -122,23 +122,23 @@ Document type boosting: ADRs and core docs ranked higher. **+55 percentage point
 
 ```
 homelab-portfolio/
-├── README.md                    # This file
-├── journey/                     # Narrative documentation
-│   └── README.md                # Complete journey (1,145 lines)
-├── presentations/               # Slide decks (54 slides total)
-│   ├── infrastructure-overview.pdf        # Phases 4-6 (12 slides)
-│   ├── phase-7-rag-platform.pdf          # Phase 7 (15 slides)
-│   ├── phase-8-optimization-journey.pdf  # Phase 8 (13 slides)
-│   └── Phase-9-Presentation-Agentic-RAG.pdf  # Phase 9 (14 slides) ⭐
-├── architecture/                # Technical decisions
-│   ├── decisions/               # ADRs documenting key choices
-│   └── diagrams/                # System architecture visuals
-├── assets/                      # Screenshots and visuals
-│   └── screenshots/             # Glass Box AI interface screenshots ⭐
-├── results/                     # Metrics and analysis
-│   ├── phase-8-metrics.md       # Session-by-session breakdown
-│   └── test-results/            # Automated test outputs
-└── methodology/                 # Engineering approach
+├── README.md                                # This file
+├── journey/                                 # Narrative documentation
+│   └── README.md                            # Complete journey (1,145 lines)
+├── presentations/                           # Slide decks (54 slides total)
+│   ├── infrastructure-overview.pdf          # Phases 4-6 (12 slides)
+│   ├── phase-7-rag-platform.pdf             # Phase 7 (15 slides)
+│   ├── phase-8-optimization-journey.pdf     # Phase 8 (13 slides)
+│   └── Phase-9-Presentation-Agentic-RAG.pdf # Phase 9 (14 slides) ⭐
+├── architecture/                            # Technical decisions
+│   ├── decisions/                           # ADRs documenting key choices
+│   └── diagrams/                            # System architecture visuals
+├── assets/                                  # Screenshots and visuals
+│   └── screenshots/                         # Glass Box AI interface screenshots ⭐
+├── results/                                 # Metrics and analysis
+│   ├── phase-8-metrics.md                   # Session-by-session breakdown
+│   └── test-results/                        # Automated test outputs
+└── methodology/                             # Engineering approach
     └── documentation-strategy.md
 ```
 
