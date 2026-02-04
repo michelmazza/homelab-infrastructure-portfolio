@@ -75,9 +75,30 @@ Transform RAG from static library to intelligent infrastructure co-pilot with re
 
 ---
 
+### ADR-011: Phase 10 Performance & Intelligence Optimization
+**File**: [decisions/ADR-011-PORTFOLIO.md](decisions/ADR-011-PORTFOLIO.md)  
+**Date**: January 6-24, 2026  
+**Status**: ✅ Complete (Grade: A+)
+
+Transform unreliable AI (69% fallback) to production-ready infrastructure co-pilot (18% fallback).
+
+**Key Decisions**:
+- Chain of Verification (CoVe): 7-component tiered system with 3ms overhead
+- TTL caching with jitter: 605,000× cached speedup
+- Multi-factor confidence scoring: 60/30/10 split (verification/source/length)
+- ADR Threshold Injector: Single-step diagnostics with architectural context
+- Glass Box AI enhancements: Complete transparency into verification process
+
+**Results**: 18% fallback (51pp improvement), 605,000× speedup, 0% metadata dumps, 416 tests passing
+
+**Innovations**: Confidence Paradox diagnostic (51pp from 50 lines), TTL Jitter pattern (cache stampede prevention)
+
+---
+
 ## Story Arc: Foundation → Build → Optimize → Intelligence
 
 **ADR-001** (Foundation): Choose simple, reliable orchestration  
+**ADR-011** (Optimize): 18% fallback, 605,000× speedup, CoVe  
 **ADR-008** (Build): Create production RAG platform  
 **ADR-009** (Optimize): Achieve 90% accuracy through systematic engineering  
 **ADR-010** (Intelligence): Transform into agentic co-pilot with live system awareness
@@ -123,4 +144,4 @@ Complete overview of technologies used across all phases.
 ---
 
 **Status**: Content being added incrementally based on phase completion  
-**Latest**: Phase 9 complete - Agentic RAG with Glass Box AI (Session 14 ✅)
+**Latest**: Phase 10 complete - Performance & Intelligence Optimization ✅

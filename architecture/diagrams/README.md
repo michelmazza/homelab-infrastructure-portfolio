@@ -287,6 +287,69 @@ Visual representations of system architecture across phases.
 
 ---
 
+## Performance & Intelligence Architecture (Phase 10)
+
+**Files**: 
+- `phase-10-system-topology.png` (System components with CoVe integration)
+- `phase-10-cove-detail.png` (7-component verification flow)
+
+**Created**: January 24, 2026  
+**Updated**: February 2, 2026  
+**Source**: draw.io
+
+### System Topology
+
+**Shows 5-Layer Architecture with Performance Optimization**:
+
+**Layer 1 - User Interface**:
+- Streamlit chat interface
+- Glass Box AI with enhanced verification display
+- Confidence heatmap visualization
+
+**Layer 2 - Chain of Verification (CoVe)**:
+- 7-component tiered verification system
+- Text match (0.5ms) → Semantic (2ms) → LLM fallback (50ms)
+- Multi-factor confidence scoring (60/30/10 split)
+
+**Layer 3 - Performance Infrastructure**:
+- TTL cache with jitter (605,000× speedup)
+- Connection pooling (99% reuse rate)
+- Parallel MCP execution (2.8× faster)
+
+**Layer 4 - Agentic Tools**:
+- 5 MCP tools with ADR Threshold Injector
+- Prometheus, Nomad, Consul APIs
+- Documentation RAG with boosted retrieval
+
+**Layer 5 - Storage & Knowledge**:
+- SQLite with WAL mode
+- Embedding cache (15MB, 611 chunks)
+- Semantic similarity cache (0.95 threshold)
+
+### CoVe Detail Diagram
+
+**Shows 7-Component Verification Pipeline**:
+
+1. **Claim Extraction**: Parse response into verifiable claims
+2. **Text Match**: Exact substring verification (0.5ms)
+3. **Semantic Match**: Embedding similarity check (2ms)
+4. **LLM Verification**: Context-aware validation (50ms)
+5. **Multi-Factor Scoring**: Combine verification results
+6. **Confidence Aggregation**: Weighted claim confidence
+7. **Glass Box Visualization**: Display verification status
+
+**Key Metrics**:
+- 83× faster than uniform LLM verification
+- 3ms average CoVe overhead (94% better than 50ms target)
+- 18% fallback rate (beat <20% target by 2pp)
+
+**Use For**:
+- Explaining verification architecture
+- Performance optimization discussions
+- CoVe design interviews
+
+---
+
 ## Diagram Philosophy
 
 **Visual Clarity**:
@@ -451,6 +514,6 @@ Visual representations of system architecture across phases.
 
 ---
 
-**Status**: 4 architecture diagrams (sanitized, documented)  
-**Coverage**: Infrastructure (Phases 6-7) + RAG Pipeline (Phase 8) + Agentic RAG (Phase 9)  
+**Status**: 6 architecture diagrams (sanitized, documented)  
+**Coverage**: Infrastructure (Phases 6-7) + RAG Pipeline (Phase 8) + Agentic RAG (Phase 9) + Performance (Phase 10)  
 **Quality**: Interview-ready, technically accurate, security-conscious

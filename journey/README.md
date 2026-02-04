@@ -8,6 +8,27 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
+**Phase 10: Performance & Intelligence Optimization** ⭐ **NEW**
+**File**: [phase-10-performance-optimization.md](phase-10-performance-optimization.md)
+**Summary**: From 69% to 18% fallback with 605,000× speedup
+
+The optimization story of transforming unreliable AI into production-ready infrastructure co-pilot through systematic performance engineering and Chain of Verification. Features the dramatic Confidence Paradox discovery and the elegant 50-line surgical fix.
+
+**Highlights**:
+- 69% → 18% fallback rate journey (51pp improvement)
+- Chain of Verification (CoVe) 7-component architecture
+- 605,000× cached query speedup
+- Confidence Paradox diagnostic (high confidence = worse results?!)
+- Surgical fix: 50 lines, 51pp improvement, 12 minutes
+- 416 tests maintained with zero regressions
+
+**Key Metrics**: 18% fallback, 3ms CoVe overhead, 3 weeks, 15 sessions
+
+**Why This Story**: Demonstrates data-driven engineering, systematic debugging, and production-grade AI optimization. Perfect for "Tell me about performance optimization" interviews.
+
+---
+
+
 **Phase 8: Retrieval Quality Optimization** ⭐ **Featured**
 **File**: [phase-8-optimization.md](phase-8-optimization.md)
 **Summary**: From 0% to 90% accuracy in 7.5 hours
@@ -231,7 +252,7 @@ Phase 9 architecture diagrams (system topology + data flow)
 
 ---
 
-**Status**: Phase 8 + Phase 9 journeys complete with comprehensive foundation references
-**Phase 9 Architecture**: Complete with diagrams, metrics, and ADR-010
+**Status**: Phase 8 + Phase 9 + Phase 10 journeys complete with comprehensive foundation references
+**Phase 10 Architecture**: Complete with diagrams, metrics, and ADR-011
 **Philosophy**: Deep dive on breakthrough stories + presentations for context
-**Coverage**: 2 complete phase narratives (Phase 8 + Phase 9), 54 slides, 4 ADRs, 13 screenshots, 4 architecture diagrams
+**Coverage**: 3 complete phase narratives (Phase 8 + Phase 9 + Phase 10), 54 slides, 4 ADRs, 13 screenshots, 4 architecture diagrams

@@ -194,6 +194,54 @@ Performance metrics and speedup visualization.
 
 ---
 
+## Phase 10: Chain of Verification (CoVe) Screenshots (January 2026)
+
+### Glass Box AI - Enhanced Verification Display
+**File**: `phase-10-glass-box-tab1-reasoning.png`
+
+Enhanced Glass Box AI showing Chain of Verification results.
+
+**Visual Elements**:
+- Verification status per claim (verified/unverified/partial)
+- Multi-factor confidence scores (60/30/10 breakdown)
+- Source attribution with verification evidence
+- Tiered verification pathway indicator
+
+**Achievement**: Makes verification process completely transparent. Users see which claims were verified by text match, semantic similarity, or LLM fallback.
+
+---
+
+### Glass Box AI - Verification Detail
+**File**: `phase-10-glass-box-tab2-verification.png`
+
+Detailed verification breakdown showing CoVe in action.
+
+**Key Insight**:
+- Text match: 0.5ms (fastest, most certain)
+- Semantic: 2ms (good balance)
+- LLM fallback: 50ms (highest accuracy, slowest)
+
+**Impact**: Visual proof of tiered verification working. Shows 83× speedup over uniform LLM verification.
+
+---
+
+### Glass Box AI - Confidence Dashboard
+**File**: `phase-10-glass-box-tab3-confidence.png`
+
+Multi-factor confidence scoring visualization.
+
+**Scoring Breakdown**:
+- Verification factor: 60% weight
+- Source quality: 30% weight
+- Response length: 10% weight
+
+**Result**: Complete transparency into how confidence is calculated, not just the final number.
+
+**Demonstrates**: Both accuracy improvement AND engineering discipline (explainable scoring).
+
+---
+
+
 ## Portfolio Value
 
 These screenshots demonstrate:
@@ -207,9 +255,10 @@ These screenshots demonstrate:
 
 ---
 
-**Status**: 13 screenshots total ✅ (+3 Phase 9)  
+**Status**: 16 screenshots total ✅ (+3 Phase 10)  
 **Week 3 Session 1**: Infrastructure + observability (8 screenshots)  
 **Week 3 Session 4**: RAG platform UI (2 screenshots)  
-**Week 3 Session 12**: Glass Box AI (3 screenshots) ⭐ NEW!  
-**Coverage**: Complete system from infrastructure → AI/ML → explainable AI  
+**Week 3 Session 12**: Glass Box AI (3 screenshots)
+**Phase 10**: CoVe verification (3 screenshots) ⭐ NEW!  
+**Coverage**: Complete system from infrastructure → AI/ML → explainable AI → verified AI  
 **Grade**: Portfolio-ready ✅

@@ -62,7 +62,7 @@ This technology stack represents a production-grade homelab built on operational
 | **rank-bm25** | Latest | Keyword search | 8 | ✅ Hybrid search |
 
 **Hybrid Ollama Architecture**:
-- **CPU Deployment** (Nomad on lab02): Learning, experimentation, ~5 tokens/sec
+- **CPU Deployment** (Nomad on node-2): Learning, experimentation, ~5 tokens/sec
 - **GPU Deployment** (Mac Studio M1 Max): Production, performance, ~127 tokens/sec (24× faster!)
 - **Why both**: Learn on CPU, run production on GPU, educational + performance benefits
 
@@ -131,9 +131,9 @@ This technology stack represents a production-grade homelab built on operational
 
 | Component | Specs | Role | Status |
 |-----------|-------|------|--------|
-| **Proxmox lab01** | Intel i7-2600 (8 cores), 16GB RAM | Server + Client | ✅ Active |
-| **Proxmox lab02** | Intel i5-4570 (4 cores), 32GB RAM | Server + Client | ✅ Active |
-| **Proxmox lab03** | Intel i5-4590 (4 cores), 32GB RAM | Server + Client (Leader) | ✅ Active |
+| **Proxmox node-1** | Intel i7-2600 (8 cores), 16GB RAM | Server + Client | ✅ Active |
+| **Proxmox node-2** | Intel i5-4570 (4 cores), 32GB RAM | Server + Client | ✅ Active |
+| **Proxmox node-3** | Intel i5-4590 (4 cores), 32GB RAM | Server + Client (Leader) | ✅ Active |
 | **Mac Studio** | M1 Max (10 cores), 32GB RAM | GPU Inference | ✅ Active |
 | **Synology NAS** | 10TB storage | NFS Storage | ✅ Active |
 
