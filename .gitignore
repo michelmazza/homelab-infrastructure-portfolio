@@ -58,3 +58,6 @@ WEEK-*.md
 *-CORRECTIONS.md
 planning-notes/
 internal-docs/
+
+# Claude Code (local settings)
+.claude/
