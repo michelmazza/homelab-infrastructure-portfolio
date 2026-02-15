@@ -121,7 +121,7 @@ Transform single-query RAG into intelligent multi-hop reasoning with conservativ
 **ADR-011** (Optimize): 18% fallback, 605,000× speedup, CoVe  
 **ADR-008** (Build): Create production RAG platform  
 **ADR-009** (Optimize): Achieve 90% accuracy through systematic engineering  
-**ADR-010** (Intelligence): Transform into agentic co-pilot with live system awareness
+**ADR-010** (Intelligence): Transform into agentic co-pilot with live system awarenes  
 **ADR-012** (Intelligence Enhancement): Multi-hop reasoning with conservative confidence
 
 ---
