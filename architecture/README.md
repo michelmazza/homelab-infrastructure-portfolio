@@ -95,6 +95,26 @@ Transform unreliable AI (69% fallback) to production-ready infrastructure co-pil
 
 ---
 
+### ADR-012: Multi-Hop Reasoning Architecture (Phase 11)
+**File**: [decisions/ADR-012-PORTFOLIO.md](decisions/ADR-012-PORTFOLIO.md)
+**Date**: February 5-13, 2026
+**Status**: ✅ Complete (Grade: A)
+
+Transform single-query RAG into intelligent multi-hop reasoning with conservative confidence strategy.
+
+**Key Decisions**:
+- Query expansion with WordNet + spaCy (500+ domain terms)
+- Pattern-based classification (5 patterns: comparison, troubleshooting, integration, process, capability)
+- Conservative confidence strategy (stop on first LOW confidence sub-query)
+- SOLID architecture (decomposition vs execution separation)
+- Parallel execution (independent sub-queries, 33% time savings)
+
+**Results**: 90% multi-hop success, 100% HIGH confidence, zero regressions across 3,744 test executions
+
+**Innovations**: Conservative Confidence (knowing when to stop), Pattern-Based Classification (100% accuracy, <1ms)
+
+---
+
 ## Story Arc: Foundation → Build → Optimize → Intelligence
 
 **ADR-001** (Foundation): Choose simple, reliable orchestration  
@@ -102,6 +122,7 @@ Transform unreliable AI (69% fallback) to production-ready infrastructure co-pil
 **ADR-008** (Build): Create production RAG platform  
 **ADR-009** (Optimize): Achieve 90% accuracy through systematic engineering  
 **ADR-010** (Intelligence): Transform into agentic co-pilot with live system awareness
+**ADR-012** (Intelligence Enhancement): Multi-hop reasoning with conservative confidence
 
 ---
 
@@ -144,4 +165,4 @@ Complete overview of technologies used across all phases.
 ---
 
 **Status**: Content being added incrementally based on phase completion  
-**Latest**: Phase 10 complete - Performance & Intelligence Optimization ✅
+**Latest**: Phase 11 complete - RAG Intelligence Enhancement ✅
