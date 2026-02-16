@@ -592,37 +592,6 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
 
 ## Next Steps 📋
 
-### Portfolio Housekeeping (Chat 4)
-
-**✅ COMPLETE**: Journey Narrative
-- Phase-11-Journey.md (portfolio version, ~2,500 words)
-- Matches Phase 10 pattern (story-driven, recruiter-friendly)
-
-**✅ COMPLETE**: ADR Documents
-- ADR-012-Multi-Hop-Reasoning-Architecture.md (private verbose, ~1,200 lines)
-- ADR-012-PORTFOLIO.md (public sanitized, ~500 lines)
-
-**CURRENT**: Metrics Report
-- Phase-11-Metrics.md (this document)
-- Matches Phase 10 pattern (comprehensive completion report)
-
-**NEXT**: README Updates
-- Phase 11 journey entry
-- Portfolio preparation
-
-### Portfolio Sync (Chat 5, Optional)
-
-**Part A**: Content Ready
-- Phase-11-Journey.md (narrative)
-- ADR-012-PORTFOLIO.md (architecture)
-- Phase-11-Metrics.md (results)
-
-**Part B**: Repository Integration
-- Sync to public portfolio repo (`homelab-infrastructure-portfolio`)
-- Update README.md (Phase 11 journey entry)
-- Security sanitization verification
-- Git commit and push
-
 ### Phase 12 Planning
 
 **Preparation**:
