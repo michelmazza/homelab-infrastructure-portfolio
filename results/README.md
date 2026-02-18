@@ -4,7 +4,40 @@ Metrics, improvements, and measurable outcomes from each phase.
 
 ---
 
-## Phase 11: RAG Intelligence Enhancement ⭐ NEW
+## Phase 12: Advanced Retrieval Optimization ⭐ NEW
+
+### Detailed Metrics
+**File**: [phase-12-metrics.md](phase-12-metrics.md)
+**Summary**: 92% hit rate via data-driven corpus expansion, Grade: A
+
+Complete performance data including:
+- Executive summary (primary objective achieved ahead of schedule)
+- Hit rate progression (72% → 80% → 92%, +20pp total)
+- Corpus transformation (611 → 2,095 chunks, 3.4× growth)
+- Failure analysis (Session 1 investigation breakdown)
+- Corpus gap queries (5/6 fixed, 83% success rate)
+- Test coverage (469 tests discovered, 432/432 passing)
+- RRF vs α-weighted validation (empirical results)
+- RAGAS evaluation baseline (methodology limitations identified)
+- Multi-hop status (bottleneck shift to routing classification)
+- Strategic decision impact (4-6× ROI analysis)
+
+**Key Achievements**:
+- 92% hit rate (+20pp improvement from 72% baseline)
+- Corpus: 85 → 270 documents, 611 → 2,095 chunks (3.4×)
+- Strategic pivot: Corpus expansion (+12pp) over Docling (+2-3pp)
+- Zero regressions: 469 tests discovered, 432/432 passing
+- Process improvements: Testing-Guide.md created
+
+**Strategic Decisions**:
+- **Data-Driven Pivot**: 30-minute investigation → 4-6× higher ROI
+- **Empirical Validation**: α-weighted (90%) kept over RRF (75-80%)
+- **Comprehensive Testing**: Full discovery (17 → 469 tests)
+- **Bottleneck Identification**: Retrieval 92% ✅ → routing classification exposed
+
+---
+
+## Phase 11: RAG Intelligence Enhancement ⭐
 
 ### Detailed Metrics
 **File**: [Phase-11-Metrics.md](Phase-11-Metrics.md)
@@ -130,4 +163,5 @@ Complete performance data including:
 
 ---
 
-**Status**: Phase 8 + Phase 9 + Phase 10 + Phase 11 metrics complete
+**Status**: Phase 8 + Phase 9 + Phase 10 + Phase 11 + Phase 12 metrics complete
+**Latest**: Phase 12 (92% hit rate, 3.4× corpus growth, data-driven optimization)

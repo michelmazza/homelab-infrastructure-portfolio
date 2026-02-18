@@ -17,7 +17,7 @@ This portfolio documents my journey building production-grade infrastructure and
 
 ---
 
-## The Journey: 11 Phases of Evolution
+## The Journey: 12 Phases of Evolution
 
 ### Foundation (Phases 1-3)
 **Orchestration Platform** → Built 3-node HashiCorp Nomad cluster
@@ -28,13 +28,14 @@ This portfolio documents my journey building production-grade infrastructure and
 **Production Operations** → 15+ services orchestrated, NFS storage integrated
 **Observability Stack** → Prometheus + Grafana + Loki with mobile alerting
 
-### Innovation & AI/ML (Phases 6-11)
+### Innovation & AI/ML (Phases 6-12)
 **AI/ML Foundation** → Local LLM deployment with Ollama
 **Advanced RAG Platform** → Production knowledge system with Streamlit UI
 **Retrieval Optimization** → 0% to 90% accuracy breakthrough ⭐
 **Agentic RAG** → Intelligent infrastructure co-pilot with Glass Box AI
 **Performance & Intelligence** → Production-ready AI with 18% fallback, 605,000× speedup ⭐
 **RAG Intelligence Enhancement** → Multi-hop reasoning with conservative confidence ⭐
+**Advanced Retrieval** → 92% hit rate via data-driven corpus expansion ⭐
 
 ### Phase 9 Complete: Agentic RAG with Glass Box AI ✅
 
@@ -105,6 +106,43 @@ This portfolio documents my journey building production-grade infrastructure and
 3. Root Cause Over Guessing (3-step systematic analysis solved paradox)
 4. External Validation (Google Gemini review provided A+ grade)
 5. Transparency Reveals Bottlenecks (Glass Box showed 99.99% time in MCP calls)
+
+---
+
+### Phase 12 Complete: Data-Driven Retrieval Optimization ✅
+
+**The Transformation**: From assumptions to evidence—achieving 92% retrieval accuracy through strategic corpus expansion
+
+**Three-Week Build** (Completed in 1 week!):
+- **Week 1**: RRF validation → α-weighted empirically superior (evidence over theory)
+- **Week 2**: Corpus expansion → 3.4× growth, 92% hit rate achieved ⭐
+- **Week 3**: RAGAS evaluation → Framework operational, bottleneck shift identified
+
+**Key Capabilities**:
+- 92% hit rate (+20pp improvement from 72% baseline)
+- 2,095 chunk corpus (3.4× expansion, Phases 4-12 coverage)
+- Strategic pivot (corpus +12pp > Docling +2-3pp, 4-6× ROI)
+- Zero regressions (432/432 tests passing, 469 total discovered)
+- Process improvements (Testing-Guide.md, comprehensive regression standard)
+
+**Innovation Highlight**: "Measure Twice, Cut Once" Methodology
+- **The Investigation**: 30 minutes analyzing failures before implementation
+- **The Discovery**: 43% of failures were data gaps, not retrieval quality
+- **The Pivot**: Deferred Docling, prioritized corpus expansion (4-6× higher impact)
+- **The Result**: 92% achieved in Week 2 instead of Week 3 (ahead of schedule)
+
+**Results**:
+- Corpus gap queries: 5/6 fixed (83% success rate)
+- RRF vs α-weighted: Empirical validation (90% vs 75-80%, kept α-weighted)
+- Test discovery: 469 tests found (was only testing 17, missed 96%)
+- Bottleneck shift: Retrieval 92% ✅, routing classification now constraint
+- Grade A external validation ("Optimized engine until hitting transmission limits")
+
+**Engineering Principles**:
+1. Investigate Before Implementing (30 min → prevented week-long misallocation)
+2. Evidence Over Theory (α-weighted beat RRF despite theoretical advantages)
+3. Comprehensive Testing (full discovery prevents blind spots: 17 → 469 tests)
+4. Bottlenecks Shift (fix one component, expose next constraint iteratively)
 
 ---
 
@@ -184,9 +222,9 @@ Document type boosting: ADRs and core docs ranked higher. **+55 percentage point
 - **Infrastructure**: 3-node Nomad cluster, Consul service mesh, Traefik reverse proxy
 - **Services Orchestrated**: 15+ production services
 - **Observability**: Prometheus + Grafana + Loki with mobile alerting via Pushover
-- **AI/ML Platform**: Ollama (CPU + GPU hybrid), RAG with 611 chunks across 85 documents
-- **RAG Accuracy**: 90% retrieval → 98.7% agentic → 18% fallback (Phase 10)
-- **Test Coverage**: 416 automated tests (100% passing)
+- **AI/ML Platform**: Ollama (CPU + GPU hybrid), RAG with 2,095 chunks across 270 documents
+- **RAG Accuracy**: 92% retrieval → 98.7% agentic → 18% fallback (Phases 8-12)
+- **Test Coverage**: 469 automated tests (432/432 passing, 100% effective rate)
 - **Documentation**: 1,145-line journey narrative, ADRs, architecture diagrams, session notes
 - **Presentations**: 68+ professional slides across 4 presentations (14 slides on Glass Box AI)
 
@@ -301,6 +339,6 @@ Under the following terms:
 
 ---
 
-**Last Updated**: February 15, 2026
-**Portfolio Version**: 1.3
-**Status**: Phase 11 Complete ✅ | 90% Multi-Hop Success, Conservative Confidence ⭐
+**Last Updated**: February 18, 2026
+**Portfolio Version**: 1.4
+**Status**: Phase 12 Complete ✅ | 92% Retrieval Accuracy, Data-Driven Optimization ⭐

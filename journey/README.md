@@ -8,7 +8,27 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
-**Phase 10: Performance & Intelligence Optimization** ⭐ **NEW**
+**Phase 12: Data-Driven Retrieval Optimization** ⭐ **NEW**
+**File**: [phase-12-retrieval-optimization.md](phase-12-retrieval-optimization.md)
+**Summary**: From 72% to 92% hit rate through strategic corpus expansion and empirical validation
+
+The data-driven optimization story of achieving 92% retrieval accuracy through systematic investigation and strategic resource allocation. Features the dramatic 30-minute investigation that prevented week-long misallocation, RRF vs α-weighted empirical validation, and comprehensive test discovery (17 → 469 tests).
+
+**Highlights**:
+- 30-minute Session 1 investigation → strategic pivot (4-6× ROI)
+- Corpus gap discovery: 43% of failures were missing data, not retrieval quality
+- Strategic pivot: Corpus expansion (+12pp) over Docling (+2-3pp)
+- RRF vs α-weighted: Empirical validation (90% vs 75-80%, evidence over theory)
+- Test discovery: 469 tests found (was only testing 17, missed 96%)
+- Bottleneck shift: Retrieval optimized → routing classification exposed
+
+**Key Metrics**: 92% hit rate, 2,095 chunks (3.4× growth), 469 tests, 0 regressions, Grade A
+
+**Why This Story**: Demonstrates "measure twice, cut once" methodology, data-driven decision making, empirical validation over theory, and systematic engineering. Perfect for "Tell me about technical decision-making" interviews.
+
+---
+
+**Phase 10: Performance & Intelligence Optimization** ⭐
 **File**: [phase-10-performance-optimization.md](phase-10-performance-optimization.md)
 **Summary**: From 69% to 18% fallback with 605,000× speedup
 
@@ -252,7 +272,7 @@ Phase 9 architecture diagrams (system topology + data flow)
 
 ---
 
-**Status**: Phase 8 + Phase 9 + Phase 10 journeys complete with comprehensive foundation references
-**Phase 10 Architecture**: Complete with diagrams, metrics, and ADR-011
+**Status**: Phase 8 + Phase 9 + Phase 10 + Phase 12 journeys complete with comprehensive foundation references
+**Latest**: Phase 12 (data-driven optimization, 92% hit rate)
 **Philosophy**: Deep dive on breakthrough stories + presentations for context
-**Coverage**: 3 complete phase narratives (Phase 8 + Phase 9 + Phase 10), 54 slides, 4 ADRs, 13 screenshots, 4 architecture diagrams
+**Coverage**: 4 complete phase narratives (Phases 8, 9, 10, 12), 54 slides, 4 ADRs, 13 screenshots, 4 architecture diagrams
