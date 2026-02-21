@@ -4,7 +4,48 @@ Metrics, improvements, and measurable outcomes from each phase.
 
 ---
 
-## Phase 12: Advanced Retrieval Optimization ⭐ NEW
+## Phase 13+14: LLM-Guided Query Decomposition ⭐ NEW
+
+### Detailed Metrics
+**File**: [phase-13-14-metrics.md](phase-13-14-metrics.md)
+**Summary**: Pattern → LLM-guided transformation, 4.4× improvement, Grade: A+
+
+Complete performance data including:
+- Executive summary (66.7% GOOD rate achieved, 4.4× improvement)
+- Quality transformation (15% → 66.7% GOOD, 50% → 100% precision)
+- Intent coverage expansion (0 → 7 operational types)
+- Week-by-week progression (Week 2 delivered 74% of total improvement)
+- MVP validation (50% GOOD at 4 intents → 66.7% GOOD at 7 intents)
+- Real-world examples (comparison, temporal, diagnostic intent queries)
+- Validation layer performance (entity coverage, duplication detection, quality assessment)
+- Latency analysis (3.95s average, 21% under 5s production target)
+- Intent-specific performance breakdown (comparison: 80% GOOD, integration_chain: 50% GOOD)
+
+**Key Achievements**:
+- 66.7% GOOD rate (4.4× improvement from 15% baseline, exceeded >40% target)
+- 100% precision (2× improvement, zero POOR decompositions across 30-query validation)
+- 7 intent types operational (temporal, aggregation, conditional, comparison, process_flow, integration_chain, diagnostic)
+- 0% pattern fallbacks (complete LLM replacement)
+- 3.95s average latency (21% under 5s production requirement)
+- Zero new regressions (454/465 tests passing, 97.6%)
+
+**Innovations**:
+- **Hybrid Architecture**: LLM semantic understanding + pattern structural guidance
+- **Entity-Aware Prompting**: 113-term vocabulary + multi-word phrase detection
+- **Conservative Threshold**: 0.5 confidence minimum (prioritize precision over recall)
+- **Three-Layer Validation**: Entity coverage (100% pass), duplication detection (3% rate), quality assessment (0% POOR)
+- **MVP Approach**: Week 2 delivered 74% of improvement (50% GOOD at 4 intents)
+
+**Strategic Decisions**:
+- **Hybrid vs Pure LLM**: Best of both worlds (semantic + structural)
+- **Intent Taxonomy**: 7 types cover 90%+ of query patterns
+- **Phase 15 Opportunity**: Lower threshold 0.5 → 0.3-0.4 (unlock +10-15pp GOOD rate)
+
+**External Validation**: Grade A+ (Google Gemini)
+
+---
+
+## Phase 12: Advanced Retrieval Optimization
 
 ### Detailed Metrics
 **File**: [phase-12-metrics.md](phase-12-metrics.md)
@@ -163,5 +204,5 @@ Complete performance data including:
 
 ---
 
-**Status**: Phase 8 + Phase 9 + Phase 10 + Phase 11 + Phase 12 metrics complete
-**Latest**: Phase 12 (92% hit rate, 3.4× corpus growth, data-driven optimization)
+**Status**: Phase 8 + Phase 9 + Phase 10 + Phase 11 + Phase 12 + Phase 13+14 metrics complete
+**Latest**: Phase 13+14 (66.7% GOOD rate, 4.4× improvement, LLM-guided decomposition)

@@ -115,6 +115,32 @@ Transform single-query RAG into intelligent multi-hop reasoning with conservativ
 
 ---
 
+### ADR-013: LLM-Guided Query Decomposition
+**Status**: ✅ Complete
+**Phase**: 13+14
+**Date**: January-February 2026
+**Decision**: Hybrid LLM-guided decomposition with semantic understanding and deterministic validation
+
+**Problem**: Pattern-based decomposition hit 15% GOOD rate ceiling, generating generic sub-questions
+
+**Solution**:
+- LLM intent classification (7 types: temporal, aggregation, conditional, comparison, process_flow, integration_chain, diagnostic)
+- Entity-aware sub-question generation (113-term vocabulary)
+- Conservative threshold (0.5 confidence minimum)
+- Three-layer validation (entity coverage, duplication detection, quality assessment)
+
+**Results**:
+- 4.4× improvement (15% → 66.7% GOOD rate)
+- 2× precision improvement (50% → 100%)
+- 7 operational intent types
+- 3.95s latency (21% under 5s target)
+
+**Why It Matters**: Hybrid architectures (LLM understanding + pattern structure) beat either approach alone
+
+**Related**: [ADR-013-PORTFOLIO.md](decisions/ADR-013-PORTFOLIO.md)
+
+---
+
 ## Story Arc: Foundation → Build → Optimize → Intelligence
 
 **ADR-001** (Foundation): Choose simple, reliable orchestration  
@@ -123,6 +149,7 @@ Transform single-query RAG into intelligent multi-hop reasoning with conservativ
 **ADR-009** (Optimize): Achieve 90% accuracy through systematic engineering  
 **ADR-010** (Intelligence): Transform into agentic co-pilot with live system awarenes  
 **ADR-012** (Intelligence Enhancement): Multi-hop reasoning with conservative confidence
+**ADR-013** (Intelligence Enhancement): LLM-guided query decomposition with hybrid architecture
 
 ---
 
@@ -165,4 +192,4 @@ Complete overview of technologies used across all phases.
 ---
 
 **Status**: Content being added incrementally based on phase completion  
-**Latest**: Phase 11 complete - RAG Intelligence Enhancement ✅
+**Latest**: Phase 13+14 complete - LLM-Guided Query Decomposition ✅

@@ -17,7 +17,7 @@ This portfolio documents my journey building production-grade infrastructure and
 
 ---
 
-## The Journey: 12 Phases of Evolution
+## The Journey: 14 Phases of Evolution
 
 ### Foundation (Phases 1-3)
 **Orchestration Platform** → Built 3-node HashiCorp Nomad cluster
@@ -28,7 +28,7 @@ This portfolio documents my journey building production-grade infrastructure and
 **Production Operations** → 15+ services orchestrated, NFS storage integrated
 **Observability Stack** → Prometheus + Grafana + Loki with mobile alerting
 
-### Innovation & AI/ML (Phases 6-12)
+### Innovation & AI/ML (Phases 6-14)
 **AI/ML Foundation** → Local LLM deployment with Ollama
 **Advanced RAG Platform** → Production knowledge system with Streamlit UI
 **Retrieval Optimization** → 0% to 90% accuracy breakthrough ⭐
@@ -36,6 +36,7 @@ This portfolio documents my journey building production-grade infrastructure and
 **Performance & Intelligence** → Production-ready AI with 18% fallback, 605,000× speedup ⭐
 **RAG Intelligence Enhancement** → Multi-hop reasoning with conservative confidence ⭐
 **Advanced Retrieval** → 92% hit rate via data-driven corpus expansion ⭐
+**LLM-Guided Decomposition** → 4.4× GOOD rate improvement, 100% precision, hybrid architecture ⭐
 
 ### Phase 9 Complete: Agentic RAG with Glass Box AI ✅
 
@@ -318,6 +319,19 @@ Traditional AI agents are black boxes - users see outputs but not reasoning. Gla
 
 ---
 
+## 📚 Phase Evolution
+
+| Phase | Focus | Key Achievement | Grade | Status |
+|-------|-------|-----------------|-------|--------|
+| **Phase 13+14** | LLM-Guided Query Decomposition | 4.4× GOOD rate (15% → 66.7%), 100% precision, 7 intent types | A+ | ✅ Complete |
+| **Phase 12** | Advanced Retrieval Optimization | 92% hit rate, 3.4× corpus growth, data-driven pivot | A | ✅ Complete |
+| **Phase 11** | Multi-Hop Reasoning | 90% routing success, 100% HIGH confidence, 33% time savings | A | ✅ Complete |
+| **Phase 10** | Performance & Intelligence | 18% fallback (51pp⬇️), 605,000× speedup, CoVe (3ms) | A+ | ✅ Complete |
+| **Phase 9** | Agentic RAG Architecture | 98.7% accuracy, Glass Box AI, 41-238× faster | A+ | ✅ Complete |
+| **Phase 8** | Retrieval Quality | 0% → 90% accuracy, Three-Layer Boosting | A+ | ✅ Complete |
+
+---
+
 ## 📞 Contact & Links
 
 - **LinkedIn**: [linkedin.com/in/michelmazza/](https://www.linkedin.com/in/michelmazza/)
@@ -339,6 +353,6 @@ Under the following terms:
 
 ---
 
-**Last Updated**: February 18, 2026
-**Portfolio Version**: 1.4
-**Status**: Phase 12 Complete ✅ | 92% Retrieval Accuracy, Data-Driven Optimization ⭐
+**Last Updated**: February 21, 2026
+**Portfolio Version**: 1.5 (Phase 13+14 Complete)
+**Latest Phase**: Phase 13+14 - LLM-Guided Query Decomposition (A+)
