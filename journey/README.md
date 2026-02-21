@@ -8,7 +8,28 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
-**Phase 12: Data-Driven Retrieval Optimization** ⭐ **NEW**
+**Phase 13+14: LLM-Guided Query Decomposition** ⭐ **NEW**
+**File**: [phase-13-14-evolution.md](phase-13-14-evolution.md)
+**Summary**: Pattern-based to LLM-guided transformation, 4.4× GOOD rate improvement
+
+The intelligence transformation story of evolving query decomposition from rigid pattern matching (15% GOOD rate) to semantic LLM understanding (66.7% GOOD rate) through systematic hybrid architecture. Features the MVP approach that delivered 74% of improvement in Week 2, conservative threshold strategy, and the validation layers that maintained 100% precision.
+
+**Highlights**:
+- 4.4× GOOD rate improvement (15% → 66.7%)
+- 2× precision improvement (50% → 100%, zero POOR decompositions)
+- Hybrid architecture: LLM semantic understanding + pattern structural reliability
+- 7 intent types operational (temporal, aggregation, conditional, comparison, process_flow, integration_chain, diagnostic)
+- MVP validation: Week 2 delivered 74% of total improvement (50% GOOD at 4 intents)
+- Conservative threshold strategy: 0.5 confidence minimum (prioritize precision over recall)
+- Three-layer validation: Entity coverage (100% pass), duplication detection (3%), quality assessment (0% POOR)
+
+**Key Metrics**: 66.7% GOOD rate, 100% precision, 7 intent types, 3.95s latency (21% under target), Grade A+
+
+**Why This Story**: Demonstrates hybrid AI architecture design, incremental MVP approach with empirical validation at each step, data-driven decision making (Week 2 vs Week 3 analysis), and production-quality AI engineering. Perfect for "Tell me about AI system design" or "How do you approach quality vs speed tradeoffs" interviews.
+
+---
+
+**Phase 12: Data-Driven Retrieval Optimization** 
 **File**: [phase-12-retrieval-optimization.md](phase-12-retrieval-optimization.md)
 **Summary**: From 72% to 92% hit rate through strategic corpus expansion and empirical validation
 

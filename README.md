@@ -28,15 +28,16 @@ This portfolio documents my journey building production-grade infrastructure and
 **Production Operations** → 15+ services orchestrated, NFS storage integrated
 **Observability Stack** → Prometheus + Grafana + Loki with mobile alerting
 
-### Innovation & AI/ML (Phases 6-14)
-**AI/ML Foundation** → Local LLM deployment with Ollama
-**Advanced RAG Platform** → Production knowledge system with Streamlit UI
-**Retrieval Optimization** → 0% to 90% accuracy breakthrough ⭐
-**Agentic RAG** → Intelligent infrastructure co-pilot with Glass Box AI
-**Performance & Intelligence** → Production-ready AI with 18% fallback, 605,000× speedup ⭐
-**RAG Intelligence Enhancement** → Multi-hop reasoning with conservative confidence ⭐
-**Advanced Retrieval** → 92% hit rate via data-driven corpus expansion ⭐
-**LLM-Guided Decomposition** → 4.4× GOOD rate improvement, 100% precision, hybrid architecture ⭐
+## Innovation & AI/ML (Phases 6-14)
+
+- **AI/ML Foundation** → Local LLM deployment with Ollama
+- **Advanced RAG Platform** → Production knowledge system with Streamlit UI
+- **Retrieval Quality** → 0% to 90% accuracy breakthrough ⭐
+- **Agentic RAG** → Intelligent infrastructure co-pilot with Glass Box AI
+- **Performance & Intelligence** → Production-ready AI with 18% fallback, 605,000× speedup ⭐
+- **RAG Intelligence Enhancement** → Multi-hop reasoning with conservative confidence ⭐
+- **Advanced Retrieval** → 92% hit rate via data-driven corpus expansion ⭐
+- **LLM-Guided Decomposition** → 4.4× GOOD rate improvement, 100% precision, hybrid architecture ⭐
 
 ### Phase 9 Complete: Agentic RAG with Glass Box AI ✅
 
