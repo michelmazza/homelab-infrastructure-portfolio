@@ -96,8 +96,8 @@ Transform unreliable AI (69% fallback) to production-ready infrastructure co-pil
 ---
 
 ### ADR-012: Multi-Hop Reasoning Architecture (Phase 11)
-**File**: [decisions/ADR-012-PORTFOLIO.md](decisions/ADR-012-PORTFOLIO.md)
-**Date**: February 5-13, 2026
+**File**: [decisions/ADR-012-PORTFOLIO.md](decisions/ADR-012-PORTFOLIO.md)  
+**Date**: February 5-13, 2026  
 **Status**: ✅ Complete (Grade: A)
 
 Transform single-query RAG into intelligent multi-hop reasoning with conservative confidence strategy.
@@ -115,11 +115,12 @@ Transform single-query RAG into intelligent multi-hop reasoning with conservativ
 
 ---
 
-### ADR-013: LLM-Guided Query Decomposition
+### ADR-013: LLM-Guided Query Decomposition (Phase 13+14)
+**File**: [decisions/ADR-013-PORTFOLIO.md](decisions/ADR-013-PORTFOLIO.md)  
+**Date**: January-February 2026  
 **Status**: ✅ Complete
-**Phase**: 13+14
-**Date**: January-February 2026
-**Decision**: Hybrid LLM-guided decomposition with semantic understanding and deterministic validation
+
+Hybrid LLM-guided decomposition with semantic understanding and deterministic validation.
 
 **Problem**: Pattern-based decomposition hit 15% GOOD rate ceiling, generating generic sub-questions
 
@@ -137,19 +138,40 @@ Transform single-query RAG into intelligent multi-hop reasoning with conservativ
 
 **Why It Matters**: Hybrid architectures (LLM understanding + pattern structure) beat either approach alone
 
-**Related**: [ADR-013-PORTFOLIO.md](decisions/ADR-013-PORTFOLIO.md)
+---
+
+### ADR-014: Conversational Memory & Latency Optimization (Phase 15)
+**File**: [decisions/ADR-014-PORTFOLIO.md](decisions/ADR-014-PORTFOLIO.md)  
+**Date**: February 3-23, 2026  
+**Status**: ✅ Complete (Grade: A+ / A+ / A+)
+
+Transform RAG from query-response to conversational intelligence with temporal context awareness.
+
+**Key Decisions**:
+- Dual-track classification: LLM primary + pattern fallback (100% recall)
+- Prompt caching: 32.4% latency reduction via strategic cache boundaries
+- Simple prepend coreference: 100% accuracy, <10ms overhead
+- SQLite session lifecycle: Conversation memory with intent-aware scoping
+- RAGAS validation: External framework for quality assurance
+
+**Results**: 100% recall (+15pp), 4.22s P95 (-33.5%), 100% coreference, 91.7% multi-turn success, 1.000 RAGAS Context Precision
+
+**Innovations**: Cache utilization > token efficiency principle, simple prepend strategy (beating complex ML), professional rollback acceptance (quantization)
+
+**External Validation**: "Top 1% of local RAG implementations" (Gemini), methodology recognition: "Benchmark → Experiment → Validate → Pivot"
 
 ---
 
 ## Story Arc: Foundation → Build → Optimize → Intelligence
 
 **ADR-001** (Foundation): Choose simple, reliable orchestration  
-**ADR-011** (Optimize): 18% fallback, 605,000× speedup, CoVe  
 **ADR-008** (Build): Create production RAG platform  
 **ADR-009** (Optimize): Achieve 90% accuracy through systematic engineering  
-**ADR-010** (Intelligence): Transform into agentic co-pilot with live system awarenes  
-**ADR-012** (Intelligence Enhancement): Multi-hop reasoning with conservative confidence
-**ADR-013** (Intelligence Enhancement): LLM-guided query decomposition with hybrid architecture
+**ADR-010** (Intelligence): Transform into agentic co-pilot with live system awareness  
+**ADR-011** (Optimize): 18% fallback, 605,000× speedup, CoVe  
+**ADR-012** (Intelligence Enhancement): Multi-hop reasoning with conservative confidence  
+**ADR-013** (Intelligence Enhancement): LLM-guided query decomposition with hybrid architecture  
+**ADR-014** (Intelligence + Performance): Conversational memory with elite-tier optimization ("top 1%")
 
 ---
 
@@ -192,4 +214,27 @@ Complete overview of technologies used across all phases.
 ---
 
 **Status**: Content being added incrementally based on phase completion  
-**Latest**: Phase 13+14 complete - LLM-Guided Query Decomposition ✅
+**Latest**: Phase 15 complete - Conversational Memory & Latency Optimization ("Top 1%") ✅
+```
+
+---
+
+## Git Commit Message Template
+```
+Architecture README: Add Phase 15 ADR-014
+
+Added ADR-014 section documenting Phase 15 achievements:
+- Conversational memory & latency optimization
+- 100% recall, 4.22s P95 (-33.5%), 91.7% multi-turn
+- "Top 1%" external validation (Gemini)
+- Methodology recognition: "Benchmark → Experiment → Validate → Pivot"
+
+Updated Story Arc with ADR-014 (Intelligence + Performance)
+Updated footer: Phase 15 complete
+
+Phase 15 Key Innovations:
+- Dual-track classification (100% recall)
+- Prompt caching (-32.4% latency)
+- Simple prepend coreference (100% accuracy, <10ms)
+- SQLite session lifecycle (conversational memory)
+- RAGAS validation framework (1.000 Context Precision)
