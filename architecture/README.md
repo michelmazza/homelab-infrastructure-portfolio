@@ -215,26 +215,3 @@ Complete overview of technologies used across all phases.
 
 **Status**: Content being added incrementally based on phase completion  
 **Latest**: Phase 15 complete - Conversational Memory & Latency Optimization ("Top 1%") ✅
-```
-
----
-
-## Git Commit Message Template
-```
-Architecture README: Add Phase 15 ADR-014
-
-Added ADR-014 section documenting Phase 15 achievements:
-- Conversational memory & latency optimization
-- 100% recall, 4.22s P95 (-33.5%), 91.7% multi-turn
-- "Top 1%" external validation (Gemini)
-- Methodology recognition: "Benchmark → Experiment → Validate → Pivot"
-
-Updated Story Arc with ADR-014 (Intelligence + Performance)
-Updated footer: Phase 15 complete
-
-Phase 15 Key Innovations:
-- Dual-track classification (100% recall)
-- Prompt caching (-32.4% latency)
-- Simple prepend coreference (100% accuracy, <10ms)
-- SQLite session lifecycle (conversational memory)
-- RAGAS validation framework (1.000 Context Precision)
