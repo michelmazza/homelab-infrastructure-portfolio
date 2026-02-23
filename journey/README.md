@@ -8,7 +8,48 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
-**Phase 13+14: LLM-Guided Query Decomposition** ⭐ **NEW**
+**Phase 15: Query Decomposition Robustness & Latency Optimization** ⭐ **NEW**
+**File**: [phase-15-journey.md](phase-15-journey.md)
+**Summary**: 100% recall, 4.22s P95, conversational memory, "top 1%" recognition
+
+The methodology validation story of achieving elite-tier RAG performance through hypothesis-driven planning, external validation checkpoints, and data-driven pivots. Features the dual-track classification discovery that prevented week-long ghost-chasing, prompt caching breakthrough (-32.4%), cache utilization principle discovery, and the simple prepend strategy that exceeded 80% target by 20pp.
+
+**Highlights**:
+- 100% recall achievement (+15pp from Phase 14, zero false negatives)
+- P95 latency: 6.35s → 4.22s (-33.5%, stretch target exceeded)
+- Avg latency: 4.1s → ~2.0s (-50.8% reduction)
+- Conversational memory: 100% coreference accuracy, 91.7% multi-turn success
+- Memory overhead: 19.6ms P95 (80% under 100ms budget)
+- RAGAS validation: 1.000 Context Precision (perfect), 0.861 Faithfulness
+- External recognition: "Top 1% of local RAG implementations" (Gemini)
+- Methodology validation: "Benchmark → Experiment → Validate → Pivot" (Gemini-recognized)
+
+**Key Innovations**:
+- **Dual-Track Classification Discovery** (Week 1): Architectural understanding prevented week of threshold tuning wrong component
+- **Prompt Caching Breakthrough** (Week 2): Static/dynamic separation exploited KV cache mechanics (-32.4% latency in single session)
+- **Cache Utilization > Token Efficiency** (Week 2): Generalizable principle for local LLM orchestration (warm cache with longer prompts beats cold cache with shorter prompts)
+- **Simple Prepend Coreference** (Week 3): 100% accuracy with <10ms overhead (vs 200-500ms LLM rewriting)
+- **Conversational Memory MVP** (Week 3): SQLite storage + intent-aware scoping, 91.7% multi-turn success
+- **ADR-014 Architecture** (Week 3): Session lifecycle design before implementation
+- **RAGAS External Validation** (Week 2): Context Precision 1.000 (perfect retrieval alignment)
+
+**Key Metrics**: 100% recall, 4.22s P95, 100% coreference, 91.7% multi-turn, Grade A+ / A+ / A+
+
+**Why This Story**: Demonstrates "top 1%" methodology validation, hypothesis-driven engineering with external validation (Session 0 + weekly Gemini checkpoints), data-driven decision making (professional rollback when data contradicts theory), and systematic excellence (3 consecutive A+ grades). Perfect for "Tell me about your engineering methodology" or "How do you approach complex system optimization" interviews. Shows "measure twice, cut once" at elite level.
+
+**Three-Week Structure**:
+- **Week 1**: Robustness validation (100% recall, dual-track discovery, strategic pivot)
+- **Week 2**: Latency optimization (prompt caching breakthrough, cache utilization principle, 4.22s P95)
+- **Week 3**: Memory & statefulness (simple prepend strategy, conversational memory MVP, ADR-014)
+
+**Methodology Recognition** (Gemini):
+- "Top 1% of local RAG implementations" (performance-to-accuracy ratio)
+- "Benchmark → Experiment → Validate → Pivot" methodology validated
+- ROI: 60 min consultation saved 10+ hours of backtracking
+
+---
+
+**Phase 13+14: LLM-Guided Query Decomposition** ⭐
 **File**: [phase-13-14-evolution.md](phase-13-14-evolution.md)
 **Summary**: Pattern-based to LLM-guided transformation, 4.4× GOOD rate improvement
 
@@ -215,20 +256,20 @@ The complete technical journey (Phases 4-9) is documented across multiple format
 ### **Quality Over Quantity**
 
 Rather than creating multiple mediocre narratives, we focus on:
-- **Two exceptional stories** (Phase 8 + Phase 9) told in depth
+- **Six exceptional stories** (Phases 8, 9, 10, 12, 13+14, 15) told in depth
 - **Visual coverage** for foundation phases (presentations)
 - **Technical depth** for key decisions (ADRs)
 - **Production evidence** via screenshots
 
 **This approach provides**:
-- Clear interview focus (Phase 8 = optimization hero story, Phase 9 = agentic innovation)
+- Clear interview focus (Phase 8 = optimization hero story, Phase 9 = agentic innovation, Phase 15 = methodology validation)
 - Comprehensive coverage (presentations + ADRs + screenshots)
 - Time efficiency (deep dive on what matters most)
 - Flexibility (can add more narratives post-launch if needed)
 
 ---
 
-## Story Arc: Foundation → Build → Optimize → Evolve
+## Story Arc: Foundation → Build → Optimize → Evolve → Excellence
 
 **Foundation** (Phases 4-6):
 - Built reliable infrastructure (Nomad, Consul, Traefik)
@@ -253,7 +294,13 @@ Rather than creating multiple mediocre narratives, we focus on:
 - Added Glass Box AI for visual transparency
 - Achieved 98.7% agentic accuracy
 
-**Result**: Clear progression from infrastructure → platform → optimization → intelligence
+**Excellence** (Phases 10-15): ⭐
+- Phase 10: Performance engineering (51pp fallback reduction, CoVe)
+- Phase 12: Data-driven optimization (92% hit rate, strategic pivots)
+- Phase 13+14: LLM-guided intelligence (4.4× improvement, hybrid architecture)
+- Phase 15: Methodology validation ("top 1%" recognition, 3 A+ grades)
+
+**Result**: Clear progression from infrastructure → platform → optimization → intelligence → elite-tier excellence
 
 ---
 
@@ -265,14 +312,17 @@ Point to **Phase 8 journey** (0% → 90% transformation - most dramatic story)
 ### **For "Show me AI/ML engineering work"**:
 Point to **Phase 9 journey** (agentic RAG + Glass Box AI innovation)
 
+### **For "Tell me about your engineering methodology"**:
+Point to **Phase 15 journey** ("top 1%" recognition, hypothesis-driven planning, external validation)
+
 ### **For "How do you approach system design"**:
-Reference ADR-001 (Nomad decision) and ADR-008 (RAG architecture) and ADR-010 (Agentic architecture)
+Reference ADR-001 (Nomad decision), ADR-008 (RAG architecture), ADR-010 (Agentic architecture), ADR-014 (Conversational memory)
 
 ### **For "Show me your infrastructure work"**:
 Show Infrastructure Overview presentation + screenshots
 
 ### **For "Walk me through your methodology"**:
-Phase 8 or Phase 9 journeys demonstrate all practices in action
+Phase 8, Phase 9, or Phase 15 journeys demonstrate all practices in action
 
 ### **For "Explainable AI / transparency"**:
 Phase 9 Glass Box AI (visual reasoning, timeline, performance)
@@ -280,20 +330,26 @@ Phase 9 Glass Box AI (visual reasoning, timeline, performance)
 ### **For "Show me architecture documentation"**:
 Phase 9 architecture diagrams (system topology + data flow)
 
+### **For "How do you make technical decisions"**:
+Phase 12 journey (data-driven pivots, empirical validation, strategic ROI)
+
+### **For "Quality vs speed tradeoffs"**:
+Phase 13+14 journey (hybrid architecture, MVP approach, conservative thresholds)
+
 ---
 
 ## Future Additions
 
 **Post-Launch** (if audience requests):
 - Phase 7 detailed narrative (if requested for foundation story)
-- Phase 10+ journeys (as new phases complete)
+- Phase 16+ journeys (as new phases complete)
 - Phases 4-6 summary (if operations focus needed for specific roles)
 
 **Current approach provides flexibility to expand while maintaining focus on strongest stories.**
 
 ---
 
-**Status**: Phase 8 + Phase 9 + Phase 10 + Phase 12 journeys complete with comprehensive foundation references
-**Latest**: Phase 12 (data-driven optimization, 92% hit rate)
+**Status**: Phases 8, 9, 10, 12, 13+14, 15 journeys complete with comprehensive foundation references
+**Latest**: Phase 15 (methodology validation, "top 1%" recognition, 3 consecutive A+ grades)
 **Philosophy**: Deep dive on breakthrough stories + presentations for context
-**Coverage**: 4 complete phase narratives (Phases 8, 9, 10, 12), 54 slides, 4 ADRs, 13 screenshots, 4 architecture diagrams
+**Coverage**: 6 complete phase narratives, 54 slides, 4 ADRs, 13 screenshots, 4 architecture diagrams

@@ -4,7 +4,61 @@ Metrics, improvements, and measurable outcomes from each phase.
 
 ---
 
-## Phase 13+14: LLM-Guided Query Decomposition ⭐ NEW
+## Phase 15: Query Decomposition Robustness & Latency Optimization ⭐ NEW
+
+### Detailed Metrics
+**File**: [phase-15-metrics.md](phase-15-metrics.md)
+**Summary**: 100% recall, 4.22s P95, conversational memory, Grade: A+ / A+ / A+
+
+Complete performance data including:
+- Executive summary (100% recall achieved, "top 1%" recognition)
+- Baseline state (Pre-Phase 15 metrics, Phase 14 ending state)
+- Week 1 outcomes (robustness validation, 100% recall, dual-track discovery)
+- Week 2 outcomes (latency optimization, 4.22s P95, prompt caching breakthrough)
+- Week 3 outcomes (memory & statefulness, 100% coreference, 91.7% multi-turn)
+- Three-week evolution summary (comprehensive before/after tables)
+- Latency bottleneck analysis (pre/post optimization breakdown)
+- RAGAS external validation (Context Precision 1.000, Faithfulness 0.861)
+- Test suite regression tracking (451 @ 100%, zero regressions)
+- Performance comparison (industry context, "top 1%" positioning)
+
+**Key Achievements**:
+- 100% recall (+15pp from Phase 14 baseline, zero false negatives across 50-query benchmark)
+- P95 latency: 4.22s (-33.5% from 6.35s baseline, stretch target exceeded)
+- Avg latency: ~2.0s (-50.8% from 4.1s baseline)
+- Coreference accuracy: 100% (NEW, 12/12 queries, exceeded 80% target by 20pp)
+- Multi-turn success: 91.7% (NEW, 11/12 scenarios, passed 90% target)
+- Memory overhead: 19.6ms P95 (NEW, 80% under 100ms budget)
+- RAGAS Context Precision: 1.000 (perfect retrieval alignment)
+- RAGAS Faithfulness: 0.861 (minimal hallucination)
+- Test pass rate: 451/451 (100%, zero regressions across 9 sessions)
+
+**Innovations**:
+- **Dual-Track Classification Discovery**: Architectural understanding (18 min baseline) prevented week of threshold tuning wrong component (LLM already @ 100% recall)
+- **Prompt Caching Breakthrough**: Static/dynamic separation exploited KV cache mechanics (P95: 6.35s → 4.29s, -32.4% in single session)
+- **Cache Utilization > Token Efficiency**: Generalizable principle validated through scientific experiment (intent-specific prompts caused +22.6% regression due to cache fragmentation)
+- **Simple Prepend Coreference**: <10ms overhead achieved 100% accuracy (exceeded 80% target by 20pp, avoided 200-500ms LLM rewriting)
+- **Conversational Memory MVP**: SQLite storage + intent-aware scoping + simple prepend = 91.7% multi-turn success
+- **ADR-014 Architecture Design**: Session lifecycle + memory scoping designed before implementation (Week 3 foundation)
+- **RAGAS External Validation**: Context Precision 1.000 (perfect), Faithfulness 0.861 (industry-standard quality assurance)
+
+**Strategic Decisions**:
+- **Session 1 Strategic Pivot**: Benchmark expansion + latency optimization (vs threshold tuning wrong component)
+- **Session 5 Professional Rollback**: Rejected intent-specific prompts (+22.6% regression empirically validated)
+- **Week 3 Simple First**: Simple prepend MVP (100% accuracy) vs LLM rewriting (200-500ms overhead deferred)
+- **Conservative Budgets**: Memory 19.6ms vs 100ms budget (80% under, safe margin)
+
+**Methodology Validation** (External Recognition):
+- **Gemini Quote**: "Top 1% of local RAG implementations" (performance-to-accuracy ratio)
+- **Methodology**: "Benchmark → Experiment → Validate → Pivot" (Gemini-recognized)
+- **Pattern**: Session 0 + weekly Gemini checkpoints = 3 consecutive A+ grades
+- **ROI**: 60 min total consultation saved 10+ hours of backtracking
+
+**External Validation**: Grade A+ / A+ / A+ (three consecutive weeks, methodology validated)
+
+---
+
+## Phase 13+14: LLM-Guided Query Decomposition ⭐
 
 ### Detailed Metrics
 **File**: [phase-13-14-metrics.md](phase-13-14-metrics.md)
@@ -137,10 +191,6 @@ Complete performance data including:
 
 ---
 
-Metrics, improvements, and measurable outcomes from each phase.
-
----
-
 ## Phase 9: Agentic RAG - Intelligent Infrastructure Co-Pilot
 
 ### Detailed Metrics
@@ -204,5 +254,5 @@ Complete performance data including:
 
 ---
 
-**Status**: Phase 8 + Phase 9 + Phase 10 + Phase 11 + Phase 12 + Phase 13+14 metrics complete
-**Latest**: Phase 13+14 (66.7% GOOD rate, 4.4× improvement, LLM-guided decomposition)
+**Status**: Phases 8, 9, 10, 11, 12, 13+14, 15 metrics complete
+**Latest**: Phase 15 (100% recall, 4.22s P95, conversational memory, "top 1%")
