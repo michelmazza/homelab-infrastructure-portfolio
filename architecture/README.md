@@ -140,9 +140,31 @@ Hybrid LLM-guided decomposition with semantic understanding and deterministic va
 
 ---
 
+### ADR-015: Analytical Intelligence & Operational Guardrails (Phase 16)
+**File**: [decisions/ADR-015-PORTFOLIO.md](decisions/ADR-015-PORTFOLIO.md)
+**Date**: February 11-25, 2026
+**Status**: ✅ Complete (Grade: A+)
+
+Transform high-performance RAG into self-aware analytical system with proactive monitoring.
+
+**Key Decisions**:
+- Conversational memory: Limit=3 with cache optimization (7.05ms overhead)
+- Metric snapshots: EAV schema with FIFO retention (5.66ms INSERT)
+- Hybrid anomaly detection: Statistical bounds + pattern matching (100% accuracy)
+- Adaptive sliding window: Cache-stable architecture (<1ms overhead, 7.4% token usage)
+- Entity Registry: Temporal coreference with entity pinning (100% pronoun resolution)
+
+**Results**: Self-aware system, 100% anomaly detection, 100% coreference accuracy, 552 tests (zero regressions), sustained A+ grade
+
+**Innovations**: Cache-stable sliding window, hybrid anomaly detection (zero false positives), temporal entity tracking (prevents hallucination), entity pinning (prevents aging decay)
+
+**External Validation**: "Self-aware analytical system", "Top 1% of local RAG implementations" (Gemini A+)
+
+---
+
 ### ADR-014: Conversational Memory & Latency Optimization (Phase 15)
-**File**: [decisions/ADR-014-PORTFOLIO.md](decisions/ADR-014-PORTFOLIO.md)  
-**Date**: February 3-23, 2026  
+**File**: [decisions/ADR-014-PORTFOLIO.md](decisions/ADR-014-PORTFOLIO.md)
+**Date**: February 3-23, 2026
 **Status**: ✅ Complete (Grade: A+ / A+ / A+)
 
 Transform RAG from query-response to conversational intelligence with temporal context awareness.
@@ -172,6 +194,7 @@ Transform RAG from query-response to conversational intelligence with temporal c
 **ADR-012** (Intelligence Enhancement): Multi-hop reasoning with conservative confidence  
 **ADR-013** (Intelligence Enhancement): LLM-guided query decomposition with hybrid architecture  
 **ADR-014** (Intelligence + Performance): Conversational memory with elite-tier optimization ("top 1%")
+**ADR-015** (Self-Awareness): Analytical intelligence with proactive monitoring and temporal coreference
 
 ---
 
@@ -213,5 +236,5 @@ Complete overview of technologies used across all phases.
 
 ---
 
-**Status**: Content being added incrementally based on phase completion  
-**Latest**: Phase 15 complete - Conversational Memory & Latency Optimization ("Top 1%") ✅
+**Status**: Content being added incrementally based on phase completion
+**Latest**: Phase 16 complete - Analytical Intelligence & Operational Guardrails ("Self-Aware System") ✅

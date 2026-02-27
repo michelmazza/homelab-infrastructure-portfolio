@@ -8,7 +8,48 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
-**Phase 15: Query Decomposition Robustness & Latency Optimization** ⭐ **NEW**
+**Phase 16: Analytical Intelligence & Operational Guardrails** ⭐ **NEW**
+**File**: [Phase-16-Journey-Narrative.md](Phase-16-Journey-Narrative.md)
+**Summary**: Self-aware analytical system, 100% anomaly detection, temporal coreference, "top 1%" sustained
+
+The analytical intelligence story of transforming a high-performance RAG system into a self-aware analytical system that monitors, diagnoses, and analyzes its own performance evolution proactively. Features conversational memory optimization, EAV metric snapshots with hybrid anomaly detection, adaptive sliding windows, and temporal coreference resolution with entity pinning.
+
+**Highlights**:
+- Self-aware system: Monitors own performance evolution via metric snapshots
+- Conversational memory: 7.05ms overhead (86% under 50ms target), 100% cache hit
+- Metric snapshots: EAV schema, 5.66ms INSERT, FIFO retention
+- Anomaly detection: 100% accuracy (hybrid two-stage), zero false positives
+- Adaptive sliding window: <1ms overhead, 7.4% token usage (50% headroom)
+- Temporal coreference: 100% accuracy (9/9 "Hard" tests, exceeded 90% target)
+- Entity Registry: Extraction, pinning, temporal ordering
+- Test growth: +87 tests (+18.7%), 552 total, zero regressions
+- P95 latency: ~4.36s (3% under 4.5s target)
+- External validation: Sustained A+ (weeks 2-3), "top 1%" recognition maintained
+
+**Key Innovations**:
+- **Cache-Stable Sliding Window**: Canonical format templates avoid complex cache invalidation
+- **Hybrid Anomaly Detection**: Two-stage filtering (statistical bounds + pattern matching) achieves 100% accuracy with zero false positives
+- **Temporal Entity Tracking**: Entity Registry with temporal ordering prevents coreference hallucination
+- **Entity Pinning**: Critical entities (3+ mentions or host/service types) persist across window slides
+- **Self-Healing Audit**: System analyzed own 3-week performance evolution (45 queries, 0 false positives)
+
+**Key Metrics**: 100% anomaly detection, 100% coreference, 7.4% token usage, 552 tests @ 100%, Grade A+
+
+**Why This Story**: Demonstrates self-aware system design, proactive monitoring architecture, and sustained engineering excellence. Perfect for "How do you build observable AI systems?" or "Tell me about proactive monitoring" interviews. Shows how external validation checkpoints (Gemini) catch architectural blind spots before they become problems.
+
+**Three-Week Structure**:
+- **Week 1**: Conversational memory (limit=3, cache optimization, 7.05ms overhead)
+- **Week 2**: Metric snapshots + anomaly detection (EAV schema, hybrid detection, "self-aware" recognition)
+- **Week 3**: Sliding window + coreference (adaptive sizing, entity registry, temporal ordering)
+
+**Methodology Recognition** (Gemini):
+- "Self-aware analytical system" (Week 2)
+- "Top 1% of local RAG implementations" (sustained from Phase 15)
+- All 3 blind spots identified and addressed proactively
+
+---
+
+**Phase 15: Query Decomposition Robustness & Latency Optimization** ⭐
 **File**: [phase-15-journey.md](phase-15-journey.md)
 **Summary**: 100% recall, 4.22s P95, conversational memory, "top 1%" recognition
 
@@ -256,13 +297,13 @@ The complete technical journey (Phases 4-9) is documented across multiple format
 ### **Quality Over Quantity**
 
 Rather than creating multiple mediocre narratives, we focus on:
-- **Six exceptional stories** (Phases 8, 9, 10, 12, 13+14, 15) told in depth
+- **Seven exceptional stories** (Phases 8, 9, 10, 12, 13+14, 15, 16) told in depth
 - **Visual coverage** for foundation phases (presentations)
 - **Technical depth** for key decisions (ADRs)
 - **Production evidence** via screenshots
 
 **This approach provides**:
-- Clear interview focus (Phase 8 = optimization hero story, Phase 9 = agentic innovation, Phase 15 = methodology validation)
+- Clear interview focus (Phase 8 = optimization hero story, Phase 9 = agentic innovation, Phase 15 = methodology validation, Phase 16 = self-aware systems)
 - Comprehensive coverage (presentations + ADRs + screenshots)
 - Time efficiency (deep dive on what matters most)
 - Flexibility (can add more narratives post-launch if needed)
@@ -294,11 +335,12 @@ Rather than creating multiple mediocre narratives, we focus on:
 - Added Glass Box AI for visual transparency
 - Achieved 98.7% agentic accuracy
 
-**Excellence** (Phases 10-15): ⭐
+**Excellence** (Phases 10-16): ⭐
 - Phase 10: Performance engineering (51pp fallback reduction, CoVe)
 - Phase 12: Data-driven optimization (92% hit rate, strategic pivots)
 - Phase 13+14: LLM-guided intelligence (4.4× improvement, hybrid architecture)
 - Phase 15: Methodology validation ("top 1%" recognition, 3 A+ grades)
+- Phase 16: Self-aware analytics (anomaly detection, temporal coreference, entity registry)
 
 **Result**: Clear progression from infrastructure → platform → optimization → intelligence → elite-tier excellence
 
@@ -315,8 +357,11 @@ Point to **Phase 9 journey** (agentic RAG + Glass Box AI innovation)
 ### **For "Tell me about your engineering methodology"**:
 Point to **Phase 15 journey** ("top 1%" recognition, hypothesis-driven planning, external validation)
 
+### **For "How do you build observable/self-aware systems"**:
+Point to **Phase 16 journey** (self-aware analytics, anomaly detection, entity tracking, proactive monitoring)
+
 ### **For "How do you approach system design"**:
-Reference ADR-001 (Nomad decision), ADR-008 (RAG architecture), ADR-010 (Agentic architecture), ADR-014 (Conversational memory)
+Reference ADR-001 (Nomad decision), ADR-008 (RAG architecture), ADR-010 (Agentic architecture), ADR-014 (Conversational memory), ADR-015 (Analytical intelligence)
 
 ### **For "Show me your infrastructure work"**:
 Show Infrastructure Overview presentation + screenshots
@@ -349,7 +394,7 @@ Phase 13+14 journey (hybrid architecture, MVP approach, conservative thresholds)
 
 ---
 
-**Status**: Phases 8, 9, 10, 12, 13+14, 15 journeys complete with comprehensive foundation references
-**Latest**: Phase 15 (methodology validation, "top 1%" recognition, 3 consecutive A+ grades)
+**Status**: Phases 8, 9, 10, 12, 13+14, 15, 16 journeys complete with comprehensive foundation references
+**Latest**: Phase 16 (self-aware analytical system, 100% anomaly detection, temporal coreference)
 **Philosophy**: Deep dive on breakthrough stories + presentations for context
-**Coverage**: 6 complete phase narratives, 54 slides, 4 ADRs, 13 screenshots, 4 architecture diagrams
+**Coverage**: 7 complete phase narratives, 54 slides, 4 ADRs, 13 screenshots, 4 architecture diagrams
