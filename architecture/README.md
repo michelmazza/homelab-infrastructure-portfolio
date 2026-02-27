@@ -193,7 +193,7 @@ Transform high-performance RAG into self-aware analytical system with proactive 
 **ADR-011** (Optimize): 18% fallback, 605,000× speedup, CoVe  
 **ADR-012** (Intelligence Enhancement): Multi-hop reasoning with conservative confidence  
 **ADR-013** (Intelligence Enhancement): LLM-guided query decomposition with hybrid architecture  
-**ADR-014** (Intelligence + Performance): Conversational memory with elite-tier optimization ("top 1%")
+**ADR-014** (Intelligence + Performance): Conversational memory with elite-tier optimization ("top 1%")  
 **ADR-015** (Self-Awareness): Analytical intelligence with proactive monitoring and temporal coreference
 
 ---
