@@ -140,28 +140,6 @@ Hybrid LLM-guided decomposition with semantic understanding and deterministic va
 
 ---
 
-### ADR-015: Analytical Intelligence & Operational Guardrails (Phase 16)
-**File**: [decisions/ADR-015-PORTFOLIO.md](decisions/ADR-015-PORTFOLIO.md)
-**Date**: February 11-25, 2026
-**Status**: ✅ Complete (Grade: A+)
-
-Transform high-performance RAG into self-aware analytical system with proactive monitoring.
-
-**Key Decisions**:
-- Conversational memory: Limit=3 with cache optimization (7.05ms overhead)
-- Metric snapshots: EAV schema with FIFO retention (5.66ms INSERT)
-- Hybrid anomaly detection: Statistical bounds + pattern matching (100% accuracy)
-- Adaptive sliding window: Cache-stable architecture (<1ms overhead, 7.4% token usage)
-- Entity Registry: Temporal coreference with entity pinning (100% pronoun resolution)
-
-**Results**: Self-aware system, 100% anomaly detection, 100% coreference accuracy, 552 tests (zero regressions), sustained A+ grade
-
-**Innovations**: Cache-stable sliding window, hybrid anomaly detection (zero false positives), temporal entity tracking (prevents hallucination), entity pinning (prevents aging decay)
-
-**External Validation**: "Self-aware analytical system", "Top 1% of local RAG implementations" (Gemini A+)
-
----
-
 ### ADR-014: Conversational Memory & Latency Optimization (Phase 15)
 **File**: [decisions/ADR-014-PORTFOLIO.md](decisions/ADR-014-PORTFOLIO.md)
 **Date**: February 3-23, 2026
@@ -181,6 +159,28 @@ Transform RAG from query-response to conversational intelligence with temporal c
 **Innovations**: Cache utilization > token efficiency principle, simple prepend strategy (beating complex ML), professional rollback acceptance (quantization)
 
 **External Validation**: "Top 1% of local RAG implementations" (Gemini), methodology recognition: "Benchmark → Experiment → Validate → Pivot"
+
+---
+
+### ADR-015: Analytical Intelligence & Operational Guardrails (Phase 16)
+**File**: [decisions/ADR-015-PORTFOLIO.md](decisions/ADR-015-PORTFOLIO.md)
+**Date**: February 11-25, 2026
+**Status**: ✅ Complete (Grade: A+)
+
+Transform high-performance RAG into self-aware analytical system with proactive monitoring.
+
+**Key Decisions**:
+- Conversational memory: Limit=3 with cache optimization (7.05ms overhead)
+- Metric snapshots: EAV schema with FIFO retention (5.66ms INSERT)
+- Hybrid anomaly detection: Statistical bounds + pattern matching (100% accuracy)
+- Adaptive sliding window: Cache-stable architecture (<1ms overhead, 7.4% token usage)
+- Entity Registry: Temporal coreference with entity pinning (100% pronoun resolution)
+
+**Results**: Self-aware system, 100% anomaly detection, 100% coreference accuracy, 552 tests (zero regressions), sustained A+ grade
+
+**Innovations**: Cache-stable sliding window, hybrid anomaly detection (zero false positives), temporal entity tracking (prevents hallucination), entity pinning (prevents aging decay)
+
+**External Validation**: "Self-aware analytical system", "Top 1% of local RAG implementations" (Gemini A+)
 
 ---
 
