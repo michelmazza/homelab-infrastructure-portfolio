@@ -8,7 +8,14 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
-**Phase 16: Analytical Intelligence & Operational Guardrails** ⭐ **NEW**
+### [Phase 17 — Advanced Synthesis](phase-17-advanced-synthesis.md) ✅
+**Focus**: Conflict detection, resolution, and multi-document synthesis with full provenance
+**Achievement**: 0.208ms heuristic engine resolving 7 conflict categories, zero LLM dependencies
+**Grade**: A+ (Gemini Validated) | March 2026
+
+---
+
+**Phase 16: Analytical Intelligence & Operational Guardrails** ⭐
 **File**: [Phase-16-Journey-Narrative.md](Phase-16-Journey-Narrative.md)
 **Summary**: Self-aware analytical system, 100% anomaly detection, temporal coreference, "top 1%" sustained
 
@@ -297,7 +304,7 @@ The complete technical journey (Phases 4-9) is documented across multiple format
 ### **Quality Over Quantity**
 
 Rather than creating multiple mediocre narratives, we focus on:
-- **Seven exceptional stories** (Phases 8, 9, 10, 12, 13+14, 15, 16) told in depth
+- **Eight exceptional stories** (Phases 8, 9, 10, 12, 13+14, 15, 16, 17) told in depth
 - **Visual coverage** for foundation phases (presentations)
 - **Technical depth** for key decisions (ADRs)
 - **Production evidence** via screenshots
@@ -341,6 +348,7 @@ Rather than creating multiple mediocre narratives, we focus on:
 - Phase 13+14: LLM-guided intelligence (4.4× improvement, hybrid architecture)
 - Phase 15: Methodology validation ("top 1%" recognition, 3 A+ grades)
 - Phase 16: Self-aware analytics (anomaly detection, temporal coreference, entity registry)
+- Phase 17: Advanced synthesis (conflict detection, resolution, provenance, Glass Box 6 tabs)
 
 **Result**: Clear progression from infrastructure → platform → optimization → intelligence → elite-tier excellence
 
@@ -394,7 +402,7 @@ Phase 13+14 journey (hybrid architecture, MVP approach, conservative thresholds)
 
 ---
 
-**Status**: Phases 8, 9, 10, 12, 13+14, 15, 16 journeys complete with comprehensive foundation references
-**Latest**: Phase 16 (self-aware analytical system, 100% anomaly detection, temporal coreference)
+**Status**: Phases 8, 9, 10, 12, 13+14, 15, 16, 17 journeys complete with comprehensive foundation references
+**Latest**: Phase 17 (advanced synthesis, 0.208ms conflict resolution, 100% provenance, Glass Box 6 tabs)
 **Philosophy**: Deep dive on breakthrough stories + presentations for context
-**Coverage**: 7 complete phase narratives, 54 slides, 4 ADRs, 13 screenshots, 4 architecture diagrams
+**Coverage**: 8 complete phase narratives, 68+ slides, 4 ADRs, 17 screenshots, 4 architecture diagrams

@@ -242,6 +242,17 @@ Multi-factor confidence scoring visualization.
 ---
 
 
+## Phase 17 — Advanced Synthesis (March 2026)
+
+| File | Description |
+|---|---|
+| `phase-10-glass-box-before-3tabs.png` | Glass Box UI before Phase 17 — original 3 tabs |
+| `phase-17-glass-box-conflicts-tab.png` | Conflicts tab — 7-category detection results |
+| `phase-17-glass-box-resolution-low-consensus.png` | Resolution tab — weighted scoring + consensus strength |
+| `phase-17-glass-box-provenance-tab.png` | Provenance tab — full fact lineage chains |
+
+---
+
 ## Portfolio Value
 
 These screenshots demonstrate:
@@ -255,10 +266,11 @@ These screenshots demonstrate:
 
 ---
 
-**Status**: 16 screenshots total ✅ (+3 Phase 10)  
-**Week 3 Session 1**: Infrastructure + observability (8 screenshots)  
-**Week 3 Session 4**: RAG platform UI (2 screenshots)  
+**Status**: 20 screenshots total ✅ (+4 Phase 17)
+**Week 3 Session 1**: Infrastructure + observability (8 screenshots)
+**Week 3 Session 4**: RAG platform UI (2 screenshots)
 **Week 3 Session 12**: Glass Box AI (3 screenshots)
-**Phase 10**: CoVe verification (3 screenshots) ⭐ NEW!  
-**Coverage**: Complete system from infrastructure → AI/ML → explainable AI → verified AI  
+**Phase 10**: CoVe verification (3 screenshots)
+**Phase 17**: Advanced Synthesis — Glass Box 6 tabs (4 screenshots) ⭐ NEW!
+**Coverage**: Complete system from infrastructure → AI/ML → explainable AI → verified AI → synthesis
 **Grade**: Portfolio-ready ✅

@@ -184,6 +184,10 @@ Transform high-performance RAG into self-aware analytical system with proactive 
 
 ---
 
+| — | Phase 17: Advanced Synthesis | Phase 17 | No standalone ADR — extends ADR-015 zero-LLM constraint. Decisions documented in journey/phase-17-advanced-synthesis.md |
+
+---
+
 ## Story Arc: Foundation → Build → Optimize → Intelligence
 
 **ADR-001** (Foundation): Choose simple, reliable orchestration  
