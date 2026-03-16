@@ -22,7 +22,7 @@ This portfolio documents my journey building production-grade infrastructure and
 
 ---
 
-## The Journey: 16 Phases of Evolution
+## The Journey: 17 Phases of Evolution
 
 ### Foundation (Phases 1-3)
 **Orchestration Platform** → Built 3-node HashiCorp Nomad cluster
