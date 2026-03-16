@@ -33,7 +33,7 @@ This portfolio documents my journey building production-grade infrastructure and
 **Production Operations** → 15+ services orchestrated, NFS storage integrated
 **Observability Stack** → Prometheus + Grafana + Loki with mobile alerting
 
-## Innovation & AI/ML (Phases 6-16)
+## Innovation & AI/ML (Phases 6-17)
 
 - **AI/ML Foundation** → Local LLM deployment with Ollama
 - **Advanced RAG Platform** → Production knowledge system with Streamlit UI
