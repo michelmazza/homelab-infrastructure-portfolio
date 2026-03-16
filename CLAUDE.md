@@ -16,8 +16,3 @@ Portfolio repository containing sanitized artifacts synced from development proj
 - Use `cp -f` when copying/overwriting files during sync operations.
 - Commit messages should be descriptive and reference the phase/session when applicable.
 
-## Python / uv
-
-- This project uses Python with uv for package management.
-- Use `uv sync` for dependencies and `uv run` for script execution.
-- Always verify API keys are loaded via dotenv before running scripts that call external APIs.
