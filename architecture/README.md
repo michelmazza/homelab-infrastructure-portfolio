@@ -186,6 +186,8 @@ Transform high-performance RAG into self-aware analytical system with proactive 
 
 | — | Phase 17: Advanced Synthesis | Phase 17 | No standalone ADR — extends ADR-015 zero-LLM constraint. Decisions documented in journey/phase-17-advanced-synthesis.md |
 
+| — | Phase 18: Predictive Diagnostics | Phase 18 | No standalone ADR — extends ADR-015 zero-LLM constraint. Decisions documented in journey/phase-18-predictive-diagnostics.md |
+
 ---
 
 ## Story Arc: Foundation → Build → Optimize → Intelligence
@@ -241,4 +243,4 @@ Complete overview of technologies used across all phases.
 ---
 
 **Status**: Content being added incrementally based on phase completion
-**Latest**: Phase 16 complete - Analytical Intelligence & Operational Guardrails ("Self-Aware System") ✅
+**Latest**: Phase 18 complete - Predictive Diagnostics ("Infrastructure Prophet") ✅

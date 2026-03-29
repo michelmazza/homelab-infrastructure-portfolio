@@ -242,6 +242,19 @@ Multi-factor confidence scoring visualization.
 ---
 
 
+## Phase 18 — Predictive Diagnostics (March 2026)
+
+### Glass Box Tab 7 — Predictive Diagnostics
+
+| File | Description |
+|---|---|
+| `phase-18/tab7-smoke-test-full.png` | Glass Box Tab 7, all 9 metric rows, R² color-coding, observer 🔴 indicators |
+| `phase-18/tab7-smoke-test-query1.png` | Full app view during active query |
+| `phase-18/tab7-smoke-test-query2.png` | Predictive Diagnostics + conflict detected |
+| `phase-18/tab7-smoke-test-query3.png` | Predictive Diagnostics + no conflict |
+
+---
+
 ## Phase 17 — Advanced Synthesis (March 2026)
 
 | File | Description |
@@ -266,7 +279,7 @@ These screenshots demonstrate:
 
 ---
 
-**Status**: 20 screenshots total ✅ (+4 Phase 17)
+**Status**: 24 screenshots total ✅ (+4 Phase 18)
 
 **Week 3 Session 1**: Infrastructure + observability (8 screenshots)
 
@@ -276,8 +289,10 @@ These screenshots demonstrate:
 
 **Phase 10**: CoVe verification (3 screenshots)
 
-**Phase 17**: Advanced Synthesis — Glass Box 6 tabs (4 screenshots) ⭐ NEW!
+**Phase 17**: Advanced Synthesis — Glass Box 6 tabs (4 screenshots)
 
-**Coverage**: Complete system from infrastructure → AI/ML → explainable AI → verified AI → synthesis
+**Phase 18**: Predictive Diagnostics — Glass Box Tab 7 (4 screenshots) ⭐ NEW!
+
+**Coverage**: Complete system from infrastructure → AI/ML → explainable AI → verified AI → synthesis → predictive
 
 **Grade**: Portfolio-ready ✅

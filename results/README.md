@@ -4,7 +4,18 @@ Metrics, improvements, and measurable outcomes from each phase.
 
 ---
 
-## Phase 17: Advanced Synthesis ⭐ NEW
+## Phase 18: Predictive Diagnostics ⭐ NEW
+
+### Phase 18 — Predictive Diagnostics
+**File**: [phase-18-metrics.md](phase-18-metrics.md)
+**Summary**: Zero-LLM OLS engine, ~0.05ms P95, +90 tests, observer effect, Grade: A+
+
+Engine P95 ~0.05ms (100× headroom), +90 tests (718→808), CV reversal finding
+(real infra 10–65× more stable than synthetic), observer effect parameters.
+
+---
+
+## Phase 17: Advanced Synthesis
 
 ### Phase 17 — Advanced Synthesis
 
@@ -313,5 +324,5 @@ Complete performance data including:
 
 ---
 
-**Status**: Phases 8, 9, 10, 11, 12, 13+14, 15, 16, 17 metrics complete
-**Latest**: Phase 17 (advanced synthesis, 0.208ms conflict resolution, 718 tests, A+ sustained)
+**Status**: Phases 8, 9, 10, 11, 12, 13+14, 15, 16, 17, 18 metrics complete
+**Latest**: Phase 18 (predictive diagnostics, ~0.05ms P95, 808 tests, A+ sustained, zero-LLM streak: 3 phases)

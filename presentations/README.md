@@ -204,7 +204,8 @@ All presentations follow core engineering principles:
 | **Phase 9** | 9 | 14 | Agentic RAG, Glass Box AI, 98.7% accuracy, MCP tools ⭐ |
 | **Phase 10** | 10 | 14 | Performance optimization, CoVe, 18% fallback ⭐ |
 | **Phase 17** | 17 | 14 | Advanced Synthesis, conflict resolution, Glass Box 6 tabs ⭐ |
-| **Total** | **4-10, 17** | **82** | **Complete technical journey with AI innovation** |
+| **Phase 18** | 18 | 12 | Predictive Diagnostics, zero-LLM OLS, observer effect ⭐ |
+| **Total** | **4-10, 17-18** | **94** | **Complete technical journey with AI innovation** |
 
 ---
 
@@ -222,6 +223,19 @@ This innovation demonstrates engineering excellence through transparency and use
 
 ---
 
+## Phase 18: Predictive Diagnostics ⭐
+
+### From Infrastructure Observer to Infrastructure Prophet
+**File**: phase-18-predictive-diagnostics.pdf
+**Slides**: 12 slides
+**Format**: PDF
+**Coverage**: Phase 18 (Predictive Diagnostics)
+
+Zero-LLM OLS regression engine forecasting 9 Prometheus series at ~0.05ms P95.
+Glass Box Tab 7 with R² color-coding and observer effect. Gemini A+.
+
+---
+
 ## Phase 17: Advanced Synthesis ⭐
 
 ### Zero-LLM Conflict Resolution Engine
@@ -236,4 +250,4 @@ This innovation demonstrates engineering excellence through transparency and use
 
 ---
 
-**Status**: 6 presentations complete, covering Phases 4-10 and 17 with full visual storytelling and Glass Box AI innovation ✅
+**Status**: 7 presentations complete, covering Phases 4-10, 17, and 18 with full visual storytelling and Glass Box AI innovation ✅

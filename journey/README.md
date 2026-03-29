@@ -8,6 +8,13 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
+### [Phase 18 — Predictive Diagnostics](phase-18-predictive-diagnostics.md) ✅
+**Focus**: Zero-LLM predictive engine, Glass Box Tab 7, observer effect
+**Achievement**: OLS regression forecasting 9 Prometheus series at ~0.05ms P95 (100× under 5ms budget). Glass Box Tab 7 with R² color-coding and self-aware observer effect diagnostics.
+**Grade**: A+ (Gemini Validated) | March 2026
+
+---
+
 ### [Phase 17 — Advanced Synthesis](phase-17-advanced-synthesis.md) ✅
 **Focus**: Conflict detection, resolution, and multi-document synthesis with full provenance
 **Achievement**: 0.208ms heuristic engine resolving 7 conflict categories, zero LLM dependencies
@@ -304,7 +311,7 @@ The complete technical journey (Phases 4-9) is documented across multiple format
 ### **Quality Over Quantity**
 
 Rather than creating multiple mediocre narratives, we focus on:
-- **Eight exceptional stories** (Phases 8, 9, 10, 12, 13+14, 15, 16, 17) told in depth
+- **Nine exceptional stories** (Phases 8, 9, 10, 12, 13+14, 15, 16, 17, 18) told in depth
 - **Visual coverage** for foundation phases (presentations)
 - **Technical depth** for key decisions (ADRs)
 - **Production evidence** via screenshots
@@ -349,6 +356,7 @@ Rather than creating multiple mediocre narratives, we focus on:
 - Phase 15: Methodology validation ("top 1%" recognition, 3 A+ grades)
 - Phase 16: Self-aware analytics (anomaly detection, temporal coreference, entity registry)
 - Phase 17: Advanced synthesis (conflict detection, resolution, provenance, Glass Box 6 tabs)
+- Phase 18: Predictive diagnostics (zero-LLM OLS engine, ~0.05ms P95, observer effect, Glass Box Tab 7)
 
 **Result**: Clear progression from infrastructure → platform → optimization → intelligence → elite-tier excellence
 
@@ -402,7 +410,7 @@ Phase 13+14 journey (hybrid architecture, MVP approach, conservative thresholds)
 
 ---
 
-**Status**: Phases 8, 9, 10, 12, 13+14, 15, 16, 17 journeys complete with comprehensive foundation references
-**Latest**: Phase 17 (advanced synthesis, 0.208ms conflict resolution, 100% provenance, Glass Box 6 tabs)
+**Status**: Phases 8, 9, 10, 12, 13+14, 15, 16, 17, 18 journeys complete with comprehensive foundation references
+**Latest**: Phase 18 (predictive diagnostics, ~0.05ms P95, observer effect, Glass Box Tab 7)
 **Philosophy**: Deep dive on breakthrough stories + presentations for context
-**Coverage**: 8 complete phase narratives, 68+ slides, 4 ADRs, 17 screenshots, 4 architecture diagrams
+**Coverage**: 9 complete phase narratives, 82+ slides, 4 ADRs, 24 screenshots, 4 architecture diagrams
