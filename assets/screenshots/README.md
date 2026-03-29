@@ -248,10 +248,10 @@ Multi-factor confidence scoring visualization.
 
 | File | Description |
 |---|---|
-| `phase-18/tab7-smoke-test-full.png` | Glass Box Tab 7, all 9 metric rows, R² color-coding, observer 🔴 indicators |
-| `phase-18/tab7-smoke-test-query1.png` | Full app view during active query |
-| `phase-18/tab7-smoke-test-query2.png` | Predictive Diagnostics + conflict detected |
-| `phase-18/tab7-smoke-test-query3.png` | Predictive Diagnostics + no conflict |
+| `phase-18-tab7-smoke-test-full.png` | Glass Box Tab 7, all 9 metric rows, R² color-coding, observer 🔴 indicators |
+| `phase-18-tab7-smoke-test-query1.png` | Full app view during active query |
+| `phase-18-tab7-smoke-test-query2.png` | Predictive Diagnostics + conflict detected |
+| `phase-18-tab7-smoke-test-query3.png` | Predictive Diagnostics + no conflict |
 
 ---
 
