@@ -8,6 +8,13 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
+### [Phase 19 — Cross-Modal Diagnostic Correlation](phase-19-cross-modal-correlation.md) ✅
+**Focus**: Zero-LLM correlation engine, four-state Glass Box Tab 7, end-to-end diagnostic query response
+**Achievement**: Metric inflections × Nomad/Consul events → Top Cause answer in <10ms. "Why is CPU high?" → "Likely caused by: searxng (restart) 45s ago [score=0.46]." Multiplicative scoring with suppression threshold. Controlled negative validation (Scenario 3). Four-state Quiet Period Paradox resolution.
+**Grade**: A+ (Gemini Validated) | April 2026
+
+---
+
 ### [Phase 18 — Predictive Diagnostics](phase-18-predictive-diagnostics.md) ✅
 **Focus**: Zero-LLM predictive engine, Glass Box Tab 7, observer effect
 **Achievement**: OLS regression forecasting 9 Prometheus series at ~0.05ms P95 (100× under 5ms budget). Glass Box Tab 7 with R² color-coding and self-aware observer effect diagnostics.
