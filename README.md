@@ -17,15 +17,15 @@ This portfolio documents my journey building production-grade infrastructure and
 
 ---
 
-**Status**: Phase 19 Complete ✅ | Cross-Modal Diagnostic Correlation | <10ms Scoring | 961 Tests | Zero-LLM Streak (4 phases)
-**Next**: Phase 20 - Conversational Diagnostic Memory (Planning)
+**Status**: Phase 20 Complete ✅ | Conversational AIOps | Verifiable Inference | 999 Tests | Zero-LLM Streak (5 phases)
+**Next**: Phase 21 — Production Reliability (PostgreSQL migration, 1000th test milestone)
 
 ---
 
-## The Journey: 19 Phases of Evolution
+## The Journey: 20 Phases of Evolution
 
 ### Foundation (Phases 1-3)
-**Orchestration Platform** → Built 3-node HashiCorp Nomad cluster
+**Orchestration Platform** → Built multi-node HashiCorp Nomad cluster
 **Service Discovery** → Implemented Consul for dynamic service mesh
 **Reverse Proxy** → Deployed Traefik for intelligent routing
 
@@ -33,7 +33,7 @@ This portfolio documents my journey building production-grade infrastructure and
 **Production Operations** → 15+ services orchestrated, NFS storage integrated
 **Observability Stack** → Prometheus + Grafana + Loki with mobile alerting
 
-## Innovation & AI/ML (Phases 6-18)
+## Innovation & AI/ML (Phases 6-20)
 
 - **AI/ML Foundation** → Local LLM deployment with Ollama
 - **Advanced RAG Platform** → Production knowledge system with Streamlit UI
@@ -47,6 +47,7 @@ This portfolio documents my journey building production-grade infrastructure and
 - **Analytical Intelligence** → Self-aware system, 100% anomaly detection, temporal coreference ⭐
 - **Predictive Diagnostics** → Zero-LLM OLS engine, ~0.05ms P95, Glass Box Tab 7, observer effect ⭐
 - **Cross-Modal Diagnostic Correlation** → Zero-LLM correlation engine, "Why is CPU high?" answered in <10ms ⭐
+- **Reliability & Resonance** → Conversational AIOps arc closed: predict → explain → remember → verify ⭐
 
 ### Phase 9 Complete: Agentic RAG with Glass Box AI ✅
 
@@ -75,14 +76,6 @@ This portfolio documents my journey building production-grade infrastructure and
 - 190 total tests (100% passing)
 - **Key Discovery**: Glass Box AI revealed 99.9% of time spent in MCP API calls (not AI reasoning)
 
-**Engineering Principles**:
-1. Foundation First (MCP tools before reasoning)
-2. Security by Default (read-only, rate-limited, validated)
-3. Intent is Key (98.2% routing accuracy enables downstream success)
-4. Simple Wins (pattern matching > machine learning for speed)
-5. Transparency Reveals (visualization directed optimization strategy)
-6. MVP Iteration (3 weeks, 3 deliverables, low-risk progression)
-
 ---
 
 ### Phase 10 Complete: Performance & Intelligence Optimization ✅
@@ -101,96 +94,27 @@ This portfolio documents my journey building production-grade infrastructure and
 - 3ms CoVe overhead (94% better than 50ms target)
 - 416 tests passing (zero regressions)
 
-**Innovation Highlight**: Chain of Verification (CoVe) - 7-component tiered verification:
-- 🔍 **Text Match**: Exact substring (0.5ms)
-- 🧠 **Semantic**: Embedding similarity (2ms)
-- 🤖 **LLM Fallback**: Context-aware verification (50ms)
-
-**Results**:
-- Confidence Paradox discovery (high confidence = worse results?!)
-- Root cause: LLM confident about sources, outputting metadata format
-- Surgical fix: 50 lines, 51pp improvement, 12 minutes
-
-**Engineering Principles**:
-1. Data-Driven Decisions (measured 69% fallback, not "feels like 40%")
-2. Performance ≠ AI (99.9% slowness from API waits, not AI processing)
-3. Root Cause Over Guessing (3-step systematic analysis solved paradox)
-4. External Validation (Google Gemini review provided A+ grade)
-5. Transparency Reveals Bottlenecks (Glass Box showed 99.99% time in MCP calls)
-
 ---
 
 ### Phase 12 Complete: Data-Driven Retrieval Optimization ✅
 
-**The Transformation**: From assumptions to evidence—achieving 92% retrieval accuracy through strategic corpus expansion
-
-**Three-Week Build** (Completed in 1 week!):
-- **Week 1**: RRF validation → α-weighted empirically superior (evidence over theory)
-- **Week 2**: Corpus expansion → 3.4× growth, 92% hit rate achieved ⭐
-- **Week 3**: RAGAS evaluation → Framework operational, bottleneck shift identified
+**The Transformation**: From assumptions to evidence — achieving 92% retrieval accuracy through strategic corpus expansion
 
 **Key Capabilities**:
 - 92% hit rate (+20pp improvement from 72% baseline)
 - 2,095 chunk corpus (3.4× expansion, Phases 4-12 coverage)
 - Strategic pivot (corpus +12pp > Docling +2-3pp, 4-6× ROI)
 - Zero regressions (432/432 tests passing, 469 total discovered)
-- Process improvements (Testing-Guide.md, comprehensive regression standard)
-
-**Innovation Highlight**: "Measure Twice, Cut Once" Methodology
-- **The Investigation**: 30 minutes analyzing failures before implementation
-- **The Discovery**: 43% of failures were data gaps, not retrieval quality
-- **The Pivot**: Deferred Docling, prioritized corpus expansion (4-6× higher impact)
-- **The Result**: 92% achieved in Week 2 instead of Week 3 (ahead of schedule)
-
-**Results**:
-- Corpus gap queries: 5/6 fixed (83% success rate)
-- RRF vs α-weighted: Empirical validation (90% vs 75-80%, kept α-weighted)
-- Test discovery: 469 tests found (was only testing 17, missed 96%)
-- Bottleneck shift: Retrieval 92% ✅, routing classification now constraint
-- Grade A external validation ("Optimized engine until hitting transmission limits")
-
-**Engineering Principles**:
-1. Investigate Before Implementing (30 min → prevented week-long misallocation)
-2. Evidence Over Theory (α-weighted beat RRF despite theoretical advantages)
-3. Comprehensive Testing (full discovery prevents blind spots: 17 → 469 tests)
-4. Bottlenecks Shift (fix one component, expose next constraint iteratively)
 
 ---
 
 ### Phase 11 Complete: RAG Intelligence Enhancement ✅
-
-**The Transformation**: From basic retrieval to intelligent multi-hop reasoning with conservative confidence
-
-**Three-Week Build**:
-- **Week 1**: Query expansion foundation → 500+ domain terms, WordNet + spaCy integration
-- **Week 2**: Multi-hop reasoning → 90% routing success, parallel execution (33% time savings)
-- **Week 3**: Validation & portfolio → Grade A external validation, zero regressions
 
 **Key Capabilities**:
 - 90% multi-hop routing success (exceeded >85% target)
 - 100% HIGH confidence results (conservative strategy validated)
 - 33% time savings through parallel execution (15.19s → 5.04s)
 - Pattern-based classification (100% accuracy, <1ms response time)
-- Conservative confidence (stop on first LOW confidence sub-query)
-
-**Innovation Highlight**: Conservative Confidence Strategy
-- **The Insight**: Knowing when to stop is competitive advantage
-- **The Evidence**: 10% early-stop cases prove fail-safe design (not limitations)
-- **The Validation**: 100% of results marked HIGH confidence (zero false positives)
-
-**Results**:
-- 90% multi-hop routing success (5 patterns: comparison, troubleshooting, integration, process, capability)
-- Zero regressions across 3,744 test executions (416 tests @ 100% pass rate)
-- 33% time savings (parallel execution on independent sub-queries)
-- Grade A external validation (Google Gemini review)
-
-**Engineering Principles**:
-1. Query Expansion First (500+ domain terms, 2-3 synonyms per concept)
-2. Pattern-Based Classification (simple beats complex: 100% accuracy, no LLM latency)
-3. Conservative Confidence (fail-safe: stop on first LOW confidence)
-4. SOLID Architecture (decomposition vs execution separation enables Phase 12)
-5. Parallel Optimization (99.9% of time is I/O wait, not AI processing)
-6. Systematic Validation (3,744 test executions, zero regressions)
 
 ---
 
@@ -198,31 +122,13 @@ This portfolio documents my journey building production-grade infrastructure and
 
 ### Phase 8: Retrieval Quality Optimization
 
-**The Challenge**
-Built a production RAG (Retrieval-Augmented Generation) system in Phase 7. Fast, beautiful UI, solid infrastructure. But when I created a test suite: **0% accuracy on factual queries.**
+**The Challenge**: Built a production RAG system in Phase 7. Fast, beautiful UI, solid infrastructure. Test suite: **0% accuracy on factual queries.**
 
-Query: "What is Nomad?"
-Expected: ADR-001 (authoritative definition)
-Got: Random session notes 😱
+**The Approach**: Systematic three-layer optimization — Hybrid Search + Document Type Boosting + Topic Authority
 
-**The Approach** (Initial Plan):
-Systematic three-layer optimization:
-- **Layer 1**: Hybrid Search (BM25 + Vector) - ✅ Implemented
-- **Layer 2**: Small-to-Big Retrieval - ❌ Abandoned (chunks already optimal size)
-- **Layer 3**: Systematic Experiments - ❌ Replaced with data-driven boosting
+**The Breakthrough** (Session 2): Document type boosting delivered **+55 percentage points in one session.**
 
-**The Pivot**: After Session 2's breakthrough with document boosting (+55pp!), pivoted from planned complex retrieval to simpler authority-based ranking. Data showed chunks were already 1847 chars (not 186 as assumed), making Small-to-Big unnecessary.
-
-**The Breakthrough** (Session 2):
-Document type boosting: ADRs and core docs ranked higher. **+55 percentage points in one session.**
-
-**The Results**:
-- **90% accuracy achieved** (exceeded 60-70% target by 20-30pp)
-- Systematic engineering: measure → hypothesize → test → iterate
-- Data-driven decisions: abandoned planned complexity when data showed simpler path
-- Time investment: 7.5 hours over 5 sessions
-
-**Key Insight**: Data-driven engineering beats complex solutions. The simplest boost (document authority) delivered the breakthrough.
+**The Results**: **90% accuracy achieved** (exceeded 60-70% target by 20-30pp)
 
 [Read the full Phase 8 journey →](journey/README.md#phase-8-retrieval-quality-optimization)
 
@@ -230,18 +136,19 @@ Document type boosting: ADRs and core docs ranked higher. **+55 percentage point
 
 ## 📊 Portfolio Statistics
 
-- **Infrastructure**: 3-node Nomad cluster, Consul service mesh, Traefik reverse proxy
+- **Infrastructure**: 4-node Nomad cluster (3 Proxmox VMs + ML workstation), Consul service mesh, Traefik reverse proxy
 - **Services Orchestrated**: 15+ production services
 - **Observability**: Prometheus + Grafana + Loki with mobile alerting via Pushover
 - **AI/ML Platform**: Ollama (CPU + GPU hybrid), RAG with 2,095 chunks across 270 documents
 - **RAG Accuracy**: 100% recall, 4.36s P95, self-aware analytical system (Phase 16)
-- **Glass Box UI**: 7 tabs (Reasoning, Verification, Confidence, Conflicts, Resolution, Provenance, Predictive+Correlation)
+- **Glass Box UI**: 8 tabs (Reasoning, Verification, Confidence, Conflicts, Resolution, Provenance, Predictive+Correlation, Diagnostic Thread)
 - **Conflict Detection**: 7 categories, 0.208ms overhead
 - **Predictive Engine**: Zero-LLM OLS regression, ~0.05ms P95, observer effect
-- **Correlation Engine**: Zero-LLM causal attribution, <10ms scoring, multiplicative scoring, 4-state Tab 7
-- **Test Coverage**: 961 automated tests (942/942 passing, 100%)
-- **Documentation**: 1,145-line journey narrative, ADRs, architecture diagrams, session notes
-- **Presentations**: 68+ professional slides across 4 presentations (14 slides on Glass Box AI)
+- **Correlation Engine**: Zero-LLM causal attribution, <10ms scoring, 4-state Top Cause
+- **Conversational AIOps**: DiagnosticContext TTL=300s, Verifiable Inference, Tab 8 Diagnostic Thread
+- **Test Coverage**: 999 automated tests (980/980 runnable @ 100%)
+- **Zero-LLM Streak**: 5 consecutive phases (16–20)
+- **Presentations**: 68+ professional slides across 4 presentations
 
 ---
 
@@ -251,17 +158,17 @@ Document type boosting: ADRs and core docs ranked higher. **+55 percentage point
 homelab-portfolio/
 ├── README.md                                # This file
 ├── journey/                                 # Narrative documentation
-│   └── README.md                            # Complete journey (1,145 lines)
-├── presentations/                           # Slide decks (54 slides total)
+│   └── README.md                            # Complete journey index
+├── presentations/                           # Slide decks
 │   ├── infrastructure-overview.pdf          # Phases 4-6 (12 slides)
 │   ├── phase-7-rag-platform.pdf             # Phase 7 (15 slides)
 │   ├── phase-8-optimization-journey.pdf     # Phase 8 (13 slides)
 │   └── Phase-9-Presentation-Agentic-RAG.pdf # Phase 9 (14 slides) ⭐
 ├── architecture/                            # Technical decisions
-│   ├── decisions/                           # ADRs documenting key choices
+│   ├── decisions/                           # ADRs (ADR-001 through ADR-016)
 │   └── diagrams/                            # System architecture visuals
 ├── assets/                                  # Screenshots and visuals
-│   └── screenshots/                         # Glass Box AI interface screenshots ⭐
+│   └── screenshots/                         # 31 production screenshots
 ├── results/                                 # Metrics and analysis
 │   ├── phase-8-metrics.md                   # Session-by-session breakdown
 │   └── test-results/                        # Automated test outputs
@@ -274,41 +181,43 @@ homelab-portfolio/
 ## 🎯 Quick Navigation
 
 - **For Technical Depth**: [Journey Narrative](journey/README.md) - Complete story with technical details
-- **For Visual Overview**: [Presentations](presentations/) - 54 slides covering Phases 4-9
+- **For Visual Overview**: [Presentations](presentations/) - 68+ slides covering Phases 4-9
 - **For Engineering Decisions**: [Architecture Decisions](architecture/decisions/) - ADRs explaining key choices
 - **For Metrics**: [Results](results/) - Quantified outcomes and test coverage
-- **For Screenshots**: [Assets](assets/screenshots/) - Glass Box AI interface ⭐
+- **For Screenshots**: [Assets](assets/screenshots/) - Glass Box AI, 8-tab interface ⭐
 
 ---
 
 ## 🚀 Highlighted Innovations
 
+### Conversational AIOps (Phase 20) ⭐ **LATEST**
+**The Innovation**: The system maintains the diagnostic thread over time.
+
+Ask "Why is CPU high?" — it correlates metric inflections against infrastructure events and answers in <10ms. Ask "Is that still related to the restart?" — it remembers the diagnosis, checks the live trend, and tells you whether the original conclusion still holds.
+
+Not because it calls an LLM for each answer. Because it maintains a per-incident `DiagnosticContext` with bounded TTL, context-guarded injection (≤200 chars), and live infrastructure verification (Verifiable Inference).
+
+**The Arc** (Phases 18–20 — Observability Trilogy):
+- Phase 18: "I see the future" — OLS regression predicts metric trends
+- Phase 19: "I understand the past" — cross-modal correlation explains anomalies
+- Phase 20: "I maintain the diagnostic thread" — memory + verification
+
+**Key Design**: `diagnostic_context_to_summary()` is the only sanctioned path by which diagnostic conclusions reach the LLM's context window. Dual-layer truncation (field-level + string-level) guarantees ≤200 chars regardless of future template changes.
+
+**Grade**: A+ (Gemini CP3)
+
+---
+
 ### Glass Box AI (Phase 9) ⭐
-**The Innovation**: Complete visual transparency into AI reasoning process
+**The Innovation**: Complete visual transparency into AI reasoning process — 3 → 8 tabs across phases 9–20
 
-Traditional AI agents are black boxes - users see outputs but not reasoning. Glass Box AI exposes every step, tool call, and performance metric through three interactive tabs:
-
-1. **Thought Trace**: Step-by-step reasoning with expandable JSON details
-2. **Timeline**: Plotly Gantt chart showing temporal execution flow  
-3. **Performance**: Dashboard with bottleneck identification and speedup visualization
-
-**The Impact**: 
-- Revealed 99.9% of execution time in MCP API calls (not AI reasoning)
-- Directed optimization strategy toward external APIs (not AI logic)
-- Built user trust through complete transparency
-- Enabled data-driven engineering decisions
-
-**The Differentiator**: Not just "what AI can do" but "showing HOW it does it"
+**Impact**: Revealed 99.9% of execution time in MCP API calls. Tab 8 (Phase 20) shows how the system thinks, not just what it answers.
 
 [See Glass Box AI screenshots →](assets/screenshots/)
 
 ### The 90% Accuracy Breakthrough (Phase 8)
-**The Challenge**: 0% accuracy on factual queries despite solid infrastructure
-
-**The Approach**: Systematic three-layer optimization with data-driven pivots
-
-**The Breakthrough**: Document type boosting (+55pp in Session 2)
-
+**The Challenge**: 0% accuracy on factual queries despite solid infrastructure  
+**The Breakthrough**: Document type boosting (+55pp in Session 2)  
 **The Result**: 90% accuracy achieved, exceeding 60-70% target by 20-30pp
 
 [Read the optimization journey →](journey/README.md#phase-8-retrieval-quality-optimization)
@@ -322,14 +231,14 @@ Traditional AI agents are black boxes - users see outputs but not reasoning. Gla
 - Data-driven decision making
 - Iterative improvement with measurable milestones
 - Comprehensive documentation of decisions and outcomes
-- Test coverage for validation
+- Test coverage for validation (999 tests, 100% pass rate)
 
 **Key Principles**:
 - Foundation before intelligence (build reliable base first)
 - Security by default (not retrofitted)
 - Simple wins (complexity when justified by data)
 - Transparency reveals truth (visualization guides optimization)
-- MVP iteration (deliver value incrementally)
+- Zero-LLM analytical path (deterministic + latency-bounded)
 
 ---
 
@@ -337,6 +246,7 @@ Traditional AI agents are black boxes - users see outputs but not reasoning. Gla
 
 | Phase | Focus | Key Achievement | Grade | Status |
 |-------|-------|-----------------|-------|--------|
+| **Phase 20** | Conversational AIOps | Verifiable Inference, Tab 8 Diagnostic Thread, 999 tests, zero-LLM streak 5 | A+ | ✅ Complete |
 | **Phase 19** | Cross-Modal Diagnostic Correlation | Zero-LLM correlation engine, 4-state Top Cause, end-to-end <10ms | A+ | ✅ Complete |
 | **Phase 18** | Predictive Diagnostics | Zero-LLM OLS engine, ~0.05ms P95, Glass Box Tab 7, observer effect | A+ | ✅ Complete |
 | **Phase 17** | Advanced Synthesis | 0.208ms conflict resolution, 100% provenance, Glass Box transparency | A+ | ✅ Complete |
@@ -363,14 +273,7 @@ Traditional AI agents are black boxes - users see outputs but not reasoning. Gla
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
-You are free to:
-- **Share**: Copy and redistribute the material
-- **Adapt**: Remix, transform, and build upon the material
-
-Under the following terms:
-- **Attribution**: Give appropriate credit and link to license
-
 ---
 
-**Last Updated**: 2026-04 (Phase 19 Complete)
-**Version**: 2.0 - Phase 19 Complete - "Cross-Modal Diagnostic Correlation"
+**Last Updated**: 2026-04 (Phase 20 Complete)
+**Version**: 2.1 - Phase 20 Complete - "Conversational AIOps — predict, explain, remember, verify"

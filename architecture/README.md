@@ -156,7 +156,7 @@ Transform RAG from query-response to conversational intelligence with temporal c
 
 **Results**: 100% recall (+15pp), 4.22s P95 (-33.5%), 100% coreference, 91.7% multi-turn success, 1.000 RAGAS Context Precision
 
-**Innovations**: Cache utilization > token efficiency principle, simple prepend strategy (beating complex ML), professional rollback acceptance (quantization)
+**Innovations**: Cache utilization > token efficiency principle, simple prepend strategy (beating complex ML), professional rollback acceptance
 
 **External Validation**: "Top 1% of local RAG implementations" (Gemini), methodology recognition: "Benchmark → Experiment → Validate → Pivot"
 
@@ -178,19 +178,50 @@ Transform high-performance RAG into self-aware analytical system with proactive 
 
 **Results**: Self-aware system, 100% anomaly detection, 100% coreference accuracy, 552 tests (zero regressions), sustained A+ grade
 
-**Innovations**: Cache-stable sliding window, hybrid anomaly detection (zero false positives), temporal entity tracking (prevents hallucination), entity pinning (prevents aging decay)
+**Innovations**: Cache-stable sliding window, hybrid anomaly detection (zero false positives), temporal entity tracking (prevents hallucination)
 
 **External Validation**: "Self-aware analytical system", "Top 1% of local RAG implementations" (Gemini A+)
 
 ---
 
-| — | Phase 17: Advanced Synthesis | Phase 17 | No standalone ADR — extends ADR-015 zero-LLM constraint. Decisions documented in journey/phase-17-advanced-synthesis.md |
+### Phases 17–19: Zero-LLM Analytical Streak
 
-| — | Phase 18: Predictive Diagnostics | Phase 18 | No standalone ADR — extends ADR-015 zero-LLM constraint. Decisions documented in journey/phase-18-predictive-diagnostics.md |
+These phases extended the zero-LLM analytical constraint without standalone ADRs. Key decisions are documented in their journey narratives.
+
+| Phase | Focus | Key Achievement |
+|-------|-------|-----------------|
+| 17 | Advanced Synthesis | 7-category conflict detection, 0.208ms overhead, Glass Box 6 tabs |
+| 18 | Predictive Diagnostics | OLS regression, ~0.05ms P95, observer effect, Glass Box Tab 7 |
+| 19 | Cross-Modal Correlation | Nomad/Consul event correlation, <10ms Top Cause, 4-state UI |
 
 ---
 
-## Story Arc: Foundation → Build → Optimize → Intelligence
+### ADR-016: Diagnostic Context Architecture — Bounded State for Conversational AIOps (Phase 20)
+**File**: [decisions/ADR-016-PORTFOLIO.md](decisions/ADR-016-PORTFOLIO.md)
+**Date**: 2026-04-06
+**Status**: ✅ Accepted (Grade: A+)
+
+Closes the Stateless Oracle problem: the system now remembers its diagnostic conclusions across conversation turns and verifies them against live infrastructure state.
+
+**Key Decisions**:
+- `DiagnosticContext` dataclass (7 fields): structured causal attribution, not raw event data
+- Context window guard: single bounded function is the **only** injection path (≤200 chars)
+- Dual-layer truncation (field-level + string-level): invariant survives future template changes
+- TTL=300s (Human Deliberation Buffer), env-var configurable (Observability Tempo)
+- Pure function return vs side-effect: testable without Streamlit mocking
+- New-query override: metric + spike signals always win over follow-up phrase match
+- Verifiable Inference: live trend appended on follow-up, graceful degradation on failure
+- Diagnostic Thread (Tab 8): append-only session investigation timeline, Pivot Event natural
+
+**Results**: 12 tests, 999 total tests (980/980 runnable @ 100%), A+ (Gemini CP1 + CP2 + CP3)
+
+**Gemini Concepts Coined**: Verifiable Inference, Diagnostic Thread, Pivot Event, Human Deliberation Buffer, Observability Tempo
+
+> "The completion of Phase 20 marks a definitive shift from building a 'tool' to engineering a 'system.'"
+
+---
+
+## Story Arc: Foundation → Build → Optimize → Intelligence → Observability Trilogy
 
 **ADR-001** (Foundation): Choose simple, reliable orchestration  
 **ADR-008** (Build): Create production RAG platform  
@@ -200,7 +231,9 @@ Transform high-performance RAG into self-aware analytical system with proactive 
 **ADR-012** (Intelligence Enhancement): Multi-hop reasoning with conservative confidence  
 **ADR-013** (Intelligence Enhancement): LLM-guided query decomposition with hybrid architecture  
 **ADR-014** (Intelligence + Performance): Conversational memory with elite-tier optimization ("top 1%")  
-**ADR-015** (Self-Awareness): Analytical intelligence with proactive monitoring and temporal coreference
+**ADR-015** (Self-Awareness): Analytical intelligence with proactive monitoring and temporal coreference  
+**Phases 17–19** (Observability): Synthesis → Prediction → Explanation (zero-LLM streak 3 → 4)  
+**ADR-016** (Conversational AIOps): Memory + verification — predict, explain, remember, verify ⭐
 
 ---
 
@@ -217,8 +250,6 @@ Visual representations of system architecture.
 
 **See**: [Diagrams README](diagrams/README.md) for detailed explanations, usage guidance, and technical details
 
-**Coverage**: Pre-RAG foundation (9 layers) + Complete infrastructure (10 layers) + RAG optimization (3-layer boosting) + Agentic intelligence (5 MCP tools + Glass Box AI)
-
 ---
 
 ## Technology Stack
@@ -233,14 +264,16 @@ Complete overview of technologies used across all phases.
 - **AI/ML Platform**: Ollama (hybrid CPU+GPU), embedding models, LLMs
 - **RAG Platform**: Streamlit, SQLite, hybrid search, document boosting, caching
 - **Agentic Systems**: MCP tools (Prometheus, Nomad, Consul), intent classification, cross-reference engine
+- **AIOps**: OLS regression engine, correlation engine, DiagnosticContext, Verifiable Inference
 - **Development & Process**: Python, pytest, UV, Git, ADR framework
-- **Hardware & Network**: 3-node cluster, Mac Studio GPU, 10TB NAS
+- **Hardware & Network**: 4-node cluster (3 Proxmox VMs + ML workstation), GPU, NAS
 
 **Philosophy**: Operational simplicity prioritized over complexity. Resource efficiency on older hardware. Production-grade patterns with learning value.
 
-**Achievements**: 98.7% agentic accuracy, 90% RAG accuracy, 24× GPU speedup, 200× cache speedup, 99.9%+ uptime
+**Achievements**: 98.7% agentic accuracy, 90% RAG accuracy, 24× GPU speedup, 605,000× cache speedup, 999 tests @ 100%, zero-LLM streak 5 phases
 
 ---
 
-**Status**: Content being added incrementally based on phase completion
-**Latest**: Phase 18 complete - Predictive Diagnostics ("Infrastructure Prophet") ✅
+**Status**: Phase 20 complete — Conversational AIOps arc closed (predict → explain → remember → verify) ✅  
+**Latest**: ADR-016 Diagnostic Context Architecture (Phase 20, Grade A+)  
+**Zero-LLM streak**: 5 consecutive phases (16–20)

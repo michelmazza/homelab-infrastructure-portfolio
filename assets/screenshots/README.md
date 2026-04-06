@@ -20,20 +20,11 @@ Visual evidence of production infrastructure and observability stack.
 
 ### Ollama Monitoring Dashboard
 **File**: `ollama_monitoring_dashboard.png`  
-**Shows**: AI/ML platform monitoring with Ollama endpoint health tracking for both CPU (Nomad cluster) and GPU (Mac Studio) instances. Demonstrates blackbox exporter probes for HTTP health checks, response times, and availability metrics. Shows hybrid Ollama deployment architecture.
-
-**Achievement**: Fixed blackbox-exporter endpoint configuration during Week 3 Session 1, demonstrating systematic troubleshooting and monitoring skills.
+**Shows**: AI/ML platform monitoring with Ollama endpoint health tracking for both CPU (Nomad cluster) and GPU (ML workstation) instances. Demonstrates blackbox exporter probes for HTTP health checks, response times, and availability metrics.
 
 ### Prometheus Targets
 **File**: `prometheus_targets.png`  
-**Shows**: Prometheus monitoring targets including:
-- **node-exporter** (3/3 up): Host metrics from all 3 Proxmox nodes
-- **nomad** (3/3 up): Nomad cluster metrics from all servers
-- **prometheus** (1/1 up): Self-monitoring
-- **traefik** (1/1 up): Reverse proxy metrics
-- **ollama-health** (2/2 up): Ollama endpoints (CPU + GPU) ✅ Fixed!
-
-**Demonstrates**: Full observability stack with service discovery, health checks, and multi-target monitoring.
+**Shows**: Prometheus monitoring targets including node-exporter (3/3 up), nomad (3/3 up), prometheus self-monitoring, traefik (1/1 up), and ollama-health (2/2 up). Full observability stack with service discovery and health checks.
 
 ---
 
@@ -41,11 +32,11 @@ Visual evidence of production infrastructure and observability stack.
 
 ### Consul Services Dashboard
 **File**: `consul_dashboard_services.png`  
-**Shows**: HashiCorp Consul service mesh with registered services, health checks, and service discovery. Demonstrates service registry and health monitoring across the cluster.
+**Shows**: HashiCorp Consul service mesh with registered services, health checks, and service discovery.
 
 ### Nomad Dashboard
 **File**: `nomad_dashbord.png`  
-**Shows**: HashiCorp Nomad orchestration platform with job management, allocation status, and cluster overview. Running 15+ containerized services across 3-node cluster.
+**Shows**: HashiCorp Nomad orchestration platform with job management, allocation status, and cluster overview. Running 15+ containerized services across the cluster.
 
 ### Traefik Dashboard
 **File**: `traefik_dashboard.png`  
@@ -58,241 +49,132 @@ Visual evidence of production infrastructure and observability stack.
 ### Streamlit Welcome Interface
 **File**: `streamlit_ui_welcome.png`
 
-Production RAG system showing:
-- **System Status**: 611 chunks loaded from 85 documents
-- **Interface**: Clean conversational UI ("HomeLab Knowledge Chat")
-- **Navigation**: Sidebar with conversation history and controls
-- **Design**: Professional dark theme with clear information hierarchy
-
-**Context**: Built in Phase 7, this interface serves as the entry point for the production RAG system optimized in Phase 8. The system loads the complete knowledge base (611 chunks from 85 documents) and provides a ChatGPT-like experience for querying homelab documentation.
-
----
+Production RAG system showing system status (611 chunks, 85 documents), clean conversational UI, and professional dark theme.
 
 ### Streamlit Query Results & RAG Workflow
 **File**: `streamlit_ui_query_results.png`
 
-Complete RAG workflow demonstrating the 90% accuracy achievement in action:
+Complete RAG workflow demonstrating 90% accuracy — hybrid search (BM25+Vector), document authority boosting (ADR=1.5×), topic authority, and real confidence scores. Visual proof the Phase 8 optimization is working.
 
-**Query Example**: "What is Nomad?"
+---
 
-**Retrieved Sources** (Top 3 with confidence scores):
-1. **ADR-001-orchestration-platform-selection.md** (score: 0.957) 🚀
-   - Authoritative document boost working perfectly!
-2. **Phase-6-Completion-Report.md** (score: 0.917)
-   - Topic match boost applied (title contains "Nomad")
-3. **ADR-001-Phase-6-AI-ML-Foundation.md** (score: 0.870)
-   - Topic match boost applied
+## Phase 9: Glass Box AI — Visual Transparency
 
-**Search Configuration** (visible in left sidebar):
-- **Mode**: Hybrid + Boosting (BM25 + Vector)
-- **α = 0.3**: 30% BM25 (keywords), 70% Vector (semantics)
-- **Boost Factors**:
-  - ADR: 1.5× (authoritative documents)
-  - Topic Match: 1.5× (title contains query term)
-  - Reports: 1.3× (formal documentation)
-  - Session Notes: 0.8× (de-boost exploratory content)
-  - ADR-Index: 0.7× (table of contents)
+### Glass Box AI - Thought Trace
+**File**: `phase-9-glass-box-thought-trace.png`
 
-**Performance Metrics**:
-- **Query Cache**: 0% hit rate (fresh query)
-- **Analytics**: 2 queries processed, 0% fallback rate
-- **Response Time**: ~1497ms average (includes LLM generation)
+Step-by-step reasoning transparency. Query: "Is Traefik running?" — shows intent classification (LIVE_STATUS, 90.0% confident), tool calls, and timing breakdown. Makes AI reasoning completely transparent.
 
-**LLM Response**: Accurate, comprehensive answer citing the correct authoritative source (ADR-001)
+### Glass Box AI - Timeline Visualization
+**File**: `phase-9-glass-box-timeline.png`
 
-**Technical Achievement**: 
-- Without optimization: ADR-001 ranked #8 (wrong!)
-- With Phase 8 optimization: ADR-001 ranked #1 with 0.957 confidence (correct!)
-- Demonstrates calculated 1.5× boost factor working exactly as designed
-- Visual proof of 90% accuracy optimization success
+Plotly Gantt chart showing execution timeline. Key insight: 99.99% of time in MCP API calls, not AI reasoning — guided optimization focus.
 
-**What This Shows**:
-- ✅ Hybrid search combining keywords + semantics
-- ✅ Document type boosting prioritizing authoritative sources
-- ✅ Topic authority matching for precise queries
-- ✅ Complete RAG pipeline: query → retrieval → generation → response
-- ✅ Professional UI with technical depth (config visible)
-- ✅ Real confidence scores showing optimization impact
+### Glass Box AI - Performance Dashboard
+**File**: `phase-9-glass-box-performance.png`
+
+Performance metrics and speedup visualization — actual (1010ms) vs target (5000ms). **5× faster than target.**
+
+---
+
+## Phase 10: Chain of Verification (CoVe)
+
+### Glass Box AI - Enhanced Verification Display
+**File**: `phase-10-glass-box-tab1-reasoning.png`
+
+Enhanced Glass Box showing CoVe results — verification status per claim, multi-factor confidence scores, source attribution.
+
+### Glass Box AI - Verification Detail
+**File**: `phase-10-glass-box-tab2-verification.png`
+
+Tiered verification breakdown: text match (0.5ms) → semantic (2ms) → LLM fallback (50ms). 83× speedup over uniform LLM verification.
+
+### Glass Box AI - Confidence Dashboard
+**File**: `phase-10-glass-box-tab3-confidence.png`
+
+Multi-factor confidence scoring: verification (60%), source quality (30%), response length (10%). Complete transparency into confidence calculation.
+
+---
+
+## Phase 17 — Advanced Synthesis
+
+| File | Description |
+|---|---|
+| `phase-10-glass-box-before-3tabs.png` | Glass Box UI before Phase 17 — original 3 tabs (baseline for comparison) |
+| `phase-17-glass-box-conflicts-tab.png` | Tab 4: Conflicts — 7-category detection results with consensus strength |
+| `phase-17-glass-box-resolution-low-consensus.png` | Tab 5: Resolution — weighted scoring + resolution strategy |
+| `phase-17-glass-box-provenance-tab.png` | Tab 6: Provenance — full fact lineage chains |
+
+**Achievement**: Glass Box expanded from 3 → 6 tabs. 0.208ms conflict resolution (48× under 10ms budget).
+
+---
+
+## Phase 18 — Predictive Diagnostics
+
+| File | Description |
+|---|---|
+| `phase-18-tab7-smoke-test-full.png` | Glass Box Tab 7 — all 9 metric rows, R² color-coding, observer 🔴 indicators |
+| `phase-18-tab7-smoke-test-query1.png` | Full app view during active diagnostic query |
+| `phase-18-tab7-smoke-test-query2.png` | Predictive Diagnostics + conflict detected |
+| `phase-18-tab7-smoke-test-query3.png` | Predictive Diagnostics + no conflict baseline |
+
+**Achievement**: Zero-LLM OLS engine at ~0.05ms P95. Self-aware observer effect: RAG query intensity correlated with own resource footprint.
+
+---
+
+## Phase 19 — Cross-Modal Diagnostic Correlation
+
+| File | Description |
+|---|---|
+| `phase-19-tab7-top-cause-candidate.png` | Tab 7: Top Cause column — Candidate state with score tooltip |
+| `phase-19-tab7-unknown-cause.png` | Tab 7: "Unknown Cause" state (events exist, no correlation above threshold) |
+| `phase-19-tab7-no-events-logged.png` | Tab 7: "No Events Logged" state (collector gap) |
+| `phase-19-tab7-collector-gap.png` | Tab 7: "Collector Gap" state — fourth diagnostic state |
+
+**Achievement**: Four-state "Quiet Period Paradox" resolution. "Why is CPU high?" answered in <10ms with zero LLM in the analytical path.
+
+---
+
+## Phase 20 — Reliability & Resonance
+
+| File | Description |
+|---|---|
+| `phase-20-glass-box-all-tabs.png` | Full 8-tab Glass Box UI — complete Conversational AIOps interface |
+| `phase-20-tab4-no-conflicts.png` | Tab 4: Synthesis Conflicts — "No conflicts detected across sources" |
+| `phase-20-tab5-resolution.png` | Tab 5: Synthesis Resolution panel |
+| `phase-20-tab6-provenance.png` | Tab 6: Provenance — 127 unique facts from 3 sources, 5.07ms overhead |
+| `phase-20-tab7-predictive-diagnostics.png` | Tab 7: Predictive Diagnostics — 9 metrics, R² color-coding, Top Cause column |
+| `phase-20-tab7-no-events-logged.png` | Tab 7: "No Events Logged" state (4th diagnostic state) |
+| `phase-20-tab8-empty-state.png` | Tab 8: Diagnostic Thread — empty state "No diagnostic investigations this session" |
+
+**Achievement**: 8-tab Glass Box. Tab 8 Diagnostic Thread: append-only session investigation timeline. Verifiable Inference: follow-up responses append live trend status. System maintains the diagnostic thread over time.
 
 ---
 
 ## Coverage Summary
 
-**Observability**:
-- ✅ Grafana (5 dashboards configured)
-- ✅ Prometheus (multiple targets monitored)
-- ✅ Host metrics (3 nodes)
-- ✅ Service health monitoring
+**Observability** (8 screenshots):
+- Grafana dashboards, Prometheus targets, host metrics, service health
 
-**Infrastructure**:
-- ✅ Consul service mesh (service registry)
-- ✅ Nomad orchestration (15+ services)
-- ✅ Traefik reverse proxy (dynamic routing)
-- ✅ Service discovery operational
+**Infrastructure** (3 screenshots):
+- Consul service mesh, Nomad orchestration, Traefik reverse proxy
 
-**AI/ML Platform**:
-- ✅ Streamlit RAG interface (welcome + query workflow)
-- ✅ 90% accuracy optimization visible in action
-- ✅ Complete retrieval pipeline with scoring
-- ✅ Professional user experience
+**AI/ML Platform** (2 screenshots):
+- Streamlit RAG interface (welcome + query workflow with 90% accuracy visible)
 
-**Future Additions**:
-- Phase 9 storyboard (Session 13)
-- Phase 9 architecture diagrams (Session 14)
-- Integration chaos testing results (future)
+**Glass Box AI — 7 tabs evolution**:
+- Phase 9: Original 3 tabs (Thought Trace, Timeline, Performance)
+- Phase 10: CoVe verification (3 screenshots)
+- Phase 17: Synthesis tabs 4–6 (4 screenshots, +before baseline)
+- Phase 18: Predictive Diagnostics Tab 7 (4 screenshots)
+- Phase 20: Full 8-tab UI (7 screenshots) ⭐ **LATEST**
+
+**Phase 19** (4 screenshots):
+- Four-state Top Cause column (Candidate, Unknown Cause, No Events, Collector Gap)
 
 ---
 
-## Phase 9: Glass Box AI - Visual Transparency (Week 3)
-
-### Glass Box AI - Thought Trace
-**File**: `phase-9-glass-box-thought-trace.png`
-
-Explainable AI in action showing step-by-step reasoning.
-
-**Query**: "Is Traefik running?"
-
-**Visual Elements**:
-- Intent: LIVE_STATUS (90.0% confident)
-- Total Time: 1010ms | Steps: 3 | Success: 100%
-- Expandable step details with JSON inputs/outputs
-
-**Steps Shown**:
-- 🎯 Step 1: Classify intent (0.1ms)
-- 🔧 Step 2: Get traefik status (1009.8ms) ← Bottleneck!
-- ✨ Step 3: Synthesize answer (0.0ms)
-
-**Achievement**: Makes AI reasoning completely transparent. Users see what intent was detected, which tools were called, what data was used, and where time was spent.
-
----
-
-### Glass Box AI - Timeline Visualization  
-**File**: `phase-9-glass-box-timeline.png`
-
-Plotly Gantt chart showing execution timeline.
-
-**Key Insight**: 
-- Intent: 0.1ms (0.01%)
-- MCP tools: 1009.8ms (99.99%) ← Optimization target
-- Synthesis: 0.0ms (0.00%)
-
-**Impact**: Visual proof that 99.99% of time is in MCP API calls, NOT AI reasoning. Guides optimization focus.
-
----
-
-### Glass Box AI - Performance Dashboard
-**File**: `phase-9-glass-box-performance.png`
-
-Performance metrics and speedup visualization.
-
-**Left**: Pie chart showing time breakdown  
-**Right**: Bar chart comparing actual (1010ms) vs target (5000ms)
-
-**Result**: **5× faster than target!** 🏆
-
-**Demonstrates**: Both performance achievement AND engineering discipline (bottleneck identification).
-
----
-
-## Phase 10: Chain of Verification (CoVe) Screenshots (January 2026)
-
-### Glass Box AI - Enhanced Verification Display
-**File**: `phase-10-glass-box-tab1-reasoning.png`
-
-Enhanced Glass Box AI showing Chain of Verification results.
-
-**Visual Elements**:
-- Verification status per claim (verified/unverified/partial)
-- Multi-factor confidence scores (60/30/10 breakdown)
-- Source attribution with verification evidence
-- Tiered verification pathway indicator
-
-**Achievement**: Makes verification process completely transparent. Users see which claims were verified by text match, semantic similarity, or LLM fallback.
-
----
-
-### Glass Box AI - Verification Detail
-**File**: `phase-10-glass-box-tab2-verification.png`
-
-Detailed verification breakdown showing CoVe in action.
-
-**Key Insight**:
-- Text match: 0.5ms (fastest, most certain)
-- Semantic: 2ms (good balance)
-- LLM fallback: 50ms (highest accuracy, slowest)
-
-**Impact**: Visual proof of tiered verification working. Shows 83× speedup over uniform LLM verification.
-
----
-
-### Glass Box AI - Confidence Dashboard
-**File**: `phase-10-glass-box-tab3-confidence.png`
-
-Multi-factor confidence scoring visualization.
-
-**Scoring Breakdown**:
-- Verification factor: 60% weight
-- Source quality: 30% weight
-- Response length: 10% weight
-
-**Result**: Complete transparency into how confidence is calculated, not just the final number.
-
-**Demonstrates**: Both accuracy improvement AND engineering discipline (explainable scoring).
-
----
-
-
-## Phase 18 — Predictive Diagnostics (March 2026)
-
-### Glass Box Tab 7 — Predictive Diagnostics
-
-| File | Description |
-|---|---|
-| `phase-18-tab7-smoke-test-full.png` | Glass Box Tab 7, all 9 metric rows, R² color-coding, observer 🔴 indicators |
-| `phase-18-tab7-smoke-test-query1.png` | Full app view during active query |
-| `phase-18-tab7-smoke-test-query2.png` | Predictive Diagnostics + conflict detected |
-| `phase-18-tab7-smoke-test-query3.png` | Predictive Diagnostics + no conflict |
-
----
-
-## Phase 17 — Advanced Synthesis (March 2026)
-
-| File | Description |
-|---|---|
-| `phase-10-glass-box-before-3tabs.png` | Glass Box UI before Phase 17 — original 3 tabs |
-| `phase-17-glass-box-conflicts-tab.png` | Conflicts tab — 7-category detection results |
-| `phase-17-glass-box-resolution-low-consensus.png` | Resolution tab — weighted scoring + consensus strength |
-| `phase-17-glass-box-provenance-tab.png` | Provenance tab — full fact lineage chains |
-
----
-
-## Portfolio Value
-
-These screenshots demonstrate:
-- **Production Operations**: Full observability stack operational
-- **Service Mesh**: Consul + Nomad + Traefik orchestration
-- **AI/ML Engineering**: 90% RAG accuracy + Agentic capabilities
-- **Explainable AI**: Glass Box visualization ⭐ NEW!
-- **Full-Stack Development**: Backend + frontend + visualization  
-- **SRE Practices**: Monitoring-first infrastructure
-- **Innovation**: Visual transparency in AI reasoning ⭐
-
----
-
-**Status**: 24 screenshots total ✅ (+4 Phase 18)
-
-**Week 3 Session 1**: Infrastructure + observability (8 screenshots)
-
-**Week 3 Session 4**: RAG platform UI (2 screenshots)
-
-**Week 3 Session 12**: Glass Box AI (3 screenshots)
-
-**Phase 10**: CoVe verification (3 screenshots)
-
-**Phase 17**: Advanced Synthesis — Glass Box 6 tabs (4 screenshots)
-
-**Phase 18**: Predictive Diagnostics — Glass Box Tab 7 (4 screenshots) ⭐ NEW!
-
-**Coverage**: Complete system from infrastructure → AI/ML → explainable AI → verified AI → synthesis → predictive
-
+**Status**: 31 screenshots total ✅  
+**Latest**: Phase 20 — 8-tab Glass Box UI, Tab 8 Diagnostic Thread, Verifiable Inference  
+**Coverage**: Infrastructure → AI/ML → Explainable AI → Verified AI → Synthesis → Predictive → Correlative → Conversational AIOps  
 **Grade**: Portfolio-ready ✅
