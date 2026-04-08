@@ -144,11 +144,13 @@ hybrid Ollama deployment (24× GPU speedup). The foundation that everything else
 4. **Phase 9**: Intelligent co-pilot transformation (Glass Box AI) ⭐
 5. **Phase 10**: Production-ready AI (18% fallback, 605,000× speedup) ⭐
 6. **Observability Trilogy** (Phases 18–20): Predict → Explain → Remember & Verify ⭐
+7. **Methodology Journey** (Phases 1–20): How the discipline to build it all was engineered ⭐
 
 **Interview Narrative**: *"We built solid infrastructure, created a production RAG platform,
 optimized it to 90% accuracy, transformed it into an intelligent co-pilot with Glass Box AI,
 then built a Conversational AIOps system that predicts metric trends, explains anomalies,
-and maintains the diagnostic thread across conversation turns."*
+and maintains the diagnostic thread across conversation turns. And if you want to understand
+how that happened systematically — that's a separate presentation."*
 
 ---
 
@@ -163,7 +165,8 @@ and maintains the diagnostic thread across conversation turns."*
 | **Phase 10** | 10 | 14 | 18% fallback, 605,000× speedup, CoVe ⭐ |
 | **Phase 17** | 17 | 14 | 0.208ms conflict resolution, Glass Box 6 tabs ⭐ |
 | **Observability Trilogy** | 18–20 | 14 | Predict→Explain→Remember, Verifiable Inference ⭐ |
-| **Total** | 4–10, 17–20 | **96** | Complete journey: infrastructure → Conversational AIOps |
+| **Methodology Journey** | 1–20 | 12 | 7 practices, 35 weeks, crawl → walk → craft ⭐ |
+| **Total** | 1–20 | **108** | Complete journey: infrastructure → Conversational AIOps |
 
 ---
 
@@ -178,7 +181,7 @@ and maintains the diagnostic thread across conversation turns."*
 
 ---
 
-**Status**: 7 presentations complete ✅
-**Total Slides**: 96 (current)
-**Latest**: Observability Trilogy — Phases 18–20 (April 2026) ⭐
+**Status**: 8 presentations complete ✅
+**Total Slides**: 108 (current)
+**Latest**: From Crawl to Craft — 20-Phase Methodology Journey (April 2026) ⭐
 **Zero-LLM streak**: 5 consecutive phases (16–20)
