@@ -118,7 +118,7 @@ simultaneously:
 | 1 | PostgreSQL on node-3 (not Mac Studio)        | 2–3     | `app_db` database in `postgres:16-alpine` on `10.0.0.42`      |
 | 2 | ≥1000 tests passing                         | 1       | 1000th test committed (final: 1002 passing)                             |
 | 3 | Cross-node writes                           | 6       | Mac Studio scraper → node-3 PostgreSQL (row-count delta verified)        |
-| 4 | Scraper runs on lab0X (not Mac Studio)      | 7       | Alloc `b319419f` on lab-node-1 (docker driver), Healthy 1/1          |
+| 4 | Scraper runs on a Linux cluster node (not Mac Studio) | 7  | Alloc `b319419f` on lab-node-1 (docker driver), Healthy 1/1          |
 
 At phase close, the scraper on lab-node-1 (ARM64) was writing to
 PostgreSQL on lab-node-3 (AMD64) via a scoped non-SUPERUSER role.

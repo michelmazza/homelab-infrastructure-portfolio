@@ -13,7 +13,7 @@ Key architectural decisions documented across the infrastructure and AI/ML engin
 
 ### [ADR-019: Alerting Integration Architecture](ADR-019-PORTFOLIO.md)
 **Decision**: Implement alert enrichment as a pure function (`enrich_alert(payload, db_url) → dict`) without bundling an HTTP server.
-**Context**: Alertmanager webhook pattern established in ADR-019 as scope-minimal enrichment. HTTP server binding to a cluster IP creates placement constraints and restartability issues.
+**Context**: Phase 20 introduced correlation engine "Top Cause" output in the UI, but Alertmanager notifications remained disconnected from that reasoning — operators saw raw metric firings without the correlation context the UI already had. HTTP server binding to a cluster IP would also create placement constraints and restartability issues, so enrichment as a pure function was preferred over bundling a server.
 **Consequence**: Enrichment logic is testable in isolation; HTTP server can be added later without coupling.
 
 ### [ADR-018: PostgreSQL Migration Strategy](ADR-018-PORTFOLIO.md)
