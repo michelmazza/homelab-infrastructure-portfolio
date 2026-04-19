@@ -8,6 +8,15 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
+### [Phase 21 — Distributed Foundations](phase-21-distributed-foundations.md) ✅ ⭐ NEW
+**Focus**: PostgreSQL migration, containerized observability, distributed compute plane
+**Achievement**: Mac Studio removed from the compute plane entirely. Three services containerized (docker driver, multi-arch), data plane migrated from SQLite to PostgreSQL on a separate cluster node, scoped IAM role replacing SUPERUSER. Cross-node writes proven: scraper on lab-node-1 writing to PostgreSQL on lab-node-3.
+**Key Innovations**: `rag/db.py` connection factory (PostgreSQL ↔ SQLite, `%s` placeholder translation), `rag/alerting.py` Alertmanager webhook enrichment, ADR-020 Nomad-native discovery + job-file placement policy (operational-state vs architectural-intent insight), shared-image pattern (one Dockerfile, three entrypoints), scoped `app_role` replacing SUPERUSER.
+**Metrics**: 1036 tests (1002 passing), 37 new tests, zero regressions, zero-LLM streak 6 phases, A+ grade.
+**Grade**: A+ (Gemini CP2 Confirmed) | April 2026
+
+---
+
 ### [Phase 20 — Reliability & Resonance](phase-20-reliability-resonance.md) ✅
 **Focus**: Conversational AIOps — memory, verification, Diagnostic Thread
 **Achievement**: The system now maintains the diagnostic thread over time. Ask "Why is CPU high?" — it correlates and answers. Ask "Is that still related to the restart?" — it remembers the diagnosis, checks the live trend, and tells you whether the original conclusion still holds. Closes the three-phase Observability Trilogy arc: predict (Phase 18) → explain (Phase 19) → remember & verify (Phase 20).

@@ -4,7 +4,40 @@ Professional slide decks documenting the infrastructure journey from foundation 
 
 ---
 
-## Observability Trilogy — Phases 18–20 ⭐ Latest
+## Phase 21: Distributed Foundations ⭐ Latest
+
+### Infrastructure Engineering — PostgreSQL Migration + Containerization
+**File**: phase-21-distributed-foundations.pdf
+**Slides**: 14 slides
+**Format**: PDF
+**Coverage**: Phase 21
+
+The infrastructure engineering story: Mac Studio removed from the compute plane entirely.
+
+- **Data plane**: SQLite on Mac Studio → PostgreSQL on a cluster node (cross-node writes proven)
+- **Compute plane**: raw_exec macOS → docker driver, multi-arch, runs on any cluster node
+- **IAM**: postgres SUPERUSER → scoped `app_role` (CRUD only)
+- **Containerization**: 0 → 3 services (scraper, lifecycle manager, log event collector)
+
+**The A+ Bar** (four conditions met simultaneously): PostgreSQL on lab-node-3, ≥1000 tests passing,
+cross-node writes proven, scraper running on lab-node-1 (not Mac Studio).
+
+**Key Decisions**: `rag/db.py` connection factory, ADR-020 placement policy (architectural-intent
+vs operational-state insight), shared-image pattern (one Dockerfile, three entrypoints).
+
+**Gemini Grade**: A+ (CP2) — "A definitive architectural inflection: compute migrated from
+development machine to cluster, data migrated to dedicated node, IAM scoped to principle
+of least privilege."
+
+**Use for**:
+- Distributed systems and data plane migration discussions
+- Infrastructure containerization engineering
+- "Show me infrastructure work beyond application code" interviews
+- PostgreSQL migration patterns (dialect portability, placeholder translation)
+
+---
+
+## Observability Trilogy — Phases 18–20
 
 ### Predict → Explain → Remember & Verify
 **File**: Observability-Trilogy.pdf
@@ -164,9 +197,10 @@ how that happened systematically — that's a separate presentation."*
 | **Phase 9** | 9 | 14 | 98.7% agentic accuracy, Glass Box AI ⭐ |
 | **Phase 10** | 10 | 14 | 18% fallback, 605,000× speedup, CoVe ⭐ |
 | **Phase 17** | 17 | 14 | 0.208ms conflict resolution, Glass Box 6 tabs ⭐ |
+| **Phase 21** | 21 | 14 | PostgreSQL migration, 3 containerized, cross-node writes, A+ ⭐ |
 | **Observability Trilogy** | 18–20 | 14 | Predict→Explain→Remember, Verifiable Inference ⭐ |
 | **Methodology Journey** | 1–20 | 12 | 7 practices, 35 weeks, crawl → walk → craft ⭐ |
-| **Total** | 1–20 | **108** | Complete journey: infrastructure → Conversational AIOps |
+| **Total** | 1–21 | **122** | Complete journey: infrastructure → Distributed Foundations |
 
 ---
 
@@ -181,7 +215,7 @@ how that happened systematically — that's a separate presentation."*
 
 ---
 
-**Status**: 8 presentations complete ✅
-**Total Slides**: 108 (current)
-**Latest**: From Crawl to Craft — 20-Phase Methodology Journey (April 2026) ⭐
-**Zero-LLM streak**: 5 consecutive phases (16–20)
+**Status**: 9 presentations complete ✅
+**Total Slides**: 122 (current)
+**Latest**: Phase 21 — Distributed Foundations (April 2026) ⭐
+**Zero-LLM streak**: 6 consecutive phases (16–21)

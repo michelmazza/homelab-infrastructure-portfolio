@@ -287,6 +287,48 @@ Visual representations of system architecture across phases.
 
 ---
 
+## Distributed System Topology (Phase 21)
+
+**File**: `phase-21-system-topology.png`
+**Created**: April 2026
+**Updated**: April 2026 (sanitized for portfolio)
+**Source**: draw.io
+
+**Shows 4-Node Cluster with Distributed Data Plane**:
+- **Mac Studio (Development)**: Streamlit RAG app + Ollama LLM inference — not managed by Nomad; node eligibility disabled for scheduling
+- **lab-node-1 (ARM64)**: prometheus-scraper (docker driver) — writes metrics to PostgreSQL on lab-node-3
+- **lab-node-2**: node-exporter (docker driver) — metrics collection
+- **lab-node-3 (AMD64)**: PostgreSQL, registry:2, log-event-collector, observability-lifecycle, Grafana, Traefik, Searxng, node-exporter
+
+**8 Data Flows Visualized**:
+1. Prometheus scraper (lab-node-1) → PostgreSQL (lab-node-3): cross-node metric writes
+2. Log event collector → PostgreSQL: Nomad/Consul event ingestion
+3. Observability lifecycle (periodic): dual-table retention (metric_snapshots + log_events)
+4. Alertmanager → enrichment webhook → top-cause annotation
+5. Correlation engine → rag/db.py factory → PostgreSQL read path
+6. Container registry (lab-node-3:5000) → image pull on any cluster node
+7. Nomad scheduler → placement via job-file constraints (ADR-020)
+8. RAG app (Mac Studio) → PostgreSQL (lab-node-3): read queries via rag/db.py
+
+**Key Architecture Decisions**:
+- **No Mac Studio in compute plane**: node eligibility disabled; zero Nomad jobs scheduled
+- **Shared image pattern**: one Dockerfile, three entrypoints (scraper / lifecycle / collector)
+- **ADR-020 placement policy**: `!= mac-studio.local` constraint encodes architectural intent
+- **Scoped IAM**: `app_role` (CRUD only) replaces SUPERUSER for all three services
+
+**Network Details**:
+- All IPs sanitized (generic private IPs)
+- Cross-node writes proven: ARM64 → AMD64 (lab-node-1 → lab-node-3)
+- Container registry on lab-node-3 serves multi-arch images (amd64 + arm64)
+
+**Use For**:
+- Distributed systems and data plane migration discussions
+- "How do you handle cross-node writes?" → Show scraper → PostgreSQL flow
+- "What's your containerization strategy?" → Shared-image pattern + placement constraints
+- ADR-020 operational-state vs architectural-intent discussion
+
+---
+
 ## Performance & Intelligence Architecture (Phase 10)
 
 **Files**: 
@@ -514,6 +556,6 @@ Visual representations of system architecture across phases.
 
 ---
 
-**Status**: 6 architecture diagrams (sanitized, documented)  
-**Coverage**: Infrastructure (Phases 6-7) + RAG Pipeline (Phase 8) + Agentic RAG (Phase 9) + Performance (Phase 10)  
+**Status**: 7 architecture diagrams (sanitized, documented)
+**Coverage**: Infrastructure (Phases 6-7) + RAG Pipeline (Phase 8) + Agentic RAG (Phase 9) + Performance (Phase 10) + Distributed System Topology (Phase 21)
 **Quality**: Interview-ready, technically accurate, security-conscious

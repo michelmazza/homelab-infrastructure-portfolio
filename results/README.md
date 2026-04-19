@@ -4,7 +4,19 @@ Metrics, improvements, and measurable outcomes from each phase.
 
 ---
 
-## Phase 18: Predictive Diagnostics ⭐ NEW
+## Phase 21: Distributed Foundations ⭐ NEW
+
+### Phase 21 — Distributed Foundations
+**File**: [phase-21-metrics.md](phase-21-metrics.md)
+**Summary**: PostgreSQL migration, 3 services containerized, 1036 tests, zero-LLM streak 6, Grade: A+
+
+Mac Studio removed from compute plane. SQLite → PostgreSQL on lab-node-3. Cross-node writes:
+scraper on lab-node-1, data on lab-node-3, neither the development machine. Before/after
+across compute, data, IAM, and operational surface axes. 37 new tests, zero regressions.
+
+---
+
+## Phase 18: Predictive Diagnostics
 
 ### Phase 18 — Predictive Diagnostics
 **File**: [phase-18-metrics.md](phase-18-metrics.md)

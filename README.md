@@ -17,8 +17,8 @@ This portfolio documents my journey building production-grade infrastructure and
 
 ---
 
-**Status**: Phase 20 Complete ✅ | Conversational AIOps | Verifiable Inference | 999 Tests | Zero-LLM Streak (5 phases)
-**Next**: Phase 21 — Production Reliability (PostgreSQL migration, 1000th test milestone)
+**Status**: Phase 21 Complete ✅ | Distributed Foundations | PostgreSQL Migration | 1036 Tests | Zero-LLM Streak (6 phases)
+**Next**: Phase 22 — Self-Healing Agents (planned)
 
 ---
 
@@ -48,6 +48,7 @@ This portfolio documents my journey building production-grade infrastructure and
 - **Predictive Diagnostics** → Zero-LLM OLS engine, ~0.05ms P95, Glass Box Tab 7, observer effect ⭐
 - **Cross-Modal Diagnostic Correlation** → Zero-LLM correlation engine, "Why is CPU high?" answered in <10ms ⭐
 - **Reliability & Resonance** → Conversational AIOps arc closed: predict → explain → remember → verify ⭐
+- **Distributed Foundations** → PostgreSQL migration, 3 services containerized, cross-node writes, scoped IAM ⭐
 
 ### Phase 9 Complete: Agentic RAG with Glass Box AI ✅
 
@@ -137,18 +138,20 @@ This portfolio documents my journey building production-grade infrastructure and
 ## 📊 Portfolio Statistics
 
 - **Infrastructure**: 4-node Nomad cluster (3 Proxmox VMs + ML workstation), Consul service mesh, Traefik reverse proxy
-- **Services Orchestrated**: 15+ production services
+- **Services Orchestrated**: 15+ production services (3 containerized observability services — docker driver, multi-arch)
 - **Observability**: Prometheus + Grafana + Loki with mobile alerting via Pushover
 - **AI/ML Platform**: Ollama (CPU + GPU hybrid), RAG with 2,095 chunks across 270 documents
+- **Data Platform**: PostgreSQL on cluster node (cross-node writes proven, scoped IAM via `app_role`)
 - **RAG Accuracy**: 100% recall, 4.36s P95, self-aware analytical system (Phase 16)
 - **Glass Box UI**: 8 tabs (Reasoning, Verification, Confidence, Conflicts, Resolution, Provenance, Predictive+Correlation, Diagnostic Thread)
 - **Conflict Detection**: 7 categories, 0.208ms overhead
 - **Predictive Engine**: Zero-LLM OLS regression, ~0.05ms P95, observer effect
 - **Correlation Engine**: Zero-LLM causal attribution, <10ms scoring, 4-state Top Cause
 - **Conversational AIOps**: DiagnosticContext TTL=300s, Verifiable Inference, Tab 8 Diagnostic Thread
-- **Test Coverage**: 999 automated tests (980/980 runnable @ 100%)
-- **Zero-LLM Streak**: 5 consecutive phases (16–20)
-- **Presentations**: 68+ professional slides across 4 presentations
+- **Architecture Decisions**: 20 ADRs (ADR-001 through ADR-020)
+- **Test Coverage**: 1036 automated tests (1002 passing)
+- **Zero-LLM Streak**: 6 consecutive phases (16–21)
+- **Presentations**: 122 professional slides across 9 presentations
 
 ---
 
@@ -165,7 +168,7 @@ homelab-portfolio/
 │   ├── phase-8-optimization-journey.pdf     # Phase 8 (13 slides)
 │   └── Phase-9-Presentation-Agentic-RAG.pdf # Phase 9 (14 slides) ⭐
 ├── architecture/                            # Technical decisions
-│   ├── decisions/                           # ADRs (ADR-001 through ADR-016)
+│   ├── decisions/                           # ADRs (ADR-001 through ADR-020)
 │   └── diagrams/                            # System architecture visuals
 ├── assets/                                  # Screenshots and visuals
 │   └── screenshots/                         # 31 production screenshots
@@ -190,7 +193,20 @@ homelab-portfolio/
 
 ## 🚀 Highlighted Innovations
 
-### Conversational AIOps (Phase 20) ⭐ **LATEST**
+### Distributed Foundations (Phase 21) ⭐ **LATEST**
+**The Transformation**: Mac Studio removed from the compute plane entirely.
+
+Before: SQLite on Mac Studio, services running as macOS processes via launchd. After: PostgreSQL on a cluster node, three services containerized with the docker driver (multi-arch amd64+arm64), node eligibility disabled on Mac Studio for all Nomad scheduling.
+
+**The A+ Bar** (four conditions met simultaneously): PostgreSQL on a cluster node, ≥1000 tests passing, cross-node writes proven (scraper on lab-node-1 writing to PostgreSQL on lab-node-3), scraper running on cluster (not Mac Studio).
+
+**Key Engineering**: `rag/db.py` connection factory with `%s` placeholder translation (SQLite ↔ PostgreSQL, transparent to all callers). ADR-020 placement policy insight: Consul de-registration is operational state, not architectural intent — encode the intent in the job file.
+
+**Grade**: A+ (Gemini CP2)
+
+---
+
+### Conversational AIOps (Phase 20)
 **The Innovation**: The system maintains the diagnostic thread over time.
 
 Ask "Why is CPU high?" — it correlates metric inflections against infrastructure events and answers in <10ms. Ask "Is that still related to the restart?" — it remembers the diagnosis, checks the live trend, and tells you whether the original conclusion still holds.
@@ -246,6 +262,7 @@ Not because it calls an LLM for each answer. Because it maintains a per-incident
 
 | Phase | Focus | Key Achievement | Grade | Status |
 |-------|-------|-----------------|-------|--------|
+| **Phase 21** | Distributed Foundations | PostgreSQL migration, 3 services containerized, 1036 tests, zero-LLM streak 6 | A+ | ✅ Complete |
 | **Phase 20** | Conversational AIOps | Verifiable Inference, Tab 8 Diagnostic Thread, 999 tests, zero-LLM streak 5 | A+ | ✅ Complete |
 | **Phase 19** | Cross-Modal Diagnostic Correlation | Zero-LLM correlation engine, 4-state Top Cause, end-to-end <10ms | A+ | ✅ Complete |
 | **Phase 18** | Predictive Diagnostics | Zero-LLM OLS engine, ~0.05ms P95, Glass Box Tab 7, observer effect | A+ | ✅ Complete |
@@ -275,5 +292,5 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 
 ---
 
-**Last Updated**: 2026-04 (Phase 20 Complete)
-**Version**: 2.1 - Phase 20 Complete - "Conversational AIOps — predict, explain, remember, verify"
+**Last Updated**: 2026-04-18 (Phase 21 Complete)
+**Version**: 2.2 - Phase 21 Complete - "Distributed Foundations — PostgreSQL migration, containerized observability, cross-node writes"
