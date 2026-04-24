@@ -8,7 +8,16 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
-### [Phase 21 — Distributed Foundations](phase-21-distributed-foundations.md) ✅ ⭐ NEW
+### [Phase 22 — Self-Healing Foundations](phase-22-self-healing-foundations.md) ✅ ⭐ NEW
+**Focus**: Zero-LLM self-healing — allowlist-driven suggestions, dry-run executor with three-gate safety, 8/8 Glass Box tabs under automated regression harness
+**Achievement**: Observer → actor transition without betting the farm. Three-step arc (observe → suggest → simulate) gated by kill-switch + rate-limit + loop guard. The kill-switch (operator intent) writes NO audit row; the rate-limit (automatic safety) writes a row with `outcome="rate_limited"`; the loop guard is structural — the rate-limit SQL has no outcome filter, so the agent's own dry-run rows count toward its budget. First zero-failures run since Phase 21 Consul drift: 1087 passing / 0 failed.
+**Key Innovations**: `rag/agent_actions.py` (zero-LLM allowlist lookup — unmatched Top Cause returns `None`, not an LLM fallback), `rag/agent_executor.py` (three-gate safety, `dry_run=TRUE` always, no HTTP/subprocess imports), 25-test UI harness via `streamlit.testing.v1.AppTest` with cache-hit shortcut and session-state pre-seeding, Testability Principles codified mid-phase (return plain data, no side effects in return values) enabling 20-minute module delivery in Session 5.
+**Metrics**: 1108 tests (+72 net), 1087 passing (+85), 0 failing (−15), 25 UI harness tests @ 0% flakiness, CI green on ubuntu-latest / Python 3.12, zero-LLM streak 7 phases, A+ grade.
+**Grade**: A+ (Gemini CP-Week-1 / CP-Week-2 / CP-Phase all confirmed) | April 2026
+
+---
+
+### [Phase 21 — Distributed Foundations](phase-21-distributed-foundations.md) ✅
 **Focus**: PostgreSQL migration, containerized observability, distributed compute plane
 **Achievement**: Mac Studio removed from the compute plane entirely. Three services containerized (docker driver, multi-arch), data plane migrated from SQLite to PostgreSQL on a separate cluster node, scoped IAM role replacing SUPERUSER. Cross-node writes proven: scraper on lab-node-1 writing to PostgreSQL on lab-node-3.
 **Key Innovations**: `rag/db.py` connection factory (PostgreSQL ↔ SQLite, `%s` placeholder translation), `rag/alerting.py` Alertmanager webhook enrichment, ADR-020 Nomad-native discovery + job-file placement policy (operational-state vs architectural-intent insight), shared-image pattern (one Dockerfile, three entrypoints), scoped `app_role` replacing SUPERUSER.
@@ -208,8 +217,8 @@ The complete technical journey (Phases 4-9) is also documented across presentati
 
 ---
 
-**Status**: Phases 8, 9, 10, 12, 13+14, 15, 16, 17, 18, 19, 20 journeys complete  
-**Latest**: Phase 20 — Reliability & Resonance (Conversational AIOps arc closed, A+)  
-**Zero-LLM streak**: 5 consecutive phases (16–20)  
-**Test coverage**: 999 tests, 980/980 runnable @ 100%  
+**Status**: Phases 8, 9, 10, 12, 13+14, 15, 16, 17, 18, 19, 20, 21, 22 journeys complete  
+**Latest**: Phase 22 — Self-Healing Foundations (Level 1 dry-run executor, 8/8 tabs, zero-failures floor, A+)  
+**Zero-LLM streak**: 7 consecutive phases (16–22)  
+**Test coverage**: 1108 tests, 1087 passing, 0 failing  
 **Philosophy**: Deep dive on breakthrough stories + presentations for context

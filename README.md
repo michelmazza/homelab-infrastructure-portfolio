@@ -17,12 +17,12 @@ This portfolio documents my journey building production-grade infrastructure and
 
 ---
 
-**Status**: Phase 21 Complete ✅ | Distributed Foundations | PostgreSQL Migration | 1036 Tests | Zero-LLM Streak (6 phases)
-**Next**: Phase 22 — Self-Healing Agents (planned)
+**Status**: Phase 22 Complete ✅ | Self-Healing Foundations | Level 1 Dry-Run Executor | 1108 Tests (0 failing) | Zero-LLM Streak (7 phases)
+**Next**: Phase 23 — The Autonomous Bridge (planned)
 
 ---
 
-## The Journey: 21 Phases of Evolution
+## The Journey: 22 Phases of Evolution
 
 ### Foundation (Phases 1-3)
 **Orchestration Platform** → Built multi-node HashiCorp Nomad cluster
@@ -33,7 +33,7 @@ This portfolio documents my journey building production-grade infrastructure and
 **Production Operations** → 15+ services orchestrated, NFS storage integrated
 **Observability Stack** → Prometheus + Grafana + Loki with mobile alerting
 
-## Innovation & AI/ML (Phases 6-21)
+## Innovation & AI/ML (Phases 6-22)
 
 - **AI/ML Foundation** → Local LLM deployment with Ollama
 - **Advanced RAG Platform** → Production knowledge system with Streamlit UI
@@ -49,6 +49,7 @@ This portfolio documents my journey building production-grade infrastructure and
 - **Cross-Modal Diagnostic Correlation** → Zero-LLM correlation engine, "Why is CPU high?" answered in <10ms ⭐
 - **Reliability & Resonance** → Conversational AIOps arc closed: predict → explain → remember → verify ⭐
 - **Distributed Foundations** → PostgreSQL migration, 3 services containerized, cross-node writes, scoped IAM ⭐
+- **Self-Healing Foundations** → Zero-LLM allowlist → enrichment → Level 1 dry-run executor with three-gate safety (kill-switch + rate-limit + loop guard), 8/8 Glass Box tabs under harness, 0 failures ⭐
 
 ### Phase 9 Complete: Agentic RAG with Glass Box AI ✅
 
@@ -143,14 +144,15 @@ This portfolio documents my journey building production-grade infrastructure and
 - **AI/ML Platform**: Ollama (CPU + GPU hybrid), RAG with 2,095 chunks across 270 documents
 - **Data Platform**: PostgreSQL on cluster node (cross-node writes proven, scoped IAM via `app_role`)
 - **RAG Accuracy**: 100% recall, 4.36s P95, self-aware analytical system (Phase 16)
-- **Glass Box UI**: 8 tabs (Reasoning, Verification, Confidence, Conflicts, Resolution, Provenance, Predictive+Correlation, Diagnostic Thread)
+- **Glass Box UI**: 8 tabs (Reasoning, Verification, Confidence, Conflicts, Resolution, Provenance, Predictive+Correlation, Diagnostic Thread) — **all under automated regression harness**
 - **Conflict Detection**: 7 categories, 0.208ms overhead
 - **Predictive Engine**: Zero-LLM OLS regression, ~0.05ms P95, observer effect
 - **Correlation Engine**: Zero-LLM causal attribution, <10ms scoring, 4-state Top Cause
 - **Conversational AIOps**: DiagnosticContext TTL=300s, Verifiable Inference, Tab 8 Diagnostic Thread
+- **Self-Healing**: Level 1 dry-run executor with three-gate safety (kill-switch + rate-limit + loop guard), zero-LLM allowlist pattern matching
 - **Architecture Decisions**: 20 ADRs (ADR-001 through ADR-020)
-- **Test Coverage**: 1036 automated tests (1002 passing)
-- **Zero-LLM Streak**: 6 consecutive phases (16–21)
+- **Test Coverage**: 1108 automated tests (1087 passing, 0 failing)
+- **Zero-LLM Streak**: 7 consecutive phases (16–22)
 - **Presentations**: 122 professional slides across 9 presentations
 
 ---
@@ -193,7 +195,25 @@ homelab-portfolio/
 
 ## 🚀 Highlighted Innovations
 
-### Distributed Foundations (Phase 21) ⭐ **LATEST**
+### Self-Healing Foundations (Phase 22) ⭐ **LATEST**
+**The Transformation**: From observer to actor — with safety gates first.
+
+For six consecutive phases the system had been a sophisticated observer: diagnose in <10ms, correlate metrics with infrastructure events, predict trends, explain reasoning through eight Glass Box tabs. Phase 22 built the foundation for self-healing without betting the farm — a three-step arc from **observation** through **suggestion** (Level 0, allowlist-driven enrichment) to **simulated action** (Level 1, dry-run executor).
+
+**The Three-Gate Safety Architecture** (Level 1):
+- **Kill-switch** (operator intent) writes NO audit row — operator intent produces silence
+- **Rate-limit** (automatic safety, 3/metric/node/10min) writes a row — automatic mechanisms must leave a trail
+- **Loop guard** is structural: the rate-limit SQL has no outcome filter, so the agent's own dry-run rows count toward its budget. A structural test prevents regressions that might add an innocent-looking filter.
+
+**Key Engineering**: `rag/agent_actions.py` (zero-LLM allowlist lookup, unmatched Top Cause returns `None` — no LLM fallback), `rag/agent_executor.py` (three-gate safety, `dry_run=TRUE` always, no HTTP/subprocess imports), 25-test UI harness via `streamlit.testing.v1.AppTest` with cache-hit shortcut and session-state pre-seeding — 8/8 Glass Box tabs under automated regression at 0% flakiness.
+
+**The Quality Floor**: First **zero-failures run** since Phase 21 Consul drift — 1087 passing / 0 failed. Consul skip fixture converted 15 persistent failures to clean skips.
+
+**Grade**: A+ (Gemini CP-Week-1 / CP-Week-2 / CP-Phase all confirmed)
+
+---
+
+### Distributed Foundations (Phase 21) ⭐
 **The Transformation**: Mac Studio removed from the compute plane entirely.
 
 Before: SQLite on Mac Studio, services running as macOS processes via launchd. After: PostgreSQL on a cluster node, three services containerized with the docker driver (multi-arch amd64+arm64), node eligibility disabled on Mac Studio for all Nomad scheduling.
@@ -247,7 +267,7 @@ Not because it calls an LLM for each answer. Because it maintains a per-incident
 - Data-driven decision making
 - Iterative improvement with measurable milestones
 - Comprehensive documentation of decisions and outcomes
-- Test coverage for validation (1036 tests, 1002 passing)
+- Test coverage for validation (1108 tests, 1087 passing, 0 failing)
 
 **Key Principles**:
 - Foundation before intelligence (build reliable base first)
@@ -262,6 +282,7 @@ Not because it calls an LLM for each answer. Because it maintains a per-incident
 
 | Phase | Focus | Key Achievement | Grade | Status |
 |-------|-------|-----------------|-------|--------|
+| **Phase 22** | Self-Healing Foundations | Level 1 dry-run executor (three-gate safety), 8/8 tabs under harness, 1108 tests (0 failing), zero-LLM streak 7 | A+ | ✅ Complete |
 | **Phase 21** | Distributed Foundations | PostgreSQL migration, 3 services containerized, 1036 tests, zero-LLM streak 6 | A+ | ✅ Complete |
 | **Phase 20** | Conversational AIOps | Verifiable Inference, Tab 8 Diagnostic Thread, 999 tests, zero-LLM streak 5 | A+ | ✅ Complete |
 | **Phase 19** | Cross-Modal Diagnostic Correlation | Zero-LLM correlation engine, 4-state Top Cause, end-to-end <10ms | A+ | ✅ Complete |
@@ -292,5 +313,5 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 
 ---
 
-**Last Updated**: 2026-04-18 (Phase 21 Complete)
-**Version**: 2.2 - Phase 21 Complete - "Distributed Foundations — PostgreSQL migration, containerized observability, cross-node writes"
+**Last Updated**: 2026-04-24 (Phase 22 Complete)
+**Version**: 2.3 - Phase 22 Complete - "Self-Healing Foundations — Level 1 dry-run executor, 8/8 Glass Box tabs under harness, zero-failures floor"
