@@ -12,7 +12,7 @@ Visual evidence of production infrastructure and observability stack.
 
 ### Host Overview Dashboard
 **File**: `dashboard_host_overview.png`  
-**Shows**: Complete infrastructure monitoring dashboard tracking Nomad cluster health, resource utilization across 3 nodes (lab01, lab02, lab03), and system metrics.
+**Shows**: Complete infrastructure monitoring dashboard tracking Nomad cluster health, resource utilization across 3 nodes (lab-node-1, lab-node-2, lab-node-3), and system metrics.
 
 ### Service Health Overview Dashboard
 **File**: `dashboard_service_health_overview.png`  

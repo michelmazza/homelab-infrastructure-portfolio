@@ -333,7 +333,7 @@ Visual representations of system architecture across phases.
 **Key Architecture Decisions**:
 - **No Mac Studio in compute plane**: node eligibility disabled; zero Nomad jobs scheduled
 - **Shared image pattern**: one Dockerfile, three entrypoints (scraper / lifecycle / collector)
-- **ADR-020 placement policy**: `!= mac-studio.local` constraint encodes architectural intent
+- **ADR-020 placement policy**: macOS-exclusion constraint encodes architectural intent
 - **Scoped IAM**: `app_role` (CRUD only) replaces SUPERUSER for all three services
 
 **Network Details**:

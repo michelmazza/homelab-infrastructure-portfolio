@@ -143,7 +143,7 @@ All 4 Nomad clients participating; Mac Studio excluded from scheduling.
 | searxng                   | lab-node-3     | docker    | Running 1/1   |
 | node-exporter             | nodes 1/2/3       | docker    | Running 3/3   |
 
-**Mac Studio** (`mac-studio.local`): node eligibility disabled,
+**Mac Studio** (development workstation): node eligibility disabled,
 zero jobs scheduled. The Streamlit RAG app and Ollama LLM inference
 continue to run here as development tooling — they are not managed by
 Nomad and so are outside the scope of this count.

@@ -49,7 +49,7 @@ The system had no conversational memory. Every query was treated as isolated:
 
 **Example**:
 ```
-User: "What's lab01 CPU usage?"
+User: "What's lab-node-1 CPU usage?"
 System: "45%"
 User: "What about its memory?"
 System: ❌ "Please specify which node"  (No context - stateless)
@@ -173,7 +173,7 @@ External quality assurance using industry-standard RAGAS metrics:
 
 **Baseline (Stateless)**:
 ```
-User: "What's lab01 CPU usage?"
+User: "What's lab-node-1 CPU usage?"
 System: "45%"
 User: "What about memory?"
 System: ❌ "Please specify which node"
@@ -181,11 +181,11 @@ System: ❌ "Please specify which node"
 
 **Phase 15 (Conversational)**:
 ```
-User: "What's lab01 CPU usage?"
+User: "What's lab-node-1 CPU usage?"
 System: "45%"
 User: "What about its memory?"
-System: ✅ "lab01 memory usage is 62%"
-        (Resolved "its" → "lab01" via simple prepend)
+System: ✅ "lab-node-1 memory usage is 62%"
+        (Resolved "its" → "lab-node-1" via simple prepend)
 ```
 
 **Difference**: From stateless search engine to conversational co-pilot.
@@ -233,7 +233,7 @@ Week 2 experiment proved warm cache with longer prompts outperforms cold cache w
 
 ### 3. Simple Solutions Win (Until They Don't)
 
-Week 3 simple prepend (regex + string concatenation, <10ms) achieved 100% accuracy—exceeded 80% target by 20pp. Infrastructure domain's entity-dense queries ("Traefik," "lab01," "CPU") provided strong signal for pronoun resolution.
+Week 3 simple prepend (regex + string concatenation, <10ms) achieved 100% accuracy—exceeded 80% target by 20pp. Infrastructure domain's entity-dense queries ("Traefik," "lab-node-1," "CPU") provided strong signal for pronoun resolution.
 
 **MVP Principle**: Start simple, enhance only when data demands it.
 
