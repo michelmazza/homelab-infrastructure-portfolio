@@ -221,7 +221,143 @@ Closes the Stateless Oracle problem: the system now remembers its diagnostic con
 
 ---
 
-## Story Arc: Foundation → Build → Optimize → Intelligence → Observability Trilogy
+### ADR-018: PostgreSQL Migration — Distributed Data Plane (Phase 21)
+**File**: [decisions/ADR-018-PORTFOLIO.md](decisions/ADR-018-PORTFOLIO.md)
+**Date**: April 2026
+**Status**: ✅ Complete (Grade: A+)
+
+Break the single-node pin: migrate the observability database from a SQLite file on the development workstation to PostgreSQL on a dedicated cluster node, via a backend-agnostic connection factory.
+
+**Key Decisions**:
+- 137-line connection factory routes by URL scheme (`postgresql://` → Psycopg 3, `sqlite:///` → internal wrapper, unknown → `ValueError`)
+- Transparent dialect translation: consumer code writes Psycopg-native `%s`; an internal wrapper translates to SQLite's `?` on every `execute()`
+- Python-side timestamp cutoffs: compute `int(time.time()) - seconds` in application code, pass as bound parameter — eliminates the largest class of dialect branching
+- `is_sqlite_connection()` predicate as minimum-surface dialect gate for the rare cases where SQL expressions genuinely differ
+- Big-bang cutover via single env-var flip — no dual-write, no phased migration
+
+**Results**: Compute decoupled from a single node; single SQL dialect in consumer code; backend-agnostic retention; rollback is one env-var flip
+
+**Innovations**: Python-side cutoff pattern (eliminates SQL dialect divergence on temporal queries); explicit-error routing (no silent backend fallbacks)
+
+---
+
+### ADR-019: Alerting Integration — Webhook Enrichment Pattern (Phase 21)
+**File**: [decisions/ADR-019-PORTFOLIO.md](decisions/ADR-019-PORTFOLIO.md)
+**Date**: April 2026
+**Status**: ✅ Complete (Grade: A+)
+
+Surface Top Cause reasoning to operators at the point of alert, transforming the system from a passive observer into an active participant in infrastructure health — without coupling to an HTTP server in this phase.
+
+**Key Decisions**:
+- Implement enrichment as a pure function: `enrich_alert(payload, db_url) → enriched_payload`
+- Graceful degradation is first-class: every failure mode returns the alert unchanged (six documented modes, bare exception handler at function boundary)
+- Defer HTTP wrapper: logic + tests now; transport layer when load-bearing
+- Stable annotation format contract (`correlation_candidate:` prefix, structured `{type=, score=, inflection=}`) — treated as public API
+- Zero-LLM analytical stack maintained on the alert path (regex extraction + scored correlation lookup + string formatting)
+
+**Results**: Top Cause reasoning reaches the operator at the point of need; six failure modes documented and tested; 24 tests in four groups (extraction, node parse, graceful degradation, format contract)
+
+**Innovations**: "Fail open" posture for alert enrichment (a system between a critical signal and its recipient should default to pass-through, never interception)
+
+---
+
+### ADR-020: Nomad-Native Discovery + Job-File Placement Policy (Phase 21)
+**File**: [decisions/ADR-020-PORTFOLIO.md](decisions/ADR-020-PORTFOLIO.md)
+**Date**: April 2026
+**Status**: ✅ Complete (Grade: A+)
+
+Heterogeneous cluster placement policy: encode "should this job ever run on this node?" as architectural intent in version-controlled job files, not as ephemeral operational state.
+
+**Key Decisions**:
+- Two mechanisms, two purposes: node eligibility flag = operational state (cluster-wide, ephemeral); job-file constraint = architectural intent (job-specific, durable)
+- Belt-and-suspenders: use both — constraint as safety net, eligibility flag as scheduling optimization
+- Remove `service {}` blocks from jobs pinned to nodes without a Consul agent; rely on Nomad-native service discovery + task-level `check {}` blocks
+- Standing convention: any future Linux Docker job carries the macOS-exclusion constraint in its job file
+
+**Results**: Immediate unblocking of 4 services after a forced rescheduling; durable git-traceable placement policy; Linux containers cannot accidentally schedule on the macOS workstation regardless of operational state changes
+
+**Innovations**: Operational-state vs architectural-intent insight (placement policy as ephemeral state is a time bomb); forced rescheduling as an unintentional cluster-wide constraint validation pass
+
+---
+
+### Phase 22: Self-Healing Foundations
+
+Phase 22 introduced Level 0 enrichment and Level 1 dry-run execution without standalone ADRs — the architectural decisions (three-gate safety, kill-switch / rate-limit / loop-guard semantics, Streamlit AppTest harness) are documented in the journey narrative. The phase established the safety architecture that ADR-025 (Phase 23) builds on.
+
+| Phase | Focus | Key Achievement |
+|-------|-------|-----------------|
+| 22 | Self-Healing Foundations | Level 1 dry-run executor with three-gate safety, 8/8 Glass Box tabs under harness, 1108 tests (0 failing), zero-LLM streak 7 |
+
+---
+
+### ADR-025: 5-Gate Live Execution Pipeline — Deterministic Autonomous Remediation (Phase 23)
+**File**: [decisions/ADR-025-PORTFOLIO.md](decisions/ADR-025-PORTFOLIO.md)
+**Date**: May 2026
+**Status**: ✅ Complete (Grade: A+)
+
+Bridge from advisory (Level 1) to autonomous remediation (Level 2) without an LLM in the safety-critical execution path. Implement as a deterministic state machine with five independently-testable gates.
+
+**Key Decisions**:
+- Five gates in series: Pre-flight (eleven failure event types in 60s lookback) → Action → Verify → Stable-duration (60s post-action poll) → Record
+- Single-strike rollback: any failure during the 60s window triggers revert (no "two strikes" confirmation pattern)
+- Three independent safety controls: pattern-level `live_enabled` flag, global kill-switch (ADR-026), stable-duration rollback — each can abort without coordination
+- Two action classes shipped (restart-class + script-class) to prove pipeline generalizes beyond a single remediation type
+- ExternalID + CreateTime allocation tracking with 2-second drift tolerance (rejects unrelated allocations from rollback decisions)
+- Nanosecond-precision audit trail (causal analysis after incidents requires ordering events within the same millisecond)
+
+**Results**: 5 gates, 2 action classes, 3 safety controls, 11 pre-flight failure types, 0 LLM calls in execution path, 8 consecutive zero-LLM phases (16–23), 27 new tests
+
+**Innovations**: Cognition/execution separation (the architectural payoff that admits LLM-as-planner in the next phase without disturbing the safety contract); single-strike rollback asymmetry (err on the side of reverting)
+
+**External Validation**: "We built a deterministic, safe, and verifiable autonomous remediation system that operates with nanosecond precision and human-in-the-loop overrides" (Gemini CP2)
+
+---
+
+### ADR-026: Kill-Switch with Confirmation Gate — Functional Safety Over Widget Elegance (Phase 23)
+**File**: [decisions/ADR-026-PORTFOLIO.md](decisions/ADR-026-PORTFOLIO.md)
+**Date**: May 2026
+**Status**: ✅ Complete (Grade: A+)
+
+Global emergency brake for live execution: operator-controlled, persisted across restarts, surfaced in CLI and UI with state shared via a JSON state file.
+
+**Key Decisions**:
+- Asymmetric confirmation: Enable is single-click (frictionless safer direction); Disable requires a confirmation modal (gated unsafe direction) — mirrors emergency-stop design in industrial equipment
+- UI panel rendered at top of `main()`, never inside conditional render blocks — guarantees the safety control is visible at every moment of the operator's session
+- Button pair (not `st.toggle`): explicit click-to-action mapping, no carry-forward state semantics, cleaner under AppTest, naturally admits the confirmation gate
+- CLI + UI share the same JSON state file (toggle either surface, the other reflects on next render)
+
+**Results**: 2 surfaces, 3 design iterations to land, 3 validation layers required to surface the placement bug, 1 multi-step lifecycle AppTest locked in
+
+**Innovations**: "Functional safety over widget elegance" (the visually elegant choice was wrong for a control that mediates infrastructure mutations); always-visible placement principle ("a safety control that is sometimes visible is, for the moments it is not visible, equivalent to one that does not exist")
+
+**External Validation**: Misdiagnosis-to-resolution arc characterized as "the mark of mature engineering" — bug shipped twice, but the methodology innovation it produced (ADR-027) ensures it cannot ship a third time
+
+---
+
+### ADR-027: Three-Layer UI Validation — A Testing Standard Encoded From a Real Bug (Phase 23)
+**File**: [decisions/ADR-027-PORTFOLIO.md](decisions/ADR-027-PORTFOLIO.md)
+**Date**: May 2026
+**Status**: ✅ Complete (Grade: A+)
+
+Codify three-layer validation as a Testing-Guide standard: every UI feature must pass function-level tests, AppTest integration, AND manual smoke test before it can be declared complete.
+
+**Key Decisions**:
+- Layer 1 (function-level): pure logic, return-value contracts, edge-case input handling
+- Layer 2 (AppTest): single-turn harness wiring, state persistence, callback registration
+- Layer 3 (manual smoke): multi-turn rendering, conditional-render gaps, ergonomics, "does this actually feel right"
+- Layer 3 is mandatory, not optional: optional manual validation degrades to never-performed manual validation under deadline pressure
+- Wired into the Session 9 completion gate: a feature without Layer 3 evidence is not eligible for the session completion summary
+- ~3-5 minutes per feature — judged worth the cost for the bug class it catches
+
+**Results**: Codified into Testing-Guide.md v5.4; integrated into CHAT-SESSION-WORKFLOW completion gate; the kill-switch placement bug (which passed Layers 1 and 2 but failed Layer 3) becomes the canonical worked example
+
+**Innovations**: "Lesson encoded as a process" — the same pattern Phase 17 used for the UI Smoke Test Gate, Phase 21 used for the Sanitization Completeness Checklist, and the multi-phase workflow used for the Session Summary Gate. Single-incident learning converted into a permanent process control
+
+**External Validation**: "Three-Layer UI Validation is a portfolio-grade pattern that generalizes well beyond this specific incident" (Gemini CP2)
+
+---
+
+## Story Arc: Foundation → Build → Optimize → Intelligence → Observability Trilogy → Self-Healing → Autonomous Bridge
 
 **ADR-001** (Foundation): Choose simple, reliable orchestration  
 **ADR-008** (Build): Create production RAG platform  
@@ -233,7 +369,10 @@ Closes the Stateless Oracle problem: the system now remembers its diagnostic con
 **ADR-014** (Intelligence + Performance): Conversational memory with elite-tier optimization ("top 1%")  
 **ADR-015** (Self-Awareness): Analytical intelligence with proactive monitoring and temporal coreference  
 **Phases 17–19** (Observability): Synthesis → Prediction → Explanation (zero-LLM streak 3 → 4)  
-**ADR-016** (Conversational AIOps): Memory + verification — predict, explain, remember, verify ⭐
+**ADR-016** (Conversational AIOps): Memory + verification — predict, explain, remember, verify  
+**ADR-018/019/020** (Distributed Foundations): PostgreSQL migration, alerting integration, placement policy — first containerized cross-node services  
+**Phase 22** (Self-Healing): Three-gate safety architecture with Level 1 dry-run executor, Streamlit AppTest harness for 8/8 Glass Box tabs  
+**ADR-025/026/027** (Autonomous Bridge): 5-gate live execution pipeline, kill-switch confirmation gate, Three-Layer UI Validation standard ⭐
 
 ---
 
@@ -247,6 +386,9 @@ Visual representations of system architecture.
 - [RAG Pipeline Architecture (Phase 8)](diagrams/rag-pipeline-architecture-phase8.png) - 5-layer pipeline with three-layer boosting system
 - [Phase 9 System Topology](diagrams/phase-9-system-topology.png) - MCP tools integration with infrastructure (5-layer agentic architecture)
 - [Phase 9 Data Flow](diagrams/phase-9-data-flow.png) - Agentic reasoning pipeline with Glass Box AI (8-step execution)
+- [Phase 10 System Topology + CoVe Detail](diagrams/phase-10-system-topology.png) - Performance optimization with 7-component verification flow
+- [Phase 21 Distributed System Topology](diagrams/phase-21-system-topology.png) - 4-node cluster with PostgreSQL migration and cross-node data flows
+- [Phase 22-23 Observation to Autonomy](diagrams/phase-22-23-observation-to-autonomy.png) - 5-gate live execution pipeline with three independent safety controls ⭐ NEW
 
 **See**: [Diagrams README](diagrams/README.md) for detailed explanations, usage guidance, and technical details
 
@@ -270,10 +412,10 @@ Complete overview of technologies used across all phases.
 
 **Philosophy**: Operational simplicity prioritized over complexity. Resource efficiency on older hardware. Production-grade patterns with learning value.
 
-**Achievements**: 98.7% agentic accuracy, 90% RAG accuracy, 24× GPU speedup, 605,000× cache speedup, 999 tests @ 100%, zero-LLM streak 5 phases
+**Achievements**: 98.7% agentic accuracy, 90% RAG accuracy, 24× GPU speedup, 605,000× cache speedup, 1179 tests @ 100% (0 failing), zero-LLM streak 8 phases (16-23), 5-gate live execution pipeline with three-gate safety
 
 ---
 
-**Status**: Phase 20 complete — Conversational AIOps arc closed (predict → explain → remember → verify) ✅  
-**Latest**: ADR-016 Diagnostic Context Architecture (Phase 20, Grade A+)  
-**Zero-LLM streak**: 5 consecutive phases (16–20)
+**Status**: Phase 23 complete — The Autonomous Bridge: 5-gate live execution with three independent safety controls ✅  
+**Latest**: ADR-025/026/027 (Phase 23, Grade A+) — live execution pipeline, kill-switch confirmation gate, Three-Layer UI Validation standard  
+**Zero-LLM streak**: 8 consecutive phases (16–23)

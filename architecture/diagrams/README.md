@@ -9,7 +9,6 @@ Visual representations of system architecture across phases.
 **File**: `infrastructure-architecture-phase6.png`  
 **Created**: December 31, 2025  
 **Updated**: January 12, 2026 (sanitized for portfolio)  
-**Source**: draw.io
 
 **Shows 9-Layer Stack (Pre-RAG)**:
 - **DNS Layer**: Synology DNS (all services point to single IP)
@@ -42,7 +41,6 @@ Visual representations of system architecture across phases.
 **File**: `infrastructure-architecture-phase7.png`  
 **Created**: January 4, 2026  
 **Updated**: January 11, 2026 (sanitized for portfolio)  
-**Source**: draw.io
 
 **Shows Complete 10-Layer Stack**:
 - **DNS Layer**: Synology DNS (all services point to single IP)
@@ -82,7 +80,6 @@ Visual representations of system architecture across phases.
 **File**: `rag-pipeline-architecture-phase8.png`  
 **Created**: January 6, 2026  
 **Updated**: January 8, 2026 (Phase 8 optimizations)  
-**Source**: draw.io
 
 **Shows 5-Layer RAG Pipeline**:
 - **User Interaction Layer**: Streamlit chat UI, query input, conversation display
@@ -143,7 +140,6 @@ Visual representations of system architecture across phases.
 
 **Created**: January 16, 2026  
 **Updated**: January 16, 2026 (Session 14)  
-**Source**: draw.io
 
 ### System Topology
 
@@ -292,7 +288,6 @@ Visual representations of system architecture across phases.
 **File**: `phase-22-23-observation-to-autonomy.png`
 **Created**: May 2026
 **Updated**: May 2026 (sanitized for portfolio)
-**Source**: draw.io
 
 **Shows the Phase 22 dry-run foundation feeding the Phase 23 5-gate live execution pipeline**:
 - **Phase 22 zone** (left, amber): allowlist matcher → enrichment → dry-run executor (Levels 0+1)
@@ -318,7 +313,6 @@ Visual representations of system architecture across phases.
 **File**: `phase-21-system-topology.png`
 **Created**: April 2026
 **Updated**: April 2026 (sanitized for portfolio)
-**Source**: draw.io
 
 **Shows 4-Node Cluster with Distributed Data Plane**:
 - **Mac Studio (Development)**: Streamlit RAG app + Ollama LLM inference — not managed by Nomad; node eligibility disabled for scheduling
@@ -363,7 +357,6 @@ Visual representations of system architecture across phases.
 
 **Created**: January 24, 2026  
 **Updated**: February 2, 2026  
-**Source**: draw.io
 
 ### System Topology
 
@@ -441,7 +434,6 @@ Visual representations of system architecture across phases.
 - Both diagrams optimized for web viewing
 - High quality but reasonable file sizes (293-313KB)
 - PNG format for universal compatibility
-- Draw.io source files maintained in homelab-nomad project
 
 ---
 
@@ -501,13 +493,6 @@ Visual representations of system architecture across phases.
 ---
 
 ## Diagram Maintenance
-
-**Source Files**: Draw.io sources maintained in `/Users/mmazza/projects/homelab-nomad/docs/diagrams/`
-
-**Version Control**: 
-- Diagram updates tracked in homelab-nomad repository
-- Portfolio copies updated when significant changes occur
-- Change log maintained in homelab-nomad diagrams README
 
 **Update Triggers**:
 - Major architecture changes (new layers, services)
