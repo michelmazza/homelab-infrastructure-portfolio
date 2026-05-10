@@ -17,12 +17,12 @@ This portfolio documents my journey building production-grade infrastructure and
 
 ---
 
-**Status**: Phase 22 Complete ✅ | Self-Healing Foundations | Level 1 Dry-Run Executor | 1108 Tests (0 failing) | Zero-LLM Streak (7 phases)
-**Next**: Phase 23 — The Autonomous Bridge (planned)
+**Status**: Phase 23 Complete ✅ | The Autonomous Bridge | 5-Gate Live Execution | 1179 Tests (0 failing) | Zero-LLM Streak (8 phases)
+**Next**: Phase 24 — LLM-as-Planner planning + FastAPI webhook receiver scoping (Session 0)
 
 ---
 
-## The Journey: 22 Phases of Evolution
+## The Journey: 23 Phases of Evolution
 
 ### Foundation (Phases 1-3)
 **Orchestration Platform** → Built multi-node HashiCorp Nomad cluster
@@ -33,7 +33,7 @@ This portfolio documents my journey building production-grade infrastructure and
 **Production Operations** → 15+ services orchestrated, NFS storage integrated
 **Observability Stack** → Prometheus + Grafana + Loki with mobile alerting
 
-## Innovation & AI/ML (Phases 6-22)
+## Innovation & AI/ML (Phases 6-23)
 
 - **AI/ML Foundation** → Local LLM deployment with Ollama
 - **Advanced RAG Platform** → Production knowledge system with Streamlit UI
@@ -50,6 +50,7 @@ This portfolio documents my journey building production-grade infrastructure and
 - **Reliability & Resonance** → Conversational AIOps arc closed: predict → explain → remember → verify ⭐
 - **Distributed Foundations** → PostgreSQL migration, 3 services containerized, cross-node writes, scoped IAM ⭐
 - **Self-Healing Foundations** → Zero-LLM allowlist → enrichment → Level 1 dry-run executor with three-gate safety (kill-switch + rate-limit + loop guard), 8/8 Glass Box tabs under harness, 0 failures ⭐
+- **The Autonomous Bridge** → 5-gate live execution pipeline (kill-switch + rate-limit + loop guard, single-strike rollback), zero LLM in execution path, 8-phase zero-LLM streak ⭐
 
 ### Phase 9 Complete: Agentic RAG with Glass Box AI ✅
 
@@ -150,10 +151,11 @@ This portfolio documents my journey building production-grade infrastructure and
 - **Correlation Engine**: Zero-LLM causal attribution, <10ms scoring, 4-state Top Cause
 - **Conversational AIOps**: DiagnosticContext TTL=300s, Verifiable Inference, Tab 8 Diagnostic Thread
 - **Self-Healing**: Level 1 dry-run executor with three-gate safety (kill-switch + rate-limit + loop guard), zero-LLM allowlist pattern matching
-- **Architecture Decisions**: 20 ADRs (ADR-001 through ADR-020)
-- **Test Coverage**: 1108 automated tests (1087 passing, 0 failing)
-- **Zero-LLM Streak**: 7 consecutive phases (16–22)
-- **Presentations**: 122 professional slides across 9 presentations
+- **Autonomous Execution (Phase 23)**: 5-gate live execution pipeline (kill-switch → rate-limit → pre-flight → restart → stable-duration), single-strike rollback, validated against live searxng restart (HTTP 200, 0.4s)
+- **Architecture Decisions**: 16 portfolio ADRs published (ADR-001, ADR-008–016, ADR-018–020, ADR-025–027)
+- **Test Coverage**: 1181 automated tests (1179 passing, 0 failing)
+- **Zero-LLM Streak**: 8 consecutive phases (16–23)
+- **Presentations**: 136 professional slides across 10 presentations
 
 ---
 
@@ -170,7 +172,7 @@ homelab-portfolio/
 │   ├── phase-8-optimization-journey.pdf     # Phase 8 (13 slides)
 │   └── Phase-9-Presentation-Agentic-RAG.pdf # Phase 9 (14 slides) ⭐
 ├── architecture/                            # Technical decisions
-│   ├── decisions/                           # ADRs (ADR-001 through ADR-020)
+│   ├── decisions/                           # 16 portfolio ADRs (ADR-001, ADR-008–016, ADR-018–020, ADR-025–027)
 │   └── diagrams/                            # System architecture visuals
 ├── assets/                                  # Screenshots and visuals
 │   └── screenshots/                         # 31 production screenshots
@@ -195,7 +197,32 @@ homelab-portfolio/
 
 ## 🚀 Highlighted Innovations
 
-### Self-Healing Foundations (Phase 22) ⭐ **LATEST**
+### The Autonomous Bridge (Phase 23) ⭐ **LATEST**
+**The Transformation**: From observer to actor to autonomous remediator — without an LLM in the execution path.
+
+For seven consecutive phases the analytical streak held: pattern-based, deterministic, latency-bounded. Phase 22 built the dry-run safety architecture without crossing the action boundary. Phase 23 had to bridge from rehearsal to performance — and did it by extending the deterministic discipline into the execution path itself, not by introducing an LLM agent to decide what to execute. That's the wrong shape of risk for production infrastructure. The right shape: build a 5-gate state machine first, define what the system is allowed to do via a YAML allowlist, build the safety controls before building the action library, and defer LLM integration to a future phase where it generates plans the deterministic pipeline disposes.
+
+**The 5-Gate Pipeline** (`rag/agent_executor.py::execute_live`):
+- **Pre-flight** queries the structured event log for any of eleven failure event types within a 60-second lookback. If the alert has been overtaken by events, the pipeline aborts before action. "Production-grade defensive programming" (Gemini CP1).
+- **Action** invokes the orchestrator API (Nomad) with explicit ExternalID and CreateTime tracking so a slow rollback can't be confused by an unrelated allocation event.
+- **Verify** confirms the action took effect.
+- **Stable-duration** monitors for 60 seconds with single-failure rollback (any failed poll → `rolled_back`).
+- **Record** persists the outcome with nanosecond timing.
+
+**Three Independent Safety Controls** (preserved from Phase 22, validated against live execution):
+- **Kill-switch** (operator intent) writes NO audit row — Yes/Cancel asymmetric confirmation gate, lifted from the chat handler block to `main()` so it's always visible (ADR-026)
+- **Rate-limit** (automatic safety, 3 actions per metric/node per 10 min) writes a row with `outcome="rate_limited"`
+- **Loop guard** is structural — the rate-limit SQL has no outcome filter, so the agent's own live rows (`executed`, `rolled_back`, `pre_flight_healthy`) count toward the budget, preventing recursive cascades
+
+**The Three-Layer UI Validation Standard** (ADR-027): the kill-switch UI bug shipped twice because Function-level tests passed and AppTest tests passed — only manual smoke testing across multiple turns caught the conditional-rendering placement bug. The methodology innovation: Function-level / AppTest / Manual-smoke triad codified in Testing-Guide v5.4 as mandatory for all stateful Streamlit widget interactions. "The bug shipped twice; the methodology innovation that emerged ensures it cannot ship a third time" (Gemini).
+
+**Live Validation**: searxng restart against the cluster Nomad endpoint — HTTP 200, 0.4s end-to-end, no auth, full pipeline trace recorded. The deterministic spine proven against a real Nomad allocation. Eight consecutive phases without an LLM in the execution path. Eight consecutive phases without a regression. Five consecutive A+ Gemini checkpoints across the Phase 22-23 arc.
+
+**Grade**: A+ (Gemini CP1 Week 1 + CP2 Week 2 — consecutive A+)
+
+---
+
+### Self-Healing Foundations (Phase 22) ⭐
 **The Transformation**: From observer to actor — with safety gates first.
 
 For six consecutive phases the system had been a sophisticated observer: diagnose in <10ms, correlate metrics with infrastructure events, predict trends, explain reasoning through eight Glass Box tabs. Phase 22 built the foundation for self-healing without betting the farm — a three-step arc from **observation** through **suggestion** (Level 0, allowlist-driven enrichment) to **simulated action** (Level 1, dry-run executor).
@@ -267,7 +294,7 @@ Not because it calls an LLM for each answer. Because it maintains a per-incident
 - Data-driven decision making
 - Iterative improvement with measurable milestones
 - Comprehensive documentation of decisions and outcomes
-- Test coverage for validation (1108 tests, 1087 passing, 0 failing)
+- Test coverage for validation (1181 tests, 1179 passing, 0 failing)
 
 **Key Principles**:
 - Foundation before intelligence (build reliable base first)
@@ -282,6 +309,7 @@ Not because it calls an LLM for each answer. Because it maintains a per-incident
 
 | Phase | Focus | Key Achievement | Grade | Status |
 |-------|-------|-----------------|-------|--------|
+| **Phase 23** | The Autonomous Bridge | 5-gate live execution, three independent safety controls, zero LLM in execution path, 1179 tests (0 failing), zero-LLM streak 8 | A+ | ✅ Complete |
 | **Phase 22** | Self-Healing Foundations | Level 1 dry-run executor (three-gate safety), 8/8 tabs under harness, 1108 tests (0 failing), zero-LLM streak 7 | A+ | ✅ Complete |
 | **Phase 21** | Distributed Foundations | PostgreSQL migration, 3 services containerized, 1036 tests, zero-LLM streak 6 | A+ | ✅ Complete |
 | **Phase 20** | Conversational AIOps | Verifiable Inference, Tab 8 Diagnostic Thread, 999 tests, zero-LLM streak 5 | A+ | ✅ Complete |
@@ -313,5 +341,5 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 
 ---
 
-**Last Updated**: 2026-04-24 (Phase 22 Complete)
-**Version**: 2.3 - Phase 22 Complete - "Self-Healing Foundations — Level 1 dry-run executor, 8/8 Glass Box tabs under harness, zero-failures floor"
+**Last Updated**: 2026-05-09 (Phase 23 Complete)
+**Version**: 2.4 - Phase 23 Complete - "The Autonomous Bridge — 5-gate live execution pipeline, three independent safety controls, zero LLM in execution path, 8-phase zero-LLM streak"

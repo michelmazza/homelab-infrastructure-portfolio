@@ -4,7 +4,19 @@ Metrics, improvements, and measurable outcomes from each phase.
 
 ---
 
-## Phase 22: Self-Healing Foundations ⭐ NEW
+## Phase 22-23: From Observation to Autonomy ⭐ NEW
+
+### Phase 22-23 Combined — From Observation to Autonomy
+**File**: [phase-22-23-metrics.md](phase-22-23-metrics.md)
+**Phases**: Phase 22 (Self-Healing Foundations) + Phase 23 (The Autonomous Bridge)
+**Combined timeline**: April 14 – April 26, 2026 (6 weeks, 18 sessions)
+**Test progression**: 1036 → 1181 collected (+145), 1002 → 1179 passing (+177), 0 failed across both phases (post-Phase-22-S6 floor)
+**Streaks**: Zero-LLM analytical 6 → 8 phases; zero-regression 6 → 8 phases
+**Validation**: 5 consecutive A+ Gemini checkpoints (Phase 22: CP-Week-1, CP-Week-2, CP-Phase; Phase 23: CP-Week-1, CP-Week-2)
+
+---
+
+## Phase 22: Self-Healing Foundations
 
 ### Phase 22 — Self-Healing Foundations
 **File**: [phase-22-metrics.md](phase-22-metrics.md)
@@ -349,5 +361,5 @@ Complete performance data including:
 
 ---
 
-**Status**: Phases 8, 9, 10, 11, 12, 13+14, 15, 16, 17, 18, 21, 22 metrics complete
-**Latest**: Phase 22 (Self-Healing Foundations, 1108 tests, 0 failing, zero-LLM streak 7 phases, A+ sustained)
+**Status**: Phases 8, 9, 10, 11, 12, 13+14, 15, 16, 17, 18, 21, 22, 22-23 combined metrics complete
+**Latest**: Phase 22-23 combined (From Observation to Autonomy, 1181 tests, 1179 passing, 0 failing, zero-LLM streak 8 phases, 5 consecutive A+ Gemini checkpoints)

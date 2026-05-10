@@ -287,6 +287,32 @@ Visual representations of system architecture across phases.
 
 ---
 
+## Observation to Autonomy (Phase 22-23) ⭐ NEW
+
+**File**: `phase-22-23-observation-to-autonomy.png`
+**Created**: May 2026
+**Updated**: May 2026 (sanitized for portfolio)
+**Source**: draw.io
+
+**Shows the Phase 22 dry-run foundation feeding the Phase 23 5-gate live execution pipeline**:
+- **Phase 22 zone** (left, amber): allowlist matcher → enrichment → dry-run executor (Levels 0+1)
+- **Phase 23 spine** (center, cyan): 5 gates in series — kill-switch → rate-limit → pre-flight → restart → stable-duration → audit
+- **Three independent safety controls** (right, green): kill-switch (operator intent, no audit row), rate-limit (3 actions per metric/node per 10 min), loop guard (structural — every audit row counts toward the rate-limit COUNT)
+- **LLM boundary** (bottom, pink annotation): no LLM at any gate; all checks deterministic
+- **Rollback loop** (single-strike): any failure during the 60s stable-duration window → rolled_back
+
+**Key Architecture Decisions**:
+- ADR-025: 5-gate pipeline rationale
+- ADR-026: Kill-switch confirmation gate placement
+- ADR-027: Three-Layer UI Validation standard
+
+**Use For**:
+- "How do you safely execute remediation actions?" → Show the 5-gate spine
+- "Where's the LLM in the execution path?" → Point to the bottom annotation: nowhere
+- "How is the kill-switch different from the rate-limit?" → Operator intent (no row) vs automatic safety (row written, outcome=rate_limited)
+
+---
+
 ## Distributed System Topology (Phase 21)
 
 **File**: `phase-21-system-topology.png`
@@ -556,6 +582,6 @@ Visual representations of system architecture across phases.
 
 ---
 
-**Status**: 7 architecture diagrams (sanitized, documented)
-**Coverage**: Infrastructure (Phases 6-7) + RAG Pipeline (Phase 8) + Agentic RAG (Phase 9) + Performance (Phase 10) + Distributed System Topology (Phase 21)
+**Status**: 9 architecture diagrams (sanitized, documented)
+**Coverage**: Infrastructure (Phases 6-7) + RAG Pipeline (Phase 8) + Agentic RAG (Phase 9) + Performance (Phase 10) + Distributed System Topology (Phase 21) + Observation to Autonomy (Phase 22-23)
 **Quality**: Interview-ready, technically accurate, security-conscious

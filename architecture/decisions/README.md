@@ -4,7 +4,26 @@ Key architectural decisions documented across the infrastructure and AI/ML engin
 
 ---
 
-## Phase 21 — Distributed Foundations ⭐ NEW
+## Phase 22-23 — From Observation to Autonomy ⭐ NEW
+
+### [ADR-025: Live Execution Pipeline (Phase 23)](ADR-025-PORTFOLIO.md)
+**Decision**: 5-gate pipeline for autonomous remediation — kill-switch → rate-limit → pre-flight → restart → stable-duration — with single-strike rollback (any single failure → rolled_back).
+**Context**: Phase 23 elevated dry-run capability (Phase 22) to live execution. Crossing the action boundary requires deterministic, auditable safety: any LLM-driven decision in the execution path was excluded by design.
+**Consequence**: Live execution shipped without an LLM in the gate-and-restart path. Eight consecutive zero-LLM phases. Validated against the searxng restart in production (HTTP 200, 0.4s end-to-end).
+
+### [ADR-026: Kill-Switch Confirmation Gate (Phase 23)](ADR-026-PORTFOLIO.md)
+**Decision**: Two-button Yes/Cancel confirmation gate for the kill-switch toggle, lifted from the `if prompt:` rerun-disappearing block to `main()` after the conversation_id early-return.
+**Context**: Phase 23 Session 7 manual smoke test exposed that click-driven Streamlit reruns were destroying the confirmation state. The architectural fix (relocate the panel) was the third iteration after two patch attempts that papered over symptoms.
+**Consequence**: Operator-intent kill-switch now survives reruns; the confirmation-gate placement constraint is encoded in the Three-Layer UI Validation standard (ADR-027) so future widget interactions don't repeat the discovery cycle.
+
+### [ADR-027: Three-Layer UI Validation Standard (Phase 23)](ADR-027-PORTFOLIO.md)
+**Decision**: Function-level / AppTest / Manual-smoke triad mandatory for any stateful Streamlit widget interaction (codified in Testing-Guide v5.4).
+**Context**: The kill-switch panel relocation (ADR-026) was caught only by manual smoke testing — function-level tests passed, AppTest passed, but a real click-driven rerun destroyed the state. Each of the three layers catches a different bug class.
+**Consequence**: Standardized validation ladder for stateful UI code; closes the gap exposed in Phase 22 Session 7 and Phase 23 Sessions 4 and 7.
+
+---
+
+## Phase 21 — Distributed Foundations
 
 ### [ADR-020: Nomad-Native Discovery + Job-File Placement Policy](ADR-020-PORTFOLIO.md)
 **Decision**: Encode placement constraints directly in job files rather than relying on Consul service tags or runtime operator commands.
@@ -91,6 +110,6 @@ Key architectural decisions documented across the infrastructure and AI/ML engin
 
 ---
 
-**ADR Count**: 20 (ADR-001 through ADR-020)
-**Coverage**: Infrastructure → RAG → Agentic → Analytics → PostgreSQL Migration
-**Status**: All decisions documented with context, options, rationale, and consequences
+**ADR Count**: 16 portfolio ADRs published (ADR-001, ADR-008–016, ADR-018–020, ADR-025–027)
+**Coverage**: Infrastructure → RAG → Agentic → Analytics → PostgreSQL Migration → Self-Healing → Autonomous Execution
+**Status**: All published decisions documented with context, options, rationale, and consequences

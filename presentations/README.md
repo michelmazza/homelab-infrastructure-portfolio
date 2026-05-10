@@ -4,7 +4,36 @@ Professional slide decks documenting the infrastructure journey from foundation 
 
 ---
 
-## Phase 21: Distributed Foundations ⭐ Latest
+## Phase 22-23: From Observation to Autonomy ⭐ Latest
+
+### Self-Healing Foundations + The Autonomous Bridge
+**File**: phase-22-23-observation-to-autonomy.pdf
+**Slides**: 14 slides
+**Format**: PDF
+**Coverage**: Phases 22–23
+
+The combined-arc story: from observer to actor to autonomous remediator. Phase 22 built the dry-run safety architecture (allowlist → enrichment → simulated action with three-gate safety). Phase 23 elevated dry-run to live execution through a 5-gate pipeline with single-strike rollback.
+
+- **Phase 22 zone**: zero-LLM allowlist matcher → Alertmanager enrichment → dry-run executor (kill-switch + rate-limit + loop guard)
+- **Phase 23 spine**: 5 gates in series — kill-switch → rate-limit → pre-flight → restart → stable-duration — with single-strike rollback (any single failure during the 60s window → rolled_back)
+- **Three independent safety controls**: kill-switch (operator intent, no audit row), rate-limit (3 actions per metric/node per 10 min, row written), loop guard (structural — every audit row counts toward the rate-limit COUNT)
+- **LLM boundary**: zero LLM at any gate; eight consecutive phases without an LLM in the execution path
+
+**Live validation**: searxng restart in production (HTTP 200, 0.4s end-to-end) — the deterministic spine proven against a real Nomad allocation.
+
+**Key Decisions**: ADR-025 (5-gate pipeline rationale), ADR-026 (kill-switch confirmation gate placement), ADR-027 (Three-Layer UI Validation standard).
+
+**Gemini Grade**: A+ × 5 — five consecutive A+ checkpoints across the Phase 22-23 arc (Phase 22: CP-Week-1, CP-Week-2, CP-Phase; Phase 23: CP-Week-1, CP-Week-2). "Deterministic, safe, and verifiable autonomous remediation."
+
+**Use for**:
+- Self-healing infrastructure and autonomous remediation discussions
+- "How do you safely execute live actions on production?" interviews
+- Zero-LLM execution path engineering
+- Three-Layer UI Validation methodology (Function-level / AppTest / Manual-smoke triad)
+
+---
+
+## Phase 21: Distributed Foundations ⭐
 
 ### Infrastructure Engineering — PostgreSQL Migration + Containerization
 **File**: phase-21-distributed-foundations.pdf
@@ -198,9 +227,10 @@ how that happened systematically — that's a separate presentation."*
 | **Phase 10** | 10 | 14 | 18% fallback, 605,000× speedup, CoVe ⭐ |
 | **Phase 17** | 17 | 14 | 0.208ms conflict resolution, Glass Box 6 tabs ⭐ |
 | **Phase 21** | 21 | 14 | PostgreSQL migration, 3 containerized, cross-node writes, A+ ⭐ |
+| **Phase 22-23** | 22–23 | 14 | 5-gate live execution, three independent safety controls, zero LLM in execution path, A+ × 5 ⭐ |
 | **Observability Trilogy** | 18–20 | 14 | Predict→Explain→Remember, Verifiable Inference ⭐ |
 | **Methodology Journey** | 1–20 | 12 | 7 practices, 35 weeks, crawl → walk → craft ⭐ |
-| **Total** | 1–21 | **122** | Complete journey: infrastructure → Distributed Foundations |
+| **Total** | 1–23 | **136** | Complete journey: infrastructure → Autonomous Bridge |
 
 ---
 
@@ -215,7 +245,7 @@ how that happened systematically — that's a separate presentation."*
 
 ---
 
-**Status**: 9 presentations complete ✅
-**Total Slides**: 122 (current)
-**Latest**: Phase 21 — Distributed Foundations (April 2026) ⭐
-**Zero-LLM streak**: 6 consecutive phases (16–21)
+**Status**: 10 presentations complete ✅
+**Total Slides**: 136 (current)
+**Latest**: Phase 22-23 — From Observation to Autonomy (May 2026) ⭐
+**Zero-LLM streak**: 8 consecutive phases (16–23)

@@ -8,7 +8,16 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
-### [Phase 22 — Self-Healing Foundations](phase-22-self-healing-foundations.md) ✅ ⭐ NEW
+### [Phase 23 — The Autonomous Bridge](phase-23-autonomous-bridge.md) ✅ ⭐ NEW
+**Focus**: Live execution with three independent safety controls, zero LLM in the gate-and-restart path, single-strike rollback. Five consecutive A+ Gemini checkpoints across the Phase 22-23 arc.
+**Achievement**: Observer → actor → autonomous remediator. The kill-switch (operator intent, no audit row) + rate-limit (automatic safety, row written) + loop guard (structural — rate-limit SQL has no outcome filter) are three orthogonal failure modes that each independently halt execution. The 5-gate pipeline shipped without LLM dependency at any gate, validated against a live searxng restart (HTTP 200, 0.4s).
+**Key Innovations**: 5-gate live executor (`rag/agent_executor.py::execute_live`), ExternalID + CreateTime stale-alloc detection (catches Nomad-rescheduled allocs mid-window), kill-switch confirmation gate relocation (the if-prompt rerun-disappearing bug surfaced by manual smoke + fixed by architectural placement, ADR-026), Three-Layer UI Validation standard codified (ADR-027 — Function-level / AppTest / Manual-smoke triad).
+**Metrics**: 1181 tests collected (+73 from Phase 22), 1179 passing (+92), 0 failing, 19 Prometheus skip-debt closed, zero-LLM streak 8 phases (16-23), zero-regression streak 8 phases.
+**Grade**: A+ (Gemini CP1 Week 1 + CP2 Week 2 — consecutive A+) | April 2026
+
+---
+
+### [Phase 22 — Self-Healing Foundations](phase-22-self-healing-foundations.md) ✅ ⭐
 **Focus**: Zero-LLM self-healing — allowlist-driven suggestions, dry-run executor with three-gate safety, 8/8 Glass Box tabs under automated regression harness
 **Achievement**: Observer → actor transition without betting the farm. Three-step arc (observe → suggest → simulate) gated by kill-switch + rate-limit + loop guard. The kill-switch (operator intent) writes NO audit row; the rate-limit (automatic safety) writes a row with `outcome="rate_limited"`; the loop guard is structural — the rate-limit SQL has no outcome filter, so the agent's own dry-run rows count toward its budget. First zero-failures run since Phase 21 Consul drift: 1087 passing / 0 failed.
 **Key Innovations**: `rag/agent_actions.py` (zero-LLM allowlist lookup — unmatched Top Cause returns `None`, not an LLM fallback), `rag/agent_executor.py` (three-gate safety, `dry_run=TRUE` always, no HTTP/subprocess imports), 25-test UI harness via `streamlit.testing.v1.AppTest` with cache-hit shortcut and session-state pre-seeding, Testability Principles codified mid-phase (return plain data, no side effects in return values) enabling 20-minute module delivery in Session 5.
@@ -217,8 +226,8 @@ The complete technical journey (Phases 4-9) is also documented across presentati
 
 ---
 
-**Status**: Phases 8, 9, 10, 12, 13+14, 15, 16, 17, 18, 19, 20, 21, 22 journeys complete  
-**Latest**: Phase 22 — Self-Healing Foundations (Level 1 dry-run executor, 8/8 tabs, zero-failures floor, A+)  
-**Zero-LLM streak**: 7 consecutive phases (16–22)  
-**Test coverage**: 1108 tests, 1087 passing, 0 failing  
+**Status**: Phases 8, 9, 10, 12, 13+14, 15, 16, 17, 18, 19, 20, 21, 22, 23 journeys complete  
+**Latest**: Phase 23 — The Autonomous Bridge (5-gate live execution, three independent safety controls, zero LLM in execution path, A+)  
+**Zero-LLM streak**: 8 consecutive phases (16–23)  
+**Test coverage**: 1181 tests, 1179 passing, 0 failing  
 **Philosophy**: Deep dive on breakthrough stories + presentations for context
