@@ -189,7 +189,7 @@ homelab-portfolio/
 
 - **For Technical Depth**: [Journey Narrative](journey/README.md) - Complete story with technical details
 - **For Visual Overview**: [Presentations](presentations/) - 68+ slides covering Phases 4-9
-- **For Engineering Decisions**: [Architecture Decisions](architecture/decisions/) - ADRs explaining key choices
+- **For Engineering Decisions**: [Architecture Decisions](architecture/decisions/) - ADRs explaining key choices. Start with [the three worth reading first](architecture/decisions/README.md#three-adrs-worth-reading-first) for a curated entry point.
 - **For Metrics**: [Results](results/) - Quantified outcomes and test coverage
 - **For Screenshots**: [Assets](assets/screenshots/) - Glass Box AI, 8-tab interface ⭐
 

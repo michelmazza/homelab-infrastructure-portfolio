@@ -1,6 +1,33 @@
 # Architecture Decision Records
 
-Key architectural decisions documented across the infrastructure and AI/ML engineering journey.
+This folder contains the architectural decision records from work on
+the homelab platform. Some of the earliest — including ADR-001 on
+the orchestration platform choice — still hold today.
+
+## Three ADRs worth reading first
+
+The most technically sophisticated ADRs in this folder are not
+necessarily the most informative ones. The three below are chosen
+for what they show about method, not outcome.
+
+**[ADR-020: Job placement as architectural intent](ADR-020-PORTFOLIO.md)** —
+Distinguishes operational state (Consul de-registration, node eligibility
+flags) from architectural intent (job-file placement constraints).
+The distinction is the difference between fixing a symptom and encoding
+a design decision so it survives the next operational change.
+
+**[ADR-026: Lifting the kill-switch confirmation gate](ADR-026-PORTFOLIO.md)** —
+Captures a small operational fix — moving a confirmation gate out of a
+conditional block in the chat handler — at full ADR weight. The discipline
+of writing things down isn't gated by scope; the reasoning behind a small
+fix is recorded the same way as a platform choice.
+
+**[ADR-027: Three-layer UI validation](ADR-027-PORTFOLIO.md)** — Converts
+a specific bug (the kill-switch UI placement issue, which shipped twice)
+into a process standard requiring function-level, AppTest, and manual-smoke
+validation for stateful widget interactions. The move that separates
+engineers who fix problems from engineers who eliminate the category
+of problem.
 
 ---
 
