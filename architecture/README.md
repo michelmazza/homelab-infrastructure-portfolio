@@ -357,7 +357,17 @@ Codify three-layer validation as a Testing-Guide standard: every UI feature must
 
 ---
 
-## Story Arc: Foundation → Build → Optimize → Intelligence → Observability Trilogy → Self-Healing → Autonomous Bridge
+### Phase 24: The Methodology Capstone
+
+Phase 24 hardened governance and reliability without introducing a new architectural decision, so it has no standalone ADR — the decisions it did make (four-regime content-equivalence verification, staged-freeze sequencing, environment-vs-code exit semantics for scheduled canaries) are process standards documented in the journey narrative and the phase deck. The ADR series is correctly complete at ADR-027.
+
+| Phase | Focus | Key Achievement |
+|-------|-------|-----------------|
+| 24 | The Methodology Capstone | Four-regime content-equivalence verifier, O(N×M) → O((N+M) log M) hot-path rewrite, scheduled scale canary, 1201 tests (0 failing), zero-LLM streak 9 |
+
+---
+
+## Story Arc: Foundation → Build → Optimize → Intelligence → Observability Trilogy → Self-Healing → Autonomous Bridge → Defensive Engineering
 
 **ADR-001** (Foundation): Choose simple, reliable orchestration  
 **ADR-008** (Build): Create production RAG platform  
@@ -372,7 +382,8 @@ Codify three-layer validation as a Testing-Guide standard: every UI feature must
 **ADR-016** (Conversational AIOps): Memory + verification — predict, explain, remember, verify  
 **ADR-018/019/020** (Distributed Foundations): PostgreSQL migration, alerting integration, placement policy — first containerized cross-node services  
 **Phase 22** (Self-Healing): Three-gate safety architecture with Level 1 dry-run executor, Streamlit AppTest harness for 8/8 Glass Box tabs  
-**ADR-025/026/027** (Autonomous Bridge): 5-gate live execution pipeline, kill-switch confirmation gate, Three-Layer UI Validation standard ⭐
+**ADR-025/026/027** (Autonomous Bridge): 5-gate live execution pipeline, kill-switch confirmation gate, Three-Layer UI Validation standard
+**Phase 24** (Defensive Engineering): Governance proven by a content-equivalence engine, algorithmic hot-path fix, scheduled reliability canary ⭐
 
 ---
 
@@ -412,10 +423,10 @@ Complete overview of technologies used across all phases.
 
 **Philosophy**: Operational simplicity prioritized over complexity. Resource efficiency on older hardware. Production-grade patterns with learning value.
 
-**Achievements**: 98.7% agentic accuracy, 90% RAG accuracy, 24× GPU speedup, 605,000× cache speedup, 1179 tests @ 100% (0 failing), zero-LLM streak 8 phases (16-23), 5-gate live execution pipeline with three-gate safety
+**Achievements**: 98.7% agentic accuracy, 90% RAG accuracy, 24× GPU speedup, 605,000× cache speedup, 1201 tests @ 100% (0 failing), zero-LLM streak 9 phases (16–24), 5-gate live execution pipeline with three-gate safety
 
 ---
 
-**Status**: Phase 23 complete — The Autonomous Bridge: 5-gate live execution with three independent safety controls ✅  
+**Status**: Phase 24 complete — The Methodology Capstone: defensive engineering, governance-as-code, live reliability canary ✅  
 **Latest**: ADR-025/026/027 (Phase 23, Grade A+) — live execution pipeline, kill-switch confirmation gate, Three-Layer UI Validation standard  
-**Zero-LLM streak**: 8 consecutive phases (16–23)
+**Zero-LLM streak**: 9 consecutive phases (16–24)
