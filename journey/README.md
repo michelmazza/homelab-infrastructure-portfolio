@@ -8,7 +8,16 @@ Phase-by-phase narratives documenting the evolution of the HomeLab infrastructur
 
 ### **Detailed Journey Narratives**
 
-### [Phase 23 — The Autonomous Bridge](phase-23-autonomous-bridge.md) ✅ ⭐ NEW
+### [Phase 24 — The Methodology Capstone](phase-24-methodology-capstone.md) ✅ ⭐ NEW
+**Focus**: Methodology + reliability hardening — reorganize the session-workflow governance document and prove the cut lossless with an engine, rewrite the observer-effect hot path to log-linear complexity, and stand up a live scheduled health canary. Zero new capability by design.
+**Achievement**: Defensive engineering. A high-risk manual document reorganization was proven content-equivalent by a permanent four-regime verifier (block multiset · stable-ID object-hash · removal audit · criteria inventory) rather than trusted by eye; `compute_observer_effect` went O(N×M) → O((N+M) log M) (~1.37B → ~8M ops) with output pinned to an oracle; a periodic Scale Smoke Canary shipped to the cluster with environment-vs-code exit semantics. The reliability tooling caught an observability gap in its own design — recorded honestly rather than hidden.
+**Key Innovations**: `scripts/verify_workflow_cut.py` (permanent content-equivalence engine, four independent negative-control regimes), staged-freeze sequencing (additive → frozen reference → tag → cut, lossless proof at each step), environment-vs-code exit classification for scheduled canaries (an outage exits 0, only a real breach exits non-zero), single-source-of-truth canary logic shared by the scheduled job and the perf test tier.
+**Metrics**: 1201 tests passing (+22 from Phase 23), 0 failing, 2 skipped; +3 opt-in perf canaries (deselected from the floor); zero-LLM streak 9 phases (16–24); zero-regression streak 9 phases. No new ADR — process standards, ADR series complete at ADR-027.
+**Grade**: A+ — "Defensive Engineering Excellence" (Gemini CP-Phase, binding) | May–June 2026
+
+---
+
+### [Phase 23 — The Autonomous Bridge](phase-23-autonomous-bridge.md) ✅
 **Focus**: Live execution with three independent safety controls, zero LLM in the gate-and-restart path, single-strike rollback. Five consecutive A+ Gemini checkpoints across the Phase 22-23 arc.
 **Achievement**: Observer → actor → autonomous remediator. The kill-switch (operator intent, no audit row) + rate-limit (automatic safety, row written) + loop guard (structural — rate-limit SQL has no outcome filter) are three orthogonal failure modes that each independently halt execution. The 5-gate pipeline shipped without LLM dependency at any gate, validated against a live searxng restart (HTTP 200, 0.4s).
 **Key Innovations**: 5-gate live executor (`rag/agent_executor.py::execute_live`), ExternalID + CreateTime stale-alloc detection (catches Nomad-rescheduled allocs mid-window), kill-switch confirmation gate relocation (the if-prompt rerun-disappearing bug surfaced by manual smoke + fixed by architectural placement, ADR-026), Three-Layer UI Validation standard codified (ADR-027 — Function-level / AppTest / Manual-smoke triad).
@@ -226,8 +235,8 @@ The complete technical journey (Phases 4-9) is also documented across presentati
 
 ---
 
-**Status**: Phases 8, 9, 10, 12, 13+14, 15, 16, 17, 18, 19, 20, 21, 22, 23 journeys complete  
-**Latest**: Phase 23 — The Autonomous Bridge (5-gate live execution, three independent safety controls, zero LLM in execution path, A+)  
+**Status**: Phases 8, 9, 10, 12, 13+14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 journeys complete  
+**Latest**: Phase 24 — The Methodology Capstone (governance proven by a content-equivalence engine, O(N×M)→O((N+M) log M) hot-path fix, live scheduled reliability canary, A+)  
 **Zero-LLM streak**: 9 consecutive phases (16–24)  
 **Test coverage**: 1203 tests, 1201 passing, 0 failing  
 **Philosophy**: Deep dive on breakthrough stories + presentations for context

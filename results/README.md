@@ -4,7 +4,17 @@ Metrics, improvements, and measurable outcomes from each phase.
 
 ---
 
-## Phase 22-23: From Observation to Autonomy ⭐ NEW
+## Phase 24: The Methodology Capstone ⭐ NEW
+
+### Phase 24 — The Methodology Capstone
+**File**: [phase-24-metrics.md](phase-24-metrics.md)
+**Summary**: Governance cut proven lossless by a four-regime engine, O(N×M)→O((N+M) log M) hot-path fix, live scheduled reliability canary, 1201 tests (0 failing), zero-LLM streak 9, no new ADR, Grade: A+ "Defensive Engineering Excellence"
+
+Maturity phase — the headline is a way of working, not a capability. The session-workflow document was reorganized and proven content-equivalent by a permanent verifier (`verify_workflow_cut.py`) rather than trusted by eye; `compute_observer_effect` was rewritten to log-linear complexity with byte-identical output (pinned to an oracle); a periodic Scale Smoke Canary shipped with environment-vs-code exit semantics. Floor 1179 → 1201 (+22), never red across nine sessions. The canary's own observability gap was caught by its own tooling and recorded honestly.
+
+---
+
+## Phase 22-23: From Observation to Autonomy
 
 ### Phase 22-23 Combined — From Observation to Autonomy
 **File**: [phase-22-23-metrics.md](phase-22-23-metrics.md)
@@ -361,5 +371,5 @@ Complete performance data including:
 
 ---
 
-**Status**: Phases 8, 9, 10, 11, 12, 13+14, 15, 16, 17, 18, 21, 22, 22-23 combined metrics complete
-**Latest**: Phase 22-23 combined (From Observation to Autonomy, 1181 tests, 1179 passing, 0 failing, zero-LLM streak 8 phases, 5 consecutive A+ Gemini checkpoints)
+**Status**: Phases 8, 9, 10, 11, 12, 13+14, 15, 16, 17, 18, 21, 22, 22-23 combined, 24 metrics complete
+**Latest**: Phase 24 — The Methodology Capstone (governance proven by a content-equivalence engine, O(N×M)→O((N+M) log M) hot-path fix, live reliability canary, 1201 tests, zero-LLM streak 9, A+)
