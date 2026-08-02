@@ -137,7 +137,7 @@ system thinks."
 - 3 new modules: observability lifecycle manager, diagnostic context, configuration
 - 9 Gemini mandates addressed (4 from Checkpoint 1, 5 from Checkpoint 2)
 - Zero-LLM analytical streak: 5 consecutive phases (Phases 16–20)
-- 4-node cluster: 3 Proxmox VMs plus the local ML workstation as a proper cluster node
+- 4-node cluster at the time of this phase: 3 Proxmox VMs plus the local ML workstation as a proper cluster node (the workstation was later removed from the compute plane — the cluster is 3 nodes today, and the workstation serves GPU inference and image builds only)
 - Grade: A+ (Gemini Checkpoint 3)
 
 ---

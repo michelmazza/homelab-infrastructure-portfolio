@@ -140,7 +140,7 @@ This portfolio documents my journey building production-grade infrastructure and
 
 ## 📊 Portfolio Statistics
 
-- **Infrastructure**: 4-node Nomad cluster (3 Proxmox VMs + ML workstation), Consul service mesh, Traefik reverse proxy
+- **Infrastructure**: 3-node Nomad cluster (3 Proxmox VMs), Consul service mesh, Traefik reverse proxy
 - **Services Orchestrated**: 15+ production services (3 containerized observability services — docker driver, multi-arch)
 - **Observability**: Prometheus + Grafana + Loki with mobile alerting via Pushover
 - **AI/ML Platform**: Ollama (CPU + GPU hybrid), RAG with 2,095 chunks across 270 documents

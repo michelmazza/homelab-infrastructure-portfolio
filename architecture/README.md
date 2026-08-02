@@ -408,7 +408,7 @@ Complete overview of technologies used across all phases.
 - **Agentic Systems**: MCP tools (Prometheus, Nomad, Consul), intent classification, cross-reference engine
 - **AIOps**: OLS regression engine, correlation engine, DiagnosticContext, Verifiable Inference
 - **Development & Process**: Python, pytest, UV, Git, ADR framework
-- **Hardware & Network**: 4-node cluster (3 Proxmox VMs + ML workstation), GPU, NAS
+- **Hardware & Network**: 3-node cluster (3 Proxmox VMs), ML workstation (GPU inference and image builds — not a cluster node), NAS
 
 **Philosophy**: Operational simplicity prioritized over complexity. Resource efficiency on older hardware. Production-grade patterns with learning value.
 
