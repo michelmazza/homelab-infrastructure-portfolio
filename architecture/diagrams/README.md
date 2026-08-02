@@ -283,7 +283,39 @@ Visual representations of system architecture across phases.
 
 ---
 
-## Observation to Autonomy (Phase 22-23) ⭐ NEW
+## Scale Smoke Canary Flow (Phase 24) ⭐ NEW
+
+**File**: `phase-24-scale-smoke-canary-flow-sanitized.png`
+**Created**: August 2026
+**Updated**: August 2026 (sanitized for portfolio)
+
+**Shows the scheduled reliability canary end to end — periodic dispatch → three checks → four-way exit classification**:
+- **Dispatch** (left): periodic batch job, cron `02:30 UTC`, `prohibit_overlap`, 256 MB, placement constrained by policy (ADR-020 pattern)
+- **Three checks** (center) — each returns plain data; single source of truth shared with the pytest perf tier:
+  - **live-scale** — read-only query over the busiest live metric's real snapshots (2.0s budget); the algorithmic-regression canary for the O((N+M) log M) rewrite
+  - **outer-limit** — synthetic, in-memory, **no database dependency** (N=500K × M=1,816, 3.0s budget); the structural-cliff detector that still runs when the database is down
+  - **retention** — read-only overshoot check against the 14-day window plus grace; the prune-enforcement canary
+- **Exit classification** (right) — environment-vs-code semantics, because any non-zero exit marks the scheduled task failed:
+  - `pass` → exit `0` (all runnable checks under budget)
+  - `unavailable` → exit `0` (database unreachable: environment down, logged, **not** a code regression)
+  - `budget_breach` → exit `1` (a check ran and exceeded budget: a real regression)
+  - `misconfigured` → exit `2` (no database URL supplied: deployment defect, fails loudly)
+
+**Key Architecture Decisions**:
+- **Single source of truth**: the canary module holds the logic; the pytest perf tier *delegates* to it rather than keeping a parallel copy that can drift
+- **An environment outage is never red**: only a check that actually ran and breached exits non-zero
+- **The synthetic check has no database dependency**: a regression is still caught during a database outage
+- **Opt-in perf tier**: the pytest form carries a `perf` marker, is deselected from the default regression run, and is deliberately excluded from the regression floor count
+
+**Use For**:
+- "How do you detect a performance regression in production?" → Show the three-check fan-out
+- "How do you avoid alert fatigue from flaky infrastructure?" → Point to the four-way exit classification
+- "How do you keep a scheduled job and its test from drifting apart?" → Single-source-of-truth delegation
+- Scheduled-canary and reliability-signal design discussions
+
+---
+
+## Observation to Autonomy (Phase 22-23)
 
 **File**: `phase-22-23-observation-to-autonomy.png`
 **Created**: May 2026
@@ -573,6 +605,6 @@ Visual representations of system architecture across phases.
 
 ---
 
-**Status**: 9 architecture diagrams (sanitized, documented)
-**Coverage**: Infrastructure (Phases 6-7) + RAG Pipeline (Phase 8) + Agentic RAG (Phase 9) + Performance (Phase 10) + Distributed System Topology (Phase 21) + Observation to Autonomy (Phase 22-23)
+**Status**: 10 architecture diagrams (sanitized, documented)
+**Coverage**: Infrastructure (Phases 6-7) + RAG Pipeline (Phase 8) + Agentic RAG (Phase 9) + Performance (Phase 10) + Distributed System Topology (Phase 21) + Observation to Autonomy (Phase 22-23) + Scale Smoke Canary Flow (Phase 24)
 **Quality**: Interview-ready, technically accurate, security-conscious

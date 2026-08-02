@@ -4,7 +4,37 @@ Professional slide decks documenting the infrastructure journey from foundation 
 
 ---
 
-## Phase 22-23: From Observation to Autonomy ⭐ Latest
+## Phase 24: Defensive Engineering ⭐ Latest
+
+### Governance as Code
+**File**: Phase-24-Defensive-Engineering.pdf
+**Slides**: 14 slides
+**Format**: PDF
+**Coverage**: Phase 24
+
+The methodology capstone: how a high-risk manual edit to the project's own governance document became an automated, verifiable compilation problem — paired with a reliability spine.
+
+- **The risk**: reorganizing a ~30-section governance document by hand is the most dangerous kind of edit. Nothing fails when a line is dropped — the safety rule is just silently gone.
+- **The governance spine**: a 5-part phase-of-work layout, 8 gates consolidated under stable `G-01`–`G-08` IDs, prior version history verbatim-archived, and a **permanent four-regime content-equivalence verifier** proving the cut lossless
+- **The four regimes** (four, because a single line-set check passes green on fragmentation): block multiset match · stable-ID object-hash · removal audit · criteria inventory
+- **The staged freeze**: additive change (404 insertions / 4 deletions, all metadata) → frozen reference (RC1) → tag → cut. Prove additivity *before* attempting a structural cut.
+- **The reliability spine**: the observer-effect hot path rewritten O(N×M) → O((N+M) log M) (~170× fewer operations at live scale) behind an equivalence guard, plus a scheduled Scale Smoke Canary deployed to the cluster with environment-vs-code exit semantics (environment outage → exit `0`, real scale breach → exit `1`)
+
+**The self-caught gap**: the Gate-0 probe shipped in the same session surfaced a design flaw in the canary itself — its only success record was batch-allocation stdout, garbage-collected within hours. The reliability tooling audited the reliability tooling, and the fix was registered rather than papered over.
+
+**By the numbers**: test floor 1179 → 1201 (0 failed), workflow doc v2.2 → v3.0, zero-LLM streak 8 → 9 phases. Outer-limit stress: N≈1.55M × M≈1,816 in 0.376s against a 5.0s budget — no algorithmic cliff.
+
+**Gemini Grade**: A+ — "Defensive Engineering Excellence": *"a textbook example of how to eliminate systemic human error from engineering governance."*
+
+**Use for**:
+- Engineering governance and process rigor — "how do you de-risk a change that nothing tests?"
+- Algorithmic complexity work grounded in a real production hot path
+- Reliability engineering: scheduled canaries and environment-vs-code signal design
+- Demonstrating intellectual honesty — a phase that surfaced and named its own gap
+
+---
+
+## Phase 22-23: From Observation to Autonomy
 
 ### Self-Healing Foundations + The Autonomous Bridge
 **File**: phase-22-23-observation-to-autonomy.pdf
@@ -206,7 +236,8 @@ hybrid Ollama deployment (24× GPU speedup). The foundation that everything else
 4. **Phase 9**: Intelligent co-pilot transformation (Glass Box AI) ⭐
 5. **Phase 10**: Production-ready AI (18% fallback, 605,000× speedup) ⭐
 6. **Observability Trilogy** (Phases 18–20): Predict → Explain → Remember & Verify ⭐
-7. **Methodology Journey** (Phases 1–20): How the discipline to build it all was engineered ⭐
+7. **Phase 24**: Defensive Engineering — governance proven by an engine, not by eye ⭐
+8. **Methodology Journey** (Phases 1–20): How the discipline to build it all was engineered ⭐
 
 **Interview Narrative**: *"We built solid infrastructure, created a production RAG platform,
 optimized it to 90% accuracy, transformed it into an intelligent co-pilot with Glass Box AI,
@@ -228,9 +259,10 @@ how that happened systematically — that's a separate presentation."*
 | **Phase 17** | 17 | 14 | 0.208ms conflict resolution, Glass Box 6 tabs ⭐ |
 | **Phase 21** | 21 | 14 | PostgreSQL migration, 3 containerized, cross-node writes, A+ ⭐ |
 | **Phase 22-23** | 22–23 | 14 | 5-gate live execution, three independent safety controls, zero LLM in execution path, A+ × 5 ⭐ |
+| **Phase 24** | 24 | 14 | Four-regime content-equivalence verifier, O((N+M) log M) rewrite, live scale canary, A+ ⭐ |
 | **Observability Trilogy** | 18–20 | 14 | Predict→Explain→Remember, Verifiable Inference ⭐ |
 | **Methodology Journey** | 1–20 | 12 | 7 practices, 35 weeks, crawl → walk → craft ⭐ |
-| **Total** | 1–23 | **136** | Complete journey: infrastructure → Autonomous Bridge |
+| **Total** | 1–24 | **150** | Complete journey: infrastructure → Defensive Engineering |
 
 ---
 
@@ -245,7 +277,7 @@ how that happened systematically — that's a separate presentation."*
 
 ---
 
-**Status**: 10 presentations complete ✅
-**Total Slides**: 136 (current)
-**Latest**: Phase 22-23 — From Observation to Autonomy (May 2026) ⭐
-**Zero-LLM streak**: 8 consecutive phases (16–23)
+**Status**: 11 presentations complete ✅
+**Total Slides**: 150 (current)
+**Latest**: Phase 24 — Defensive Engineering: Governance as Code (August 2026) ⭐
+**Zero-LLM streak**: 9 consecutive phases (16–24)

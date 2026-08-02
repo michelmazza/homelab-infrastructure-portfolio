@@ -17,12 +17,12 @@ This portfolio documents my journey building production-grade infrastructure and
 
 ---
 
-**Status**: Phase 23 Complete ✅ | The Autonomous Bridge | 5-Gate Live Execution | 1179 Tests (0 failing) | Zero-LLM Streak (8 phases)
-**Next**: Phase 24 — LLM-as-Planner planning + FastAPI webhook receiver scoping (Session 0)
+**Status**: Phase 24 Complete ✅ | Defensive Engineering | Governance as Code | 1201 Tests (0 failing) | Zero-LLM Streak (9 phases)
+**Next**: Phase 25 — durable canary run records + Gate-0 probe wiring (Session 0)
 
 ---
 
-## The Journey: 23 Phases of Evolution
+## The Journey: 24 Phases of Evolution
 
 ### Foundation (Phases 1-3)
 **Orchestration Platform** → Built multi-node HashiCorp Nomad cluster
@@ -33,7 +33,7 @@ This portfolio documents my journey building production-grade infrastructure and
 **Production Operations** → 15+ services orchestrated, NFS storage integrated
 **Observability Stack** → Prometheus + Grafana + Loki with mobile alerting
 
-## Innovation & AI/ML (Phases 6-23)
+## Innovation & AI/ML (Phases 6-24)
 
 - **AI/ML Foundation** → Local LLM deployment with Ollama
 - **Advanced RAG Platform** → Production knowledge system with Streamlit UI
@@ -51,6 +51,7 @@ This portfolio documents my journey building production-grade infrastructure and
 - **Distributed Foundations** → PostgreSQL migration, 3 services containerized, cross-node writes, scoped IAM ⭐
 - **Self-Healing Foundations** → Zero-LLM allowlist → enrichment → Level 1 dry-run executor with three-gate safety (kill-switch + rate-limit + loop guard), 8/8 Glass Box tabs under harness, 0 failures ⭐
 - **The Autonomous Bridge** → 5-gate live execution pipeline (kill-switch + rate-limit + loop guard, single-strike rollback), zero LLM in execution path, 8-phase zero-LLM streak ⭐
+- **Defensive Engineering** → Governance as code: a four-regime content-equivalence verifier proving a high-risk doc cut lossless, an O(N×M) → O((N+M) log M) hot-path rewrite, and a scheduled scale canary on the cluster ⭐
 
 ### Phase 9 Complete: Agentic RAG with Glass Box AI ✅
 
@@ -152,10 +153,12 @@ This portfolio documents my journey building production-grade infrastructure and
 - **Conversational AIOps**: DiagnosticContext TTL=300s, Verifiable Inference, Tab 8 Diagnostic Thread
 - **Self-Healing**: Level 1 dry-run executor with three-gate safety (kill-switch + rate-limit + loop guard), zero-LLM allowlist pattern matching
 - **Autonomous Execution (Phase 23)**: 5-gate live execution pipeline (kill-switch → rate-limit → pre-flight → restart → stable-duration), single-strike rollback, validated against live searxng restart (HTTP 200, 0.4s)
+- **Governance as Code (Phase 24)**: four-regime content-equivalence verifier (block multiset · stable-ID object-hash · removal audit · criteria inventory) proving a structural governance-doc cut lossless
+- **Reliability Canary (Phase 24)**: scheduled scale canary with environment-vs-code exit semantics; observer-effect hot path rewritten O(N×M) → O((N+M) log M) (~170× fewer operations at live scale)
 - **Architecture Decisions**: 16 portfolio ADRs published (ADR-001, ADR-008–016, ADR-018–020, ADR-025–027)
-- **Test Coverage**: 1181 automated tests (1179 passing, 0 failing)
-- **Zero-LLM Streak**: 8 consecutive phases (16–23)
-- **Presentations**: 136 professional slides across 10 presentations
+- **Test Coverage**: 1203 automated tests (1201 passing, 0 failing) + 3 opt-in scale canaries
+- **Zero-LLM Streak**: 9 consecutive phases (16–24)
+- **Presentations**: 150 professional slides across 11 presentations
 
 ---
 
@@ -170,7 +173,8 @@ homelab-portfolio/
 │   ├── infrastructure-overview.pdf          # Phases 4-6 (12 slides)
 │   ├── phase-7-rag-platform.pdf             # Phase 7 (15 slides)
 │   ├── phase-8-optimization-journey.pdf     # Phase 8 (13 slides)
-│   └── Phase-9-Presentation-Agentic-RAG.pdf # Phase 9 (14 slides) ⭐
+│   ├── Phase-9-Presentation-Agentic-RAG.pdf # Phase 9 (14 slides) ⭐
+│   └── Phase-24-Defensive-Engineering.pdf   # Phase 24 (14 slides) ⭐
 ├── architecture/                            # Technical decisions
 │   ├── decisions/                           # 16 portfolio ADRs (ADR-001, ADR-008–016, ADR-018–020, ADR-025–027)
 │   └── diagrams/                            # System architecture visuals
@@ -188,7 +192,7 @@ homelab-portfolio/
 ## 🎯 Quick Navigation
 
 - **For Technical Depth**: [Journey Narrative](journey/README.md) - Complete story with technical details
-- **For Visual Overview**: [Presentations](presentations/) - 68+ slides covering Phases 4-9
+- **For Visual Overview**: [Presentations](presentations/) - 150 slides across 11 decks covering Phases 4-24
 - **For Engineering Decisions**: [Architecture Decisions](architecture/decisions/) - ADRs explaining key choices. Start with [the three worth reading first](architecture/decisions/README.md#three-adrs-worth-reading-first) for a curated entry point.
 - **For Metrics**: [Results](results/) - Quantified outcomes and test coverage
 - **For Screenshots**: [Assets](assets/screenshots/) - Glass Box AI, 8-tab interface ⭐
@@ -197,7 +201,28 @@ homelab-portfolio/
 
 ## 🚀 Highlighted Innovations
 
-### The Autonomous Bridge (Phase 23) ⭐ **LATEST**
+### Defensive Engineering (Phase 24) ⭐ **LATEST**
+**The Transformation**: From governance you can only trust to governance you can prove.
+
+The document that governs every session had grown into a flat ~30-section sprawl across three phases. It needed reorganizing — and reorganizing a governance document by hand is the most dangerous kind of edit there is. Nothing fails when a line goes missing. No test goes red. The safety rule is just silently gone. The move was to stop treating it as an editing problem and start treating it as a compilation problem: prove semantic equivalence between the old and new documents before shipping.
+
+**The four-regime verifier** — four regimes, because a single line-set check passes green on fragmentation:
+- **Block multiset match**: every text block survives somewhere in the output (order-independent — a moved block is fine, a lost one is not)
+- **Stable-ID object-hash**: consolidated gates hash-match by stable ID, catching intra-gate fragmentation
+- **Removal audit**: every deletion is explicitly reconciled against the archived history
+- **Criteria inventory**: no success or acceptance criterion is dropped across the cut
+
+**The staged freeze**: additive change first (404 insertions / 4 deletions, all metadata — structure moved: none), then a frozen reference snapshot, then a tag, and only then the cut. The reorganization was fully understood a week before it was performed; the discipline was in not performing it yet. Prove additivity before you attempt a structural cut — the frozen reference is the whole game.
+
+**The reliability spine**: the observer-effect hot path was a nested O(N×M) scan — ~1.37B operations at live scale. Reframing it as a sorted-partition problem (sort the boundaries once, binary-search membership) took it to O((N+M) log M), ~8M operations, all behind an equivalence guard that pinned the old output as an oracle. A scheduled scale canary now watches it on the cluster, with exit semantics that distinguish an environment outage (exit `0` — never a false red) from a genuine scale breach (exit `1`).
+
+**The self-caught gap**: a read-only probe shipped in the same session surfaced a design flaw in the canary itself — its only success record was batch-allocation stdout, garbage-collected within hours of the run. The scheduled job fired and the child job completed, but the self-reported green was gone before anyone could read it. The reliability tooling audited the reliability tooling. The honest record reads *"scheduler fired, job completed, alloc-green GC'd, proxy-healthy"* — not *"verified green"* — and the durable fix was registered for the next phase rather than papered over.
+
+**Gemini Grade**: A+ — "Defensive Engineering Excellence": *"a textbook example of how to eliminate systemic human error from engineering governance."*
+
+---
+
+### The Autonomous Bridge (Phase 23)
 **The Transformation**: From observer to actor to autonomous remediator — without an LLM in the execution path.
 
 For seven consecutive phases the analytical streak held: pattern-based, deterministic, latency-bounded. Phase 22 built the dry-run safety architecture without crossing the action boundary. Phase 23 had to bridge from rehearsal to performance — and did it by extending the deterministic discipline into the execution path itself, not by introducing an LLM agent to decide what to execute. That's the wrong shape of risk for production infrastructure. The right shape: build a 5-gate state machine first, define what the system is allowed to do via a YAML allowlist, build the safety controls before building the action library, and defer LLM integration to a future phase where it generates plans the deterministic pipeline disposes.
@@ -294,7 +319,8 @@ Not because it calls an LLM for each answer. Because it maintains a per-incident
 - Data-driven decision making
 - Iterative improvement with measurable milestones
 - Comprehensive documentation of decisions and outcomes
-- Test coverage for validation (1181 tests, 1179 passing, 0 failing)
+- Test coverage for validation (1203 tests, 1201 passing, 0 failing)
+- Prove high-risk structural edits with an engine, not by eye
 
 **Key Principles**:
 - Foundation before intelligence (build reliable base first)
@@ -309,6 +335,7 @@ Not because it calls an LLM for each answer. Because it maintains a per-incident
 
 | Phase | Focus | Key Achievement | Grade | Status |
 |-------|-------|-----------------|-------|--------|
+| **Phase 24** | Defensive Engineering | Four-regime content-equivalence verifier, O((N+M) log M) hot-path rewrite, scheduled scale canary, 1201 tests (0 failing), zero-LLM streak 9 | A+ | ✅ Complete |
 | **Phase 23** | The Autonomous Bridge | 5-gate live execution, three independent safety controls, zero LLM in execution path, 1179 tests (0 failing), zero-LLM streak 8 | A+ | ✅ Complete |
 | **Phase 22** | Self-Healing Foundations | Level 1 dry-run executor (three-gate safety), 8/8 tabs under harness, 1108 tests (0 failing), zero-LLM streak 7 | A+ | ✅ Complete |
 | **Phase 21** | Distributed Foundations | PostgreSQL migration, 3 services containerized, 1036 tests, zero-LLM streak 6 | A+ | ✅ Complete |
@@ -341,5 +368,5 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 
 ---
 
-**Last Updated**: 2026-05-09 (Phase 23 Complete)
-**Version**: 2.4 - Phase 23 Complete - "The Autonomous Bridge — 5-gate live execution pipeline, three independent safety controls, zero LLM in execution path, 8-phase zero-LLM streak"
+**Last Updated**: 2026-08-02 (Phase 24 Complete)
+**Version**: 2.5 - Phase 24 Complete - "Defensive Engineering — governance as code: a four-regime content-equivalence verifier, an O((N+M) log M) hot-path rewrite, and a scheduled scale canary; 9-phase zero-LLM streak"
