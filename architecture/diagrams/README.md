@@ -504,6 +504,12 @@ Visual representations of system architecture across phases.
 - Network topology generalized
 - Port numbers preserved (standard, educational value)
 - Component relationships maintained
+- **Embedded editor source stripped**: diagram PNGs exported from draw.io carry the full
+  diagram source in a PNG `tEXt`/`zTXt`/`iTXt` metadata chunk. That source is invisible in the
+  rendered image but trivially extractable, and it is *not* covered by sanitizing what the
+  diagram displays. All `tEXt`/`zTXt`/`iTXt` chunks are therefore removed from every published
+  diagram PNG (image data left byte-identical — no recompression). Editable `.drawio` sources
+  stay in the private repository; this directory publishes rendered PNGs only.
 
 ---
 
