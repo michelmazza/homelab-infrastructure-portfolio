@@ -4,16 +4,16 @@
 
 ## Systematic DevOps & AI/ML Engineering
 
-**Michel Mazza** | DevOps Engineer | AI/ML Systems Builder
-📍 Montreal, QC | 🔗 [LinkedIn](https://www.linkedin.com/in/michelmazza/)
+**Michel Mazza** | Enterprise architect by trade, platform engineer by hobby
+📍 Montreal, QC | 🌐 [michelmazza.ca](https://michelmazza.ca/) | 🔗 [LinkedIn](https://www.linkedin.com/in/michelmazza/)
 
 ---
 
 ## About This Portfolio
 
-This portfolio documents my journey building production-grade infrastructure and AI/ML systems from first principles. Every decision measured, every result validated, every lesson documented.
+This portfolio documents how I built a home lab and AI/ML experiments from first principles. Every decision measured, every result validated, every lesson documented.
 
-**Not tutorials. Not toy projects. Real production systems.**
+*Personal project, not related to any employer.*
 
 ---
 
@@ -356,9 +356,10 @@ Not because it calls an LLM for each answer. Because it maintains a per-incident
 
 ## 📞 Contact & Links
 
+- **Personal projects**: [michelmazza.ca](https://michelmazza.ca/)
 - **LinkedIn**: [linkedin.com/in/michelmazza/](https://www.linkedin.com/in/michelmazza/)
 - **Location**: Montreal, QC, Canada
-- **Portfolio**: This repository documents real production systems and engineering approach
+- **Portfolio**: This repository documents a personal home lab and its engineering approach
 
 ---
 
